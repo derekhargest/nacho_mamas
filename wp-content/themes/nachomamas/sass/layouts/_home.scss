@@ -1,0 +1,66 @@
+.home-item{
+  background: $c-red-orange;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 4.444em;
+  h3{
+    font-family: $font-stack-heading;
+    color: $c-white;
+    padding-top: .5em;
+    line-height: 1.3em;
+  }
+  .home-image{
+    @include span(6 of 9);
+    margin-right: 0;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  .home-content{
+    width: 28.81%;
+    float: right;
+    padding: 0 2.6383%;
+    position: relative;
+    min-height: 441px;
+  }
+
+  .button-wrap{
+    position: absolute;
+    bottom: 2em;
+    width: 84.5%;
+  }
+  .button{
+    max-width: 225px;
+    margin: 0 auto;
+    box-shadow: 0px 2px 1px #0c4e64;
+  }
+}
+
+.home-item:nth-child(odd){
+  @include span(9 of 10 last);
+  .home-content{
+    float: right;
+  }
+  .home-image{
+    float: left;
+  }
+}
+
+.home-item:nth-child(even){
+  @include span(9 of 10);
+  .home-image{
+    float: right;
+  }
+  .home-content{
+    float: left;
+  }
+}
+
+.home-item:nth-child(2){
+  background: $c-green;
+}
+
+.home-item:nth-child(3){
+  background: $c-dark-blue;
+}

@@ -1,0 +1,153 @@
+#banner{
+	position: relative;
+	z-index: 20;
+}
+
+.banner-wrapper{
+  position: relative;
+  height: auto;
+	background-attachment: fixed;
+}
+
+.banner-overlay.home .overlay-logo{
+	margin: 0 auto;
+	max-width: 120px;
+	width: 9%;
+}
+
+.banner-overlay.page .overlay-logo{
+	margin: 0 auto;
+	max-width: 120px;
+	width: 9%;
+}
+
+.banner-overlay, .banner-overlay-notitle{
+  position: relative;
+  width: 100%;
+  z-index: 25;
+  margin-top: 2em;
+	background-attachment: fixed;
+  h2, h3{
+    font-family: $font-stack-heading;
+    color: $c-white;
+    text-align: center;
+    font-size: 2.20em;
+    font-weight: 400;
+    line-height: 1.25em;
+    max-width: 13em;
+    margin: 0 auto;
+  }
+  &.home .overlay-logo{
+    margin: 0 auto;
+    max-width: 319px;
+    margin-top: 1.15em;
+    width: 18.7%;
+  }
+	&.page{
+		margin-top: 16.4%;
+		.overlay-logo{
+			margin: 0 auto;
+			max-width: 223px;
+			width: 12.38%;
+			margin-bottom: 3em;
+		}
+		h3{
+			font-size: 3em;
+		}
+	}
+}
+
+.banner-overlay-notitle{
+  margin-bottom: 9%;
+  .dark{
+    display: block;
+
+  }
+  .white{
+    display: none;
+  }
+  .overlay-logo{
+    width: 16%;
+  }
+}
+
+.banner.main-banner{
+  position: relative;
+}
+
+@media ( min-width: 703px ) and (max-width: 1140px ){
+
+.banner-overlay-notitle .overlay-logo{
+  width: 10%;
+}
+
+}
+
+@media (min-width: 545px){
+  .banner-overlay-notitle{
+    margin: 9% 0;
+  }
+}
+
+@media (min-width: 450px){
+  .banner-overlay, .banner-overlay-notitle{
+    margin-top: 16.5%;
+    &.home .overlay-logo{
+      margin-top: 2.555em;
+    }
+    h2,h3{
+      font-size: 4em;
+      font-weight: 200;
+      line-height: 1.15em;
+    }
+  }
+}
+
+@media (min-width: 700px){
+  #banner{
+    float: left;
+    width: 100%;
+  }
+  .banner-overlay, .banner-overlay-notitle{
+    position: absolute;
+  }
+  #content-block{
+    margin-top: 0;
+  }
+  .banner-overlay-notitle{
+    margin-top: 16% !important;
+    .dark{
+      display: none;
+    }
+    .white{
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 699px){
+  #content-block{
+    margin-top: 0em !important;
+  }
+  .banner-overlay{
+    margin-top: 3.5em !important;
+    padding-bottom: 4em !important;
+  }
+}
+
+@media (min-width: 1140px){
+  .banner-overlay, .banner-overlay-notitle{
+    margin-top: 16%;
+    h2,h3{
+      font-size: 5em;
+    }
+  }
+
+  .banner-overlay.home{
+    margin-top: 6%;
+
+    .overlay-logo{
+      margin-bottom: 2em;
+    }
+  }
+}

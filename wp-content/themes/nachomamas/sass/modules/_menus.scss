@@ -1,0 +1,48 @@
+.location-menus{
+  & > .menu{
+    margin-bottom: 3em;
+  }
+  .menu{
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid $c-red-orange;
+    padding-bottom: 4em;
+    h4{
+      font-size: 2em;
+      font-weight: 900;
+    }
+    .menu-content{
+      @include span(6 of 8);
+      p{
+        font-size: 1em;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+    }
+    .button{
+      @include span(2 of 8);
+      margin-right: 0;
+      background: $c-green;
+      box-shadow: $drop-shadow;
+      span{
+        color: $c-white;
+      }
+    }
+    .menu-buttons{
+      width: 100%;
+      float: left;
+      margin-top: 3.75em;
+      .button{
+        @include span(2 of 8);
+        background: $c-light-blue;
+          span{
+            color: $c-white;
+          }
+
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

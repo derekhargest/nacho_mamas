@@ -1,0 +1,50 @@
+.events{
+  .event-item-wrapper{
+    @include span(4 of 8);
+    margin-bottom: 2.5em;
+    &:nth-child(even){
+      @include span(4 of 8 last);
+    }
+  }
+  .event-item{
+    border: $border;
+    border-radius: 10px;
+    .event-image{
+      img{
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        width: 100% !important;
+        height: auto !important;
+      }
+    }
+    .event-content{
+      padding: 1.875em;
+      @include clearfix;
+      a{
+        text-decoration: none;
+      }
+      p{
+        margin-bottom: 0;
+        font-size: 1em;
+      }
+      & > p{
+        margin-bottom: 1em;
+      }
+    }
+      h3{
+        font-weight: 700;
+        font-size: 1.875em;
+        letter-spacing: normal;
+      }
+      .event-info{
+        width: 60%;
+        float: left;
+      }
+      .facebook-event{
+        display: block;
+        width: 148px;
+        float: right;
+        margin-top: 1.75em;
+      }
+  }
+}

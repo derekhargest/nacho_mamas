@@ -1,0 +1,114 @@
+img{
+	max-width: 100%;
+	display: block;
+}
+
+ul{
+	-webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0px !important;
+}
+
+body {background:$c-white;}
+
+*:focus{
+	outline: none;
+	-webkit-focus-ring-color: auto 0px;
+}
+
+::-webkit-input-placeholder {color: #fff !important; opacity: 1 !important; font-weight: 500 !important;}
+::-moz-placeholder          {opacity: 1 !important; font-weight: 500 !important;} /* Firefox 19+ */
+:-moz-placeholder           {opacity: 1 !important; font-weight: 500 !important;} /* Firefox 18- */
+:-ms-input-placeholder      {opacity: 1 !important; font-weight: 500 !important;}
+
+input, textarea{
+	font-size: 1em;
+	color: $c-text-color;
+	border: 0;
+	padding: .5em 1em;
+	line-height: 2em;
+	border: 0;
+	font-weight: 400;
+	font: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+	-webkit-appearance: none;
+}
+
+.site-main{
+	width: 100%;
+}
+
+.content-area{
+	@include clearfix;
+}
+
+#map{
+	height: 500px;
+}
+
+#sidebar{
+	width: span(3);
+	float: right;
+}
+
+/*
+#fancybox-title{
+	display: none !important;
+
+}
+#fancybox-left-ico, #fancybox-right-ico, #fancybox-close{
+	width: 47px !important;
+	height: 47px !important;
+}
+
+#fancybox-left-ico {
+    background-image: url('images/left-arrow.png') !important;
+    background-position: 0px 0px !important;
+}
+
+#fancybox-right-ico {
+    background-image: url('images/right-arrow.png') !important;
+    background-position: 0px 0px !important;
+}
+
+#fancybox-close{
+	background-image: url('images/close-btn.png') !important;
+	background-position: 0px 0px !important;
+}
+
+*/
+
+#events, #menus{
+	background: #dfdfdf;
+	@include clearfix;
+	.content-container{
+		margin-top: 8.8888em;
+	}
+}
+
+.read-more.home{
+	text-decoration: none;
+	font-size: 1.95em;
+	color: $c-red-orange;
+	font-weight: 600;
+	margin-top: 2em;
+	&:hover{
+		opacity: .85;
+	}
+}
+
+.home .entry-content p{
+	margin-bottom: 1.75em;
+}
+
+@media (min-width: 1140px){
+
+	.entry-content{
+
+	}
+
+	#map{
+		height: 800px;
+	}
+}

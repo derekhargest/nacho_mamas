@@ -1,0 +1,30 @@
+// Theme Information
+//--------------------------------------------//
+$theme_name: "Nacho Mama's Parent Theme";
+$theme_uri: "#";
+$theme_description: "Parent theme for Nacho Mama's";
+$theme_version: "1.0";
+$theme_author: "Derek Hargest";
+$theme_author_uri: "http://www.nachomamas.com";
+$theme_license: "GPL";
+$theme_tags: "responsive-layout, post-formats";
+
+$font-stack: 'Open Sans', sans-serif;
+
+$font-stack-heading: 'Walter Turncoat', cursive;
+
+$c-light-blue: #2394be;
+$c-green: #7ac561;
+$c-red-orange: #f04413;
+$c-orange: #f36c34;
+$c-white: #fffdf0;
+$c-dark-blue: #134e64;
+$c-yellow: #f1d96b;
+$c-black: $c-dark-blue;
+
+$c-text-color: $c-black;
+$c-active-page: $c-dark-blue;
+$c-content-heading: $c-red-orange;
+
+$border: 1px solid $c-red-orange;
+$drop-shadow: 0px 3px 1px $c-dark-blue;

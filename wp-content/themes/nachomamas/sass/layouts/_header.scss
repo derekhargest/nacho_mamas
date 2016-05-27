@@ -29,7 +29,7 @@
 .mobile-logo{
 	display: block;
 	float: left;
-	width: 80%;
+	width: 60%;
 	.header-logo{
 		width: 12%;
 		padding-top: 1em;
@@ -155,8 +155,8 @@
 		line-height: 1.25em;
     padding-top: 3em;
     padding-bottom: 1.875em;
-    padding-left: 8.3%;
-    padding-right: 8.3%;
+    padding-left: 7.25%;
+    padding-right: 7.25%;
 		&:hover{
 			cursor: default;
 		}
@@ -371,7 +371,7 @@
 				}
 		}
 
-	@media (min-width: 1140px) and (max-width: 1279px){
+	@media (min-width: 1140px) and (max-width: 1320px){
 		.main-navigation{
 				width: 95% !important;
         margin: 0 auto;
@@ -390,7 +390,7 @@
 			max-width: 75px !important;
 		}
 	.page-header .main-navigation ul.menu > li{
-			padding-left: 7.5%;
-			padding-right: 7.5%;
+			padding-left: 7%;
+			padding-right: 7%;
 		}
 	}

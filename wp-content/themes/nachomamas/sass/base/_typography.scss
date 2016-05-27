@@ -61,6 +61,7 @@ h2.entry-title, .home h1.entry-title, h1.page-title{
     font-weight: 900;
     color: $c-content-heading;
     text-align: center;
+    line-height: 1em;
    }
 
 h1.entry-title{ font-size: 3em; color: $c-content-heading; font-weight: 900; text-align: center;}
@@ -92,7 +93,7 @@ small{
 }
 
 .entry-header h1{
-	line-height: 1.5em;
+	line-height: 1em;
 }
 
 .main-navigation ul li, .slicknav_menu ul li{
@@ -146,11 +147,15 @@ small{
 @media (max-width: 1140px){
 
   p{
-  	font-size: 1.75em;
-  	letter-spacing: .05em;
+  	font-size: 1em;
   }
 
   .principals .principal-item p{
     font-size: 1.5em !important;
   }
+}
+@media (max-width: 900px){
+h1.entry-title{
+  font-size: 2.5em;
+}
 }

@@ -128,6 +128,7 @@ h2.entry-title, .home h1.entry-title, h1.page-title {
   font-weight: 900;
   color: #f04413;
   text-align: center;
+  line-height: 1em;
 }
 
 h1.entry-title {
@@ -171,7 +172,7 @@ small {
 }
 
 .entry-header h1 {
-  line-height: 1.5em;
+  line-height: 1em;
 }
 
 .main-navigation ul li a, .slicknav_menu ul li a {
@@ -212,15 +213,19 @@ small {
 }
 @media (max-width: 1140px) {
   p {
-    font-size: 1.75em;
-    letter-spacing: .05em;
+    font-size: 1em;
   }
 
   .principals .principal-item p {
     font-size: 1.5em !important;
   }
 }
-.button, .woocommerce .subfooter a.button, #mc_embed_signup .button {
+@media (max-width: 900px) {
+  h1.entry-title {
+    font-size: 2.5em;
+  }
+}
+.button, .woocommerce .subfooter a.button, #mc_embed_signup .button, button#load-more, button#follow-us {
   display: block;
   text-decoration: none;
   border: 0;
@@ -241,7 +246,7 @@ small {
   padding: 0;
   line-height: normal;
 }
-.button span, .woocommerce .subfooter a.button span, #mc_embed_signup .button span {
+.button span, .woocommerce .subfooter a.button span, #mc_embed_signup .button span, button#load-more span, button#follow-us span {
   margin: 0 auto;
   float: none;
   overflow: hidden;
@@ -254,22 +259,22 @@ small {
   border: 0;
   letter-spacing: -.25px;
 }
-.button span::after, .woocommerce .subfooter a.button span::after, #mc_embed_signup .button span::after {
+.button span::after, .woocommerce .subfooter a.button span::after, #mc_embed_signup .button span::after, button#load-more span::after, button#follow-us span::after {
   content: '\2192';
   padding-left: 0.5em;
   font-size: 1em;
 }
-.button:hover, .woocommerce .subfooter a.button:hover, #mc_embed_signup .button:hover {
+.button:hover, .woocommerce .subfooter a.button:hover, #mc_embed_signup .button:hover, button#load-more:hover, button#follow-us:hover {
   text-decoration: none;
   opacity: .85;
 }
 
-.woocommerce #respond input#submit.alt.disabled, .woocommerce #respond input#submit.alt.disabled:hover, .woocommerce #respond input#submit.alt:disabled, .woocommerce #respond input#submit.alt:disabled:hover, .woocommerce #respond input#submit.alt:disabled[disabled], .woocommerce #respond input#submit.alt:disabled[disabled]:hover, .woocommerce a.button.alt.disabled, .woocommerce #mc_embed_signup a.alt.disabled.button, #mc_embed_signup .woocommerce a.alt.disabled.button, .woocommerce a.button.alt.disabled:hover, .woocommerce #mc_embed_signup a.alt.disabled.button:hover, #mc_embed_signup .woocommerce a.alt.disabled.button:hover, .woocommerce a.button.alt:disabled, .woocommerce #mc_embed_signup a.alt.button:disabled, #mc_embed_signup .woocommerce a.alt.button:disabled, .woocommerce a.button.alt:disabled:hover, .woocommerce #mc_embed_signup a.alt.button:disabled:hover, #mc_embed_signup .woocommerce a.alt.button:disabled:hover, .woocommerce a.button.alt:disabled[disabled], .woocommerce #mc_embed_signup a.alt.button:disabled[disabled], #mc_embed_signup .woocommerce a.alt.button:disabled[disabled], .woocommerce a.button.alt:disabled[disabled]:hover, .woocommerce #mc_embed_signup a.alt.button:disabled[disabled]:hover, #mc_embed_signup .woocommerce a.alt.button:disabled[disabled]:hover, .woocommerce button.button.alt.disabled, .woocommerce #mc_embed_signup button.alt.disabled.button, #mc_embed_signup .woocommerce button.alt.disabled.button, .woocommerce button.button.alt.disabled:hover, .woocommerce #mc_embed_signup button.alt.disabled.button:hover, #mc_embed_signup .woocommerce button.alt.disabled.button:hover, .woocommerce button.button.alt:disabled, .woocommerce #mc_embed_signup button.alt.button:disabled, #mc_embed_signup .woocommerce button.alt.button:disabled, .woocommerce button.button.alt:disabled:hover, .woocommerce #mc_embed_signup button.alt.button:disabled:hover, #mc_embed_signup .woocommerce button.alt.button:disabled:hover, .woocommerce button.button.alt:disabled[disabled], .woocommerce #mc_embed_signup button.alt.button:disabled[disabled], #mc_embed_signup .woocommerce button.alt.button:disabled[disabled], .woocommerce button.button.alt:disabled[disabled]:hover, .woocommerce #mc_embed_signup button.alt.button:disabled[disabled]:hover, #mc_embed_signup .woocommerce button.alt.button:disabled[disabled]:hover, .woocommerce input.button.alt.disabled, .woocommerce #mc_embed_signup input.alt.disabled.button, #mc_embed_signup .woocommerce input.alt.disabled.button, .woocommerce input.button.alt.disabled:hover, .woocommerce #mc_embed_signup input.alt.disabled.button:hover, #mc_embed_signup .woocommerce input.alt.disabled.button:hover, .woocommerce input.button.alt:disabled, .woocommerce #mc_embed_signup input.alt.button:disabled, #mc_embed_signup .woocommerce input.alt.button:disabled, .woocommerce input.button.alt:disabled:hover, .woocommerce #mc_embed_signup input.alt.button:disabled:hover, #mc_embed_signup .woocommerce input.alt.button:disabled:hover, .woocommerce input.button.alt:disabled[disabled], .woocommerce #mc_embed_signup input.alt.button:disabled[disabled], #mc_embed_signup .woocommerce input.alt.button:disabled[disabled], .woocommerce input.button.alt:disabled[disabled]:hover, .woocommerce #mc_embed_signup input.alt.button:disabled[disabled]:hover, #mc_embed_signup .woocommerce input.alt.button:disabled[disabled]:hover {
+.woocommerce #respond input#submit.alt.disabled, .woocommerce #respond input#submit.alt.disabled:hover, .woocommerce #respond input#submit.alt:disabled, .woocommerce #respond input#submit.alt:disabled:hover, .woocommerce #respond input#submit.alt:disabled[disabled], .woocommerce #respond input#submit.alt:disabled[disabled]:hover, .woocommerce a.button.alt.disabled, .woocommerce #mc_embed_signup a.alt.disabled.button, #mc_embed_signup .woocommerce a.alt.disabled.button, .woocommerce a.button.alt.disabled:hover, .woocommerce #mc_embed_signup a.alt.disabled.button:hover, #mc_embed_signup .woocommerce a.alt.disabled.button:hover, .woocommerce a.button.alt:disabled, .woocommerce #mc_embed_signup a.alt.button:disabled, #mc_embed_signup .woocommerce a.alt.button:disabled, .woocommerce a.button.alt:disabled:hover, .woocommerce #mc_embed_signup a.alt.button:disabled:hover, #mc_embed_signup .woocommerce a.alt.button:disabled:hover, .woocommerce a.button.alt:disabled[disabled], .woocommerce #mc_embed_signup a.alt.button:disabled[disabled], #mc_embed_signup .woocommerce a.alt.button:disabled[disabled], .woocommerce a.button.alt:disabled[disabled]:hover, .woocommerce #mc_embed_signup a.alt.button:disabled[disabled]:hover, #mc_embed_signup .woocommerce a.alt.button:disabled[disabled]:hover, .woocommerce button.button.alt.disabled, .woocommerce #mc_embed_signup button.alt.disabled.button, #mc_embed_signup .woocommerce button.alt.disabled.button, .woocommerce button.alt.disabled#load-more, .woocommerce button.alt.disabled#follow-us, .woocommerce button.button.alt.disabled:hover, .woocommerce #mc_embed_signup button.alt.disabled.button:hover, #mc_embed_signup .woocommerce button.alt.disabled.button:hover, .woocommerce button.alt.disabled#load-more:hover, .woocommerce button.alt.disabled#follow-us:hover, .woocommerce button.button.alt:disabled, .woocommerce #mc_embed_signup button.alt.button:disabled, #mc_embed_signup .woocommerce button.alt.button:disabled, .woocommerce button.alt#load-more:disabled, .woocommerce button.alt#follow-us:disabled, .woocommerce button.button.alt:disabled:hover, .woocommerce #mc_embed_signup button.alt.button:disabled:hover, #mc_embed_signup .woocommerce button.alt.button:disabled:hover, .woocommerce button.alt#load-more:disabled:hover, .woocommerce button.alt#follow-us:disabled:hover, .woocommerce button.button.alt:disabled[disabled], .woocommerce #mc_embed_signup button.alt.button:disabled[disabled], #mc_embed_signup .woocommerce button.alt.button:disabled[disabled], .woocommerce button.alt#load-more:disabled[disabled], .woocommerce button.alt#follow-us:disabled[disabled], .woocommerce button.button.alt:disabled[disabled]:hover, .woocommerce #mc_embed_signup button.alt.button:disabled[disabled]:hover, #mc_embed_signup .woocommerce button.alt.button:disabled[disabled]:hover, .woocommerce button.alt#load-more:disabled[disabled]:hover, .woocommerce button.alt#follow-us:disabled[disabled]:hover, .woocommerce input.button.alt.disabled, .woocommerce #mc_embed_signup input.alt.disabled.button, #mc_embed_signup .woocommerce input.alt.disabled.button, .woocommerce input.button.alt.disabled:hover, .woocommerce #mc_embed_signup input.alt.disabled.button:hover, #mc_embed_signup .woocommerce input.alt.disabled.button:hover, .woocommerce input.button.alt:disabled, .woocommerce #mc_embed_signup input.alt.button:disabled, #mc_embed_signup .woocommerce input.alt.button:disabled, .woocommerce input.button.alt:disabled:hover, .woocommerce #mc_embed_signup input.alt.button:disabled:hover, #mc_embed_signup .woocommerce input.alt.button:disabled:hover, .woocommerce input.button.alt:disabled[disabled], .woocommerce #mc_embed_signup input.alt.button:disabled[disabled], #mc_embed_signup .woocommerce input.alt.button:disabled[disabled], .woocommerce input.button.alt:disabled[disabled]:hover, .woocommerce #mc_embed_signup input.alt.button:disabled[disabled]:hover, #mc_embed_signup .woocommerce input.alt.button:disabled[disabled]:hover {
   background-color: #7ac561;
   color: #fffdf0;
 }
 
-.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce #mc_embed_signup a.alt.button, #mc_embed_signup .woocommerce a.alt.button, .woocommerce button.button.alt, .woocommerce #mc_embed_signup button.alt.button, #mc_embed_signup .woocommerce button.alt.button, .woocommerce input.button.alt, .woocommerce #mc_embed_signup input.alt.button, #mc_embed_signup .woocommerce input.alt.button {
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce #mc_embed_signup a.alt.button, #mc_embed_signup .woocommerce a.alt.button, .woocommerce button.button.alt, .woocommerce #mc_embed_signup button.alt.button, #mc_embed_signup .woocommerce button.alt.button, .woocommerce button.alt#load-more, .woocommerce button.alt#follow-us, .woocommerce input.button.alt, .woocommerce #mc_embed_signup input.alt.button, #mc_embed_signup .woocommerce input.alt.button {
   background-color: #7ac561;
   color: #fffdf0;
   line-height: 1.90em;
@@ -565,13 +570,13 @@ article > .content-container {
 }
 
 .content-container {
-  width: 83.05085%;
+  width: 100%;
   float: left;
-  margin-right: 1.69492%;
+  margin-left: 0;
+  margin-right: 0;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
-  padding-top: 3.75em;
 }
 .content-container .entry-content {
   padding-top: 2em;
@@ -585,6 +590,12 @@ article > .content-container {
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
+  margin-top: 2.5em;
+}
+
+.single .page-content p {
+  font-size: 1.5em;
+  line-height: 1.25em;
 }
 
 .content-title {
@@ -627,6 +638,10 @@ section.quotes {
   width: 100%;
 }
 
+.insta-feed .button, .insta-feed .woocommerce .subfooter a.button, .woocommerce .subfooter .insta-feed a.button, .insta-feed #mc_embed_signup .button, #mc_embed_signup .insta-feed .button, .insta-feed button#load-more, .insta-feed button#follow-us {
+  width: auto;
+}
+
 @media (min-width: 800px) {
   .content-area {
     padding-bottom: 0;
@@ -665,6 +680,11 @@ section.quotes {
 }
 @media (min-width: 1260px) {
   .content-container {
+    width: 100%;
+  }
+}
+@media (max-width: 1260px) {
+  .home-item {
     width: 100%;
   }
 }
@@ -793,9 +813,78 @@ input, textarea {
   margin-bottom: 1.75em;
 }
 
-@media (min-width: 1140px) {
-  #map {
-    height: 800px;
+.insta-buttons {
+  width: 79.59184%;
+  float: left;
+  margin-right: 2.04082%;
+  float: none;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+  padding-bottom: 1em;
+  width: 43.5%;
+}
+
+button#load-more {
+  background: #7ac561;
+  padding: 1em 1em;
+  color: #fffdf0;
+  float: left;
+  width: 48.71795%;
+  float: left;
+  margin-right: 2.5641%;
+  width: 35% !important;
+}
+
+button#follow-us {
+  background: #4f80a5;
+  padding: 1em 1em;
+  color: #fffdf0;
+  float: left;
+  width: 48.71795%;
+  float: left;
+  margin-right: 2.5641%;
+  margin-right: 0;
+}
+
+.rules-list {
+  list-style: disc;
+  font-size: 1.125em;
+}
+.rules-list li {
+  list-style: disc;
+  line-height: 2em;
+  list-style-position: inside;
+}
+
+@media (max-width: 500px) {
+  #instafeed {
+    margin-top: 2.5em;
+  }
+  #instafeed a {
+    width: 100%;
+    margin-bottom: 1.875em;
+  }
+  #instafeed a:nth-child(4n) {
+    width: 100%;
+  }
+  #instafeed a img {
+    width: 100%;
+  }
+}
+@media (max-width: 1140px) {
+  .insta-feed {
+    margin-bottom: 2em;
+    float: left;
+  }
+
+  button#load-more {
+    width: 100% !important;
+    margin-bottom: 1.5em;
+  }
+
+  button#follow-us {
+    width: 100% !important;
   }
 }
 .logo {
@@ -825,7 +914,7 @@ input, textarea {
 .mobile-logo {
   display: block;
   float: left;
-  width: 80%;
+  width: 60%;
 }
 .mobile-logo .header-logo {
   width: 12%;
@@ -959,8 +1048,8 @@ input, textarea {
   line-height: 1.25em;
   padding-top: 3em;
   padding-bottom: 1.875em;
-  padding-left: 8.3%;
-  padding-right: 8.3%;
+  padding-left: 7.25%;
+  padding-right: 7.25%;
 }
 .page-header .main-navigation ul.menu > li:hover {
   cursor: default;
@@ -1160,7 +1249,7 @@ input, textarea {
     width: 83% !important;
   }
 }
-@media (min-width: 1140px) and (max-width: 1279px) {
+@media (min-width: 1140px) and (max-width: 1320px) {
   .main-navigation {
     width: 95% !important;
     margin: 0 auto;
@@ -1183,8 +1272,8 @@ input, textarea {
   }
 
   .page-header .main-navigation ul.menu > li {
-    padding-left: 7.5%;
-    padding-right: 7.5%;
+    padding-left: 7%;
+    padding-right: 7%;
   }
 }
 ::-webkit-input-placeholder {
@@ -1256,7 +1345,7 @@ input, textarea {
   display: block;
   height: 0px;
 }
-.footer-signup .button, .footer-signup .woocommerce .subfooter a.button, .woocommerce .subfooter .footer-signup a.button, .footer-signup #mc_embed_signup .button, #mc_embed_signup .footer-signup .button {
+.footer-signup .button, .footer-signup .woocommerce .subfooter a.button, .woocommerce .subfooter .footer-signup a.button, .footer-signup #mc_embed_signup .button, #mc_embed_signup .footer-signup .button, .footer-signup button#load-more, .footer-signup button#follow-us {
   background: #f36c34;
   position: absolute;
   right: -5px;
@@ -1330,10 +1419,10 @@ input, textarea {
   letter-spacing: .05em;
   transition: background-color 100ms ease-in-out;
 }
-.site-footer .button, .site-footer .woocommerce .subfooter a.button, .woocommerce .subfooter .site-footer a.button, .site-footer #mc_embed_signup .button, #mc_embed_signup .site-footer .button {
+.site-footer .button, .site-footer .woocommerce .subfooter a.button, .woocommerce .subfooter .site-footer a.button, .site-footer #mc_embed_signup .button, #mc_embed_signup .site-footer .button, .site-footer button#load-more, .site-footer button#follow-us {
   border: 1px solid #fff;
 }
-.site-footer .button:hover, .site-footer .woocommerce .subfooter a.button:hover, .woocommerce .subfooter .site-footer a.button:hover, .site-footer #mc_embed_signup .button:hover, #mc_embed_signup .site-footer .button:hover {
+.site-footer .button:hover, .site-footer .woocommerce .subfooter a.button:hover, .woocommerce .subfooter .site-footer a.button:hover, .site-footer #mc_embed_signup .button:hover, #mc_embed_signup .site-footer .button:hover, .site-footer button#load-more:hover, .site-footer button#follow-us:hover {
   background-color: #fff;
   color: #382e26 !important;
 }
@@ -1504,6 +1593,75 @@ input, textarea {
     min-height: 270px;
   }
 }
+@media (max-width: 1140px) {
+  .subfooter .subfooter-wrapper {
+    width: 32.20339%;
+    float: right;
+    margin-right: 0;
+    float: none;
+    margin: 0 auto;
+  }
+
+  .site-footer .footer-marker {
+    width: 10.833%;
+  }
+}
+@media (max-width: 1650px) {
+  .footer-signup .container {
+    width: 66.10169%;
+    float: right;
+    margin-right: 0;
+    float: none;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1260px) {
+  .footer-signup p {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+    margin-right: 0px;
+  }
+  .footer-signup #mc_embed_signup {
+    margin: 0 auto;
+    float: none;
+    width: 65%;
+    padding-left: 6%;
+  }
+}
+@media (max-width: 700px) {
+  .footer-signup .container {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+    float: none;
+    margin: 0 auto;
+  }
+  .footer-signup .container #mc_embed_signup {
+    margin: 0 auto;
+    float: none;
+    width: 90%;
+    padding-left: 6%;
+  }
+
+  .site-footer .footer-marker {
+    width: 16.833%;
+  }
+}
+@media (max-width: 560px) {
+  .subfooter .subfooter-wrapper {
+    width: 83.05085%;
+    float: right;
+    margin-right: 0;
+    float: none;
+    margin-right: auto;
+  }
+}
+@media (max-width: 500px) {
+  .site-footer .footer-marker {
+    width: 26.833%;
+  }
+}
 .home-item {
   background: #f04413;
   border-radius: 20px;
@@ -1531,14 +1689,13 @@ input, textarea {
   float: right;
   padding: 0 2.6383%;
   position: relative;
-  min-height: 441px;
 }
 .home-item .button-wrap {
   position: absolute;
   bottom: 2em;
   width: 84.5%;
 }
-.home-item .button, .home-item .woocommerce .subfooter a.button, .woocommerce .subfooter .home-item a.button, .home-item #mc_embed_signup .button, #mc_embed_signup .home-item .button {
+.home-item .button, .home-item .woocommerce .subfooter a.button, .woocommerce .subfooter .home-item a.button, .home-item #mc_embed_signup .button, #mc_embed_signup .home-item .button, .home-item button#load-more, .home-item button#follow-us {
   max-width: 225px;
   margin: 0 auto;
   box-shadow: 0px 2px 1px #0c4e64;
@@ -1576,6 +1733,54 @@ input, textarea {
   background: #134e64;
 }
 
+@media (max-width: 1260px) {
+  .home-item:nth-child(even), .home-item:nth-child(odd) {
+    width: 100%;
+  }
+  .home-item h3 {
+    font-size: 2em;
+  }
+}
+@media (max-width: 900px) {
+  .home-item h3 {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 700px) {
+  .home-item .button-wrap {
+    position: relative;
+    width: 100%;
+    margin: 1.5em 0;
+    bottom: 0;
+  }
+  .home-item .home-content {
+    width: 80%;
+    float: none;
+    padding: 0;
+  }
+  .home-item:nth-child(even) h3, .home-item:nth-child(odd) h3 {
+    font-size: 2em;
+    text-align: center;
+  }
+  .home-item:nth-child(even) .home-content, .home-item:nth-child(odd) .home-content {
+    margin: 0 auto;
+    float: left;
+    padding: 0 10%;
+  }
+  .home-item .home-image {
+    width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  .home-item .home-content:nth-child(even) h3, .home-item .home-content:nth-child(odd) h3 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .home h1.entry-title {
+    font-size: 1.5em;
+  }
+}
 #banner {
   position: relative;
   z-index: 20;
@@ -1621,6 +1826,7 @@ input, textarea {
   max-width: 319px;
   margin-top: 1.15em;
   width: 18.7%;
+  display: none;
 }
 .banner-overlay.page, .banner-overlay-notitle.page {
   margin-top: 16.4%;
@@ -1664,7 +1870,7 @@ input, textarea {
 }
 @media (min-width: 450px) {
   .banner-overlay, .banner-overlay-notitle {
-    margin-top: 16.5%;
+    margin-top: 17.5%;
   }
   .banner-overlay.home .overlay-logo, .banner-overlay-notitle.home .overlay-logo {
     margin-top: 2.555em;
@@ -1690,7 +1896,7 @@ input, textarea {
   }
 
   .banner-overlay-notitle {
-    margin-top: 16% !important;
+    margin-top: 6.5% !important;
   }
   .banner-overlay-notitle .dark {
     display: none;
@@ -1715,6 +1921,9 @@ input, textarea {
   }
   .banner-overlay h2, .banner-overlay h3, .banner-overlay-notitle h2, .banner-overlay-notitle h3 {
     font-size: 5em;
+  }
+  .banner-overlay.home .overlay-logo, .banner-overlay-notitle.home .overlay-logo {
+    display: block;
   }
 
   .banner-overlay.home {
@@ -1933,6 +2142,25 @@ input, textarea {
   padding: 10px;
 }
 
+@media (max-width: 940px) {
+  .bx-wrapper li {
+    background: url(assets/images/bg-quote.png) no-repeat 50% 0;
+  }
+  .bx-wrapper li .slide {
+    width: 100%;
+  }
+  .bx-wrapper li .slide p {
+    font-size: 1.25em;
+    padding: 3em 1em 1em 1em;
+  }
+
+  .bx-controls {
+    position: absolute;
+    bottom: -2em;
+    float: left;
+    width: 100%;
+  }
+}
 .cta-section {
   background: #7ac561;
   transition: all linear 200ms;
@@ -1980,8 +2208,13 @@ input, textarea {
     font-size: 1.675em;
   }
 }
+@media (max-width: 700px) {
+  .cta-section a span {
+    font-size: 1.5em;
+  }
+}
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
-  width: 31.20837298%;
+  width: 31.1535%;
   margin-right: 2.8544%;
   border: 1px solid #f04413;
   border-radius: 10px;
@@ -1998,7 +2231,7 @@ input, textarea {
   padding-left: 1em;
   padding-bottom: 0;
 }
-.woocommerce ul.products li.product .button, .woocommerce ul.products li.product #mc_embed_signup .button, #mc_embed_signup .woocommerce ul.products li.product .button, .woocommerce-page ul.products li.product .button, .woocommerce-page ul.products li.product #mc_embed_signup .button, #mc_embed_signup .woocommerce-page ul.products li.product .button {
+.woocommerce ul.products li.product .button, .woocommerce ul.products li.product #mc_embed_signup .button, #mc_embed_signup .woocommerce ul.products li.product .button, .woocommerce ul.products li.product button#load-more, .woocommerce ul.products li.product button#follow-us, .woocommerce-page ul.products li.product .button, .woocommerce-page ul.products li.product #mc_embed_signup .button, #mc_embed_signup .woocommerce-page ul.products li.product .button, .woocommerce-page ul.products li.product button#load-more, .woocommerce-page ul.products li.product button#follow-us {
   background: transparent;
   font-size: 1em;
   padding-left: 1.5em;
@@ -2017,6 +2250,30 @@ input, textarea {
   padding-top: 3.75em;
 }
 
+@media (max-width: 1040px) {
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    width: 48.97959%;
+    float: left;
+    margin-right: 2.04082%;
+    width: 47.97959%;
+  }
+  .woocommerce ul.products li.product:nth-child(2n), .woocommerce-page ul.products li.product:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 740px) {
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2em;
+  }
+  .woocommerce ul.products li.product h3, .woocommerce-page ul.products li.product h3 {
+    padding-left: .5em;
+  }
+  .woocommerce ul.products li.product .button, .woocommerce ul.products li.product #mc_embed_signup .button, #mc_embed_signup .woocommerce ul.products li.product .button, .woocommerce ul.products li.product button#load-more, .woocommerce ul.products li.product button#follow-us, .woocommerce-page ul.products li.product .button, .woocommerce-page ul.products li.product #mc_embed_signup .button, #mc_embed_signup .woocommerce-page ul.products li.product .button, .woocommerce-page ul.products li.product button#load-more, .woocommerce-page ul.products li.product button#follow-us {
+    padding-left: .5em;
+  }
+}
 .events .event-item-wrapper {
   width: 48.71795%;
   float: left;
@@ -2059,7 +2316,7 @@ input, textarea {
   letter-spacing: normal;
 }
 .events .event-item .event-info {
-  width: 60%;
+  width: 50%;
   float: left;
 }
 .events .event-item .facebook-event {
@@ -2069,6 +2326,32 @@ input, textarea {
   margin-top: 1.75em;
 }
 
+@media (max-width: 1000px) {
+  .events .event-item h3 {
+    line-height: 1em;
+  }
+  .events .event-item .facebook-event {
+    float: left;
+  }
+  .events .event-item .event-info {
+    width: 100%;
+  }
+
+  .events .event-item-wrapper, .events .event-item-wrapper:nth-child(even) {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1.5em;
+  }
+
+  .events .event-item .event-content {
+    padding: 1em;
+  }
+}
+@media (max-width: 600px) {
+  .events .event-item .event-content {
+    padding: .5em;
+  }
+}
 .location-menus > .menu {
   margin-bottom: 3em;
 }
@@ -2092,7 +2375,7 @@ input, textarea {
   font-weight: 600;
   letter-spacing: 1px;
 }
-.location-menus .menu .button, .location-menus .menu .woocommerce .subfooter a.button, .woocommerce .subfooter .location-menus .menu a.button, .location-menus .menu #mc_embed_signup .button, #mc_embed_signup .location-menus .menu .button {
+.location-menus .menu .button, .location-menus .menu .woocommerce .subfooter a.button, .woocommerce .subfooter .location-menus .menu a.button, .location-menus .menu #mc_embed_signup .button, #mc_embed_signup .location-menus .menu .button, .location-menus .menu button#load-more, .location-menus .menu button#follow-us {
   width: 23.07692%;
   float: left;
   margin-right: 2.5641%;
@@ -2100,7 +2383,7 @@ input, textarea {
   background: #7ac561;
   box-shadow: 0px 3px 1px #134e64;
 }
-.location-menus .menu .button span, .location-menus .menu #mc_embed_signup .button span, #mc_embed_signup .location-menus .menu .button span {
+.location-menus .menu .button span, .location-menus .menu #mc_embed_signup .button span, #mc_embed_signup .location-menus .menu .button span, .location-menus .menu button#load-more span, .location-menus .menu button#follow-us span {
   color: #fffdf0;
 }
 .location-menus .menu .menu-buttons {
@@ -2108,19 +2391,43 @@ input, textarea {
   float: left;
   margin-top: 3.75em;
 }
-.location-menus .menu .menu-buttons .button, .location-menus .menu .menu-buttons #mc_embed_signup .button, #mc_embed_signup .location-menus .menu .menu-buttons .button {
+.location-menus .menu .menu-buttons .button, .location-menus .menu .menu-buttons #mc_embed_signup .button, #mc_embed_signup .location-menus .menu .menu-buttons .button, .location-menus .menu .menu-buttons button#load-more, .location-menus .menu .menu-buttons button#follow-us {
   width: 23.07692%;
   float: left;
   margin-right: 2.5641%;
   background: #2394be;
 }
-.location-menus .menu .menu-buttons .button span, .location-menus .menu .menu-buttons #mc_embed_signup .button span, #mc_embed_signup .location-menus .menu .menu-buttons .button span {
+.location-menus .menu .menu-buttons .button span, .location-menus .menu .menu-buttons #mc_embed_signup .button span, #mc_embed_signup .location-menus .menu .menu-buttons .button span, .location-menus .menu .menu-buttons button#load-more span, .location-menus .menu .menu-buttons button#follow-us span {
   color: #fffdf0;
 }
-.location-menus .menu .menu-buttons .button:last-child, .location-menus .menu .menu-buttons #mc_embed_signup .button:last-child, #mc_embed_signup .location-menus .menu .menu-buttons .button:last-child {
+.location-menus .menu .menu-buttons .button:last-child, .location-menus .menu .menu-buttons #mc_embed_signup .button:last-child, #mc_embed_signup .location-menus .menu .menu-buttons .button:last-child, .location-menus .menu .menu-buttons button#load-more:last-child, .location-menus .menu .menu-buttons button#follow-us:last-child {
   margin-right: 0;
 }
 
+@media (max-width: 1140px) {
+  .location-menus .menu h4 {
+    line-height: 1em;
+    margin-bottom: .5em;
+  }
+  .location-menus .menu span.number {
+    width: 100%;
+    display: block;
+  }
+  .location-menus .menu .menu-buttons {
+    margin-top: 2em;
+  }
+  .location-menus .menu .menu-buttons .button, .location-menus .menu .menu-buttons #mc_embed_signup .button, #mc_embed_signup .location-menus .menu .menu-buttons .button, .location-menus .menu .menu-buttons button#load-more, .location-menus .menu .menu-buttons button#follow-us {
+    width: 100%;
+    margin-bottom: 1.5em;
+  }
+  .location-menus .menu .button, .location-menus .menu .woocommerce .subfooter a.button, .woocommerce .subfooter .location-menus .menu a.button, .location-menus .menu #mc_embed_signup .button, #mc_embed_signup .location-menus .menu .button, .location-menus .menu button#load-more, .location-menus .menu button#follow-us {
+    width: 100%;
+  }
+  .location-menus .menu .menu-content {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+}
 .locations .location-item {
   overflow: hidden;
   *zoom: 1;
@@ -2167,11 +2474,11 @@ input, textarea {
   font-weight: 600;
   margin-bottom: 0;
 }
-.locations .location-item .location-hours .button, .locations .location-item .location-hours #mc_embed_signup .button, #mc_embed_signup .locations .location-item .location-hours .button {
+.locations .location-item .location-hours .button, .locations .location-item .location-hours #mc_embed_signup .button, #mc_embed_signup .locations .location-item .location-hours .button, .locations .location-item .location-hours button#load-more, .locations .location-item .location-hours button#follow-us {
   background: #7ac561;
   margin-top: 2.65em;
   box-shadow: 0px 3px 1px #134e64;
 }
-.locations .location-item .location-hours .button span, .locations .location-item .location-hours #mc_embed_signup .button span, #mc_embed_signup .locations .location-item .location-hours .button span {
+.locations .location-item .location-hours .button span, .locations .location-item .location-hours #mc_embed_signup .button span, #mc_embed_signup .locations .location-item .location-hours .button span, .locations .location-item .location-hours button#load-more span, .locations .location-item .location-hours button#follow-us span {
   color: #fffdf0;
 }

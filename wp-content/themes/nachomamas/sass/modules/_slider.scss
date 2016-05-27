@@ -222,3 +222,23 @@
 	font-size: .85em;
 	padding: 10px;
 }
+
+
+@media (max-width: 940px){
+	.bx-wrapper li{
+		background: url(assets/images/bg-quote.png) no-repeat 50% 0;
+	.slide{
+		width: 100%;
+		p{
+			font-size: 1.25em;
+			padding: 3em 1em 1em 1em;
+		}
+	}
+	}
+	.bx-controls{
+		position: absolute;
+		bottom: -2em;
+		float: left;
+		width: 100%;
+	}
+}

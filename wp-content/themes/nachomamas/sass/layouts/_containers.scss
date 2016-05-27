@@ -29,10 +29,9 @@ article > .content-container{
 }
 
 .content-container{
-  @include span(10 of 12);
+  @include span(12 of 12);
   margin: 0 auto;
   @include clearfix;
-  padding-top: 3.75em;
 
   .entry-content{
     padding-top: 2em;
@@ -44,6 +43,16 @@ article > .content-container{
   float: none;
   margin: 0 auto;
   @include clearfix;
+  margin-top: 2.5em;
+}
+
+.single{
+  .page-content{
+    p{
+      font-size: 1.5em;
+      line-height: 1.25em;
+    }
+  }
 }
 
 .content-title{
@@ -85,9 +94,12 @@ section.quotes{
   }
 }
 
-@media (min-width: 450px){
-
+.insta-feed{
+  .button{
+    width: auto;
+  }
 }
+
 @media (min-width: 800px){
 
   .content-area{
@@ -118,6 +130,12 @@ section.quotes{
 
 @media (min-width: 1260px){
   .content-container{
+    width: 100%;
+  }
+}
+
+@media (max-width: 1260px){
+  .home-item{
     width: 100%;
   }
 }

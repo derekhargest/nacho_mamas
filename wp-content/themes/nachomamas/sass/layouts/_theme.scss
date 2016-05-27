@@ -102,13 +102,75 @@ input, textarea{
 	margin-bottom: 1.75em;
 }
 
-@media (min-width: 1140px){
+.insta-buttons{
+	@include span(8 of 10);
+	float: none;
+	margin: 0 auto;
+	@include clearfix;
+	padding-bottom: 1em;
+	width: 43.5%;
+}
 
-	.entry-content{
 
+button#load-more{
+  @extend .button;
+  background: $c-green;
+  padding: 1em 1em;
+  color: $c-white;
+	float: left;
+	@include span(4 of 8);
+	width: 35% !important;
+}
+
+button#follow-us{
+  @extend .button;
+  background: #4f80a5;
+  padding: 1em 1em;
+  color: $c-white;
+	float: left;
+	@include span(4 of 8);
+	margin-right: 0;
+}
+
+.rules-list{
+	list-style: disc;
+	font-size: 1.125em;
+	li{
+		list-style: disc;
+		line-height: 2em;
+		list-style-position: inside;
+	}
+}
+
+
+@media (max-width: 500px){
+  #instafeed{
+    margin-top: 2.5em;
+
+     a{
+      width: 100%;
+      margin-bottom: 1.875em;
+      &:nth-child(4n){
+        width: 100%;
+      }
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1140px){
+	.insta-feed{
+		margin-bottom: 2em;
+		float: left;
+	}
+	button#load-more{
+	  width: 100% !important;
+		margin-bottom: 1.5em;
 	}
 
-	#map{
-		height: 800px;
+	button#follow-us{
+		width: 100% !important;
 	}
 }

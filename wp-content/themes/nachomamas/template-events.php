@@ -18,18 +18,15 @@ get_header(); ?>
 
 		<?php get_template_part( 'template-parts/cta-link' ); ?>
 
-		<?php
-
-		while ( have_posts() ) : the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-		endwhile;
-		?>
-
     <div class="content-container">
       <div class="page-content">
+				<div class="content-title">
+					<header class="entry-header">
+						<h1 class="entry-title"><?php the_title(); ?></h1>
+					</header><!-- .entry-header -->
+				</div>
 				<div class="events">
+					<div class="page-content">
 
 					<?php
       $args = array('post_type' => 'events');
@@ -58,6 +55,7 @@ get_header(); ?>
 					</div>
 
 					<?php endwhile;?>
+				</div>
 
 				</div>
 

@@ -46,3 +46,30 @@
     }
   }
 }
+
+@media (max-width: 1140px){
+  .location-menus .menu{
+    h4{
+      line-height: 1em;
+      margin-bottom: .5em;
+    }
+    span.number{
+      width: 100%;
+      display: block;
+    }
+    .menu-buttons{
+      margin-top: 2em;
+      .button{
+          width: 100%;
+          margin-bottom: 1.5em;
+      }
+    }
+    .button{
+      width: 100%;
+    }
+    .menu-content{
+      width: 100%;
+      margin-bottom: 1em;
+    }
+  }
+}

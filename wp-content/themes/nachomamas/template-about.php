@@ -64,23 +64,7 @@ get_header(); ?>
 
 				</div>
 
-        <div class="content-title">
-
-          <header class="entry-header">
-
-            <h1 class="entry-title">
-
-              Word On the Street
-
-            </h1>
-
-          </header>
-
-        </div>
-
         <div class="page-content">
-
-          <p><?php the_field('secondary_content'); ?></p>
 
           <section class="quotes">
             <header class="entry-header">
@@ -113,8 +97,11 @@ get_header(); ?>
             <div id="instafeed">
 
             </div>
-            <button id="load-more">Load More</button>
-          </section>
+						<div class="insta-buttons">
+            <button id="load-more">Load More...</button>
+						<button id="follow-us"><i class="fa fa-instagram" aria-hidden="true"></i> Follow Us on Instagram</button>
+						</div>
+					</section>
 
         </div>
 

@@ -15,11 +15,7 @@ get_header(); ?>
 
 		<div id="content-block">
 
-			<div class="cta-section">
-
-				<a href="http://www.opentable.com/single.aspx?rid=212593&restref=212593"><span>Make Reservations Today</span></a>
-
-			</div>
+		<?php get_template_part( 'template-parts/cta-link' ); ?>
 
 			<div class="container">
 

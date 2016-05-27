@@ -34,8 +34,7 @@ get_header(); ?>
       	<div class="menu">
 					<h4>Canton Menus</h4>
 					<div class="menu-content">
-
-						<p>For Carryout Call: 410-324-2922</p>
+						<p>For Carryout Call: <span class="number">410-324-2922</span></p>
 					</div>
 					<a href="#" class="button"><span>Order Online</span></a>
 					<div class="menu-buttons">
@@ -49,7 +48,7 @@ get_header(); ?>
 					<h4>Towson Menus</h4>
 					<div class="menu-content">
 
-						<p>For Carryout Call: 410-324-2922</p>
+						<p>For Carryout Call: <span class="number">410-324-2922</span></p>
 					</div>
 					<a href="#" class="button"><span>Order Online</span></a>
 					<div class="menu-buttons">

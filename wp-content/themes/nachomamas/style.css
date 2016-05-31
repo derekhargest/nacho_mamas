@@ -613,7 +613,6 @@ article > .content-container, .single-product .content-container {
 
 .site-main {
   background: #fffdf0;
-  padding-bottom: 7.5em;
 }
 
 section.quotes {
@@ -1370,7 +1369,7 @@ button#follow-us {
 }
 .footer-signup #mc_embed_signup {
   float: left;
-  width: 44%;
+  width: 55%;
   height: 2.375em;
 }
 .footer-signup .mc-field-group {
@@ -1618,6 +1617,11 @@ button#follow-us {
     margin-right: 0;
     float: none;
     margin: 0 auto;
+  }
+}
+@media (max-width: 1501px) {
+  .footer-signup #mc_embed_signup {
+    width: 44%;
   }
 }
 @media (max-width: 1260px) {
@@ -2079,7 +2083,7 @@ button#follow-us {
   width: 22px;
   height: 60px;
   text-indent: -9999px;
-  z-index: 9999;
+  z-index: 20;
 }
 
 .bx-wrapper .bx-controls-direction a.disabled {

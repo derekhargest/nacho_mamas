@@ -12,10 +12,10 @@
 		<div class="banner main-banner">
 				<img src="<?php echo esc_url( get_template_directory_uri() ) ?>/assets/images/default-banner.jpg" alt="<?php the_title(); ?> Banner" title="<?php the_title(); ?> Banner" />
 		</div>
-	</div>
-
-	<div class="banner-overlay page">
-		<h3>Share The Love</h3>
+		
+		<div class="banner-overlay page">
+			<h3>Share The Love</h3>
+		</div>
 	</div>
 
 <?php endif; ?>

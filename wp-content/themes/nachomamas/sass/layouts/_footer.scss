@@ -82,7 +82,7 @@
   }
   #mc_embed_signup{
     float: left;
-    width: 44%;
+    width: 55%;
     height: 2.375em;
   }
   .mc-field-group{
@@ -332,6 +332,12 @@
     @include span(8 of 12 last);
     float: none;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 1501px){
+  .footer-signup #mc_embed_signup{
+    width: 44%;
   }
 }
 

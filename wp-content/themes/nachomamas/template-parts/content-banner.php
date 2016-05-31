@@ -4,7 +4,7 @@
 		<div class="banner main-banner">
 				<img src="<?php the_field('page_main_banner'); ?>" alt="<?php the_title(); ?> Banner" title="<?php the_title(); ?> Banner" />
 		</div>
-	</div>
+
 
 	<?php if ( is_front_page() ) : ?>
 		<div class="banner-overlay home">
@@ -17,6 +17,7 @@
 		<div class="banner-overlay page">
 			<h3><?php the_field('headline_title'); ?></h3>
 		</div>
+		</div>
 	<?php endif; ?>
 
 <?php else:?>
@@ -25,10 +26,12 @@
 		<div class="banner main-banner">
 				<img src="<?php echo esc_url( get_template_directory_uri() ) ?>/assets/images/default-banner.jpg" alt="<?php the_title(); ?> Banner" title="<?php the_title(); ?> Banner" />
 		</div>
-	</div>
+
 
 	<div class="banner-overlay page">
 		<h3><?php the_field('headline_title'); ?></h3>
+	</div>
+
 	</div>
 
 <?php endif; ?>

@@ -284,6 +284,7 @@ small {
   font-weight: 600;
   font-size: 1.75em;
   text-align: center;
+  margin-top: 1em;
 }
 .woocommerce #content .entry-summary .quantity .qty {
   border: 1px solid #134e64;
@@ -292,6 +293,14 @@ small {
 }
 .woocommerce #content .entry-summary .product_meta {
   display: none;
+}
+
+.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce #mc_embed_signup a.alt.button:hover, #mc_embed_signup .woocommerce a.alt.button:hover, .woocommerce button.button.alt:hover, .woocommerce #mc_embed_signup button.alt.button:hover, #mc_embed_signup .woocommerce button.alt.button:hover, .woocommerce button.alt#load-more:hover, .woocommerce button.alt#follow-us:hover, .woocommerce input.button.alt:hover, .woocommerce #mc_embed_signup input.alt.button:hover, #mc_embed_signup .woocommerce input.alt.button:hover {
+  background-color: #7ac561;
+}
+
+.woocommerce div.product .product_title {
+  line-height: 1em;
 }
 
 .slicknav_btn {
@@ -550,7 +559,7 @@ small {
   padding-top: 1.25em;
 }
 
-article > .content-container {
+article > .content-container, .single-product .content-container {
   padding-top: 2.5em;
 }
 
@@ -752,10 +761,6 @@ input, textarea {
 .content-area {
   overflow: hidden;
   *zoom: 1;
-}
-
-#map {
-  height: 500px;
 }
 
 #sidebar {
@@ -1809,7 +1814,7 @@ button#follow-us {
   z-index: 25;
   background-attachment: fixed;
   position: absolute;
-  margin-top: 17%;
+  top: 65%;
 }
 .banner-overlay h2, .banner-overlay h3, .banner-overlay-notitle h2, .banner-overlay-notitle h3 {
   font-family: "Walter Turncoat", cursive;
@@ -1843,7 +1848,7 @@ button#follow-us {
   z-index: 25;
   background-attachment: fixed;
   position: absolute;
-  margin-top: 6%;
+  top: 2.75%;
 }
 
 .banner-overlay-notitle .dark {
@@ -1896,18 +1901,9 @@ button#follow-us {
     display: block;
   }
 }
-@media (max-width: 400px) {
-  .banner-overlay h3, .banner-overlay-notitle h3 {
-    font-size: 1.5em;
-  }
-}
 @media (max-width: 699px) {
   #content-block {
     margin-top: 0em !important;
-  }
-
-  .banner-overlay, .banner-overlay-notitle {
-    margin-top: 9%;
   }
 }
 @media (min-width: 1140px) {
@@ -1922,18 +1918,27 @@ button#follow-us {
     margin-bottom: 2em;
   }
 }
-.banner-overlay.home, .banner-overlay-notitle {
-  margin-top: 5%;
-}
-
 @media (max-width: 1140px) {
-  .banner-overlay.home, .banner-overlay-notitle {
-    margin-top: 22%;
+  .banner-overlay.home {
+    top: 10%;
   }
 }
 @media (max-width: 700px) {
   .banner-overlay.page h3 {
     font-size: 1.5em;
+  }
+
+  .banner-overlay.home {
+    top: 5.5%;
+  }
+}
+@media (max-width: 400px) {
+  .banner-overlay h3, .banner-overlay-notitle h3 {
+    font-size: 1.5em;
+  }
+
+  .banner-overlay.home {
+    top: 3.5%;
   }
 }
 /**
@@ -2245,6 +2250,9 @@ button#follow-us {
 .woocommerce ul.products li.product img, .woocommerce-page ul.products li.product img {
   border-bottom: 1px solid #f04413;
 }
+.woocommerce ul.products li.product a.button, .woocommerce ul.products li.product #mc_embed_signup a.button, #mc_embed_signup .woocommerce ul.products li.product a.button, .woocommerce-page ul.products li.product a.button, .woocommerce-page ul.products li.product #mc_embed_signup a.button, #mc_embed_signup .woocommerce-page ul.products li.product a.button {
+  color: #134e64;
+}
 
 .shop-container {
   width: 74.39716312%;
@@ -2445,11 +2453,14 @@ button#follow-us {
   width: 35.89744%;
   float: left;
   margin-right: 2.5641%;
+  margin-right: 5.1282%;
+}
+.locations .location-item .location-map #map, .locations .location-item .location-map #map2 {
+  min-height: 240px;
 }
 .locations .location-item .location-content {
-  width: 35.89744%;
+  width: 33.3334%;
   float: left;
-  margin-right: 2.5641%;
 }
 .locations .location-item .location-content h3 {
   font-weight: 900;
@@ -2458,6 +2469,10 @@ button#follow-us {
   margin-bottom: .75em;
 }
 .locations .location-item .location-content p, .locations .location-item .location-content address {
+  font-size: 1em;
+  font-weight: 600;
+}
+.locations .location-item .location-content a {
   font-size: 1em;
   font-weight: 600;
 }
@@ -2484,4 +2499,28 @@ button#follow-us {
 }
 .locations .location-item .location-hours .button span, .locations .location-item .location-hours #mc_embed_signup .button span, #mc_embed_signup .locations .location-item .location-hours .button span, .locations .location-item .location-hours button#load-more span, .locations .location-item .location-hours button#follow-us span {
   color: #fffdf0;
+}
+
+@media (max-width: 1050px) {
+  .locations .location-item .location-map {
+    width: 100%;
+    margin-right: 0;
+  }
+  .locations .location-item .location-map #map, .locations .location-item .location-map #map2 {
+    margin: 0 auto;
+    float: none;
+    display: block;
+  }
+  .locations .location-item .location-content, .locations .location-item .location-hours {
+    margin: 0 auto;
+    margin-top: 2em;
+    width: 100%;
+  }
+  .locations .location-item .location-content h3, .locations .location-item .location-content address, .locations .location-item .location-content p, .locations .location-item .location-content h4, .locations .location-item .location-content a, .locations .location-item .location-hours h3, .locations .location-item .location-hours address, .locations .location-item .location-hours p, .locations .location-item .location-hours h4, .locations .location-item .location-hours a {
+    text-align: center;
+  }
+  .locations .location-item .location-content a, .locations .location-item .location-hours a {
+    width: 100%;
+    display: block;
+  }
 }

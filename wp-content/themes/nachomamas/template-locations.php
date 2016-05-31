@@ -33,7 +33,7 @@ get_header(); ?>
       <div class="locations">
 				<div class="location-item">
 					<div class="location-map">
-						Map
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d772.0921266604076!2d-76.57563247255753!3d39.27989263191174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c8038ba65deadd%3A0xc3690a9bd071fb69!2sNacho+Mama&#39;s!5e0!3m2!1sen!2sus!4v1464710822019" id="map" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</div>
 					<div class="location-content">
 						<h3>Canton</h3>
@@ -53,7 +53,7 @@ get_header(); ?>
 				</div>
 				<div class="location-item last">
 					<div class="location-map">
-						Map
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3083.0359959948782!2d-76.60490268463471!3d39.400691679496184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c80faf04f0f349%3A0x16b9ec6c193a31e5!2s2+W+Pennsylvania+Ave%2C+Towson%2C+MD+21204!5e0!3m2!1sen!2sus!4v1464711265961" id="map2" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</div>
 					<div class="location-content">
 						<h3>Towson</h3>
@@ -166,5 +166,14 @@ get_header(); ?>
 		<?php endif; ?>
 
 	</div>
+
+	<script>
+
+jQuery(document).ready(function($){
+   $('iframe#map').attr("src", $('iframe#map').attr('src').replace("http:","https:") );
+	 $('iframe#map2').attr("src", $('iframe#map2').attr('src').replace("http:","https:") );
+});
+
+	</script>
 
 <?php get_footer(); ?>

@@ -17,6 +17,7 @@
     font-weight: 600;
     font-size: 1.75em;
     text-align: center;
+    margin-top: 1em;
   }
   .quantity{
     .qty{
@@ -29,4 +30,12 @@
     display: none;
   }
 }
+}
+
+.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover{
+  background-color: $c-green;
+}
+
+.woocommerce div.product .product_title{
+  line-height: 1em;
 }

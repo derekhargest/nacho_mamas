@@ -36,6 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 	<div class="content-container">
+		<div class="page-content">
 
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -82,5 +83,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />
 </div>
 </div><!-- #product-<?php the_ID(); ?> -->
+</div>
 
 <?php // do_action( 'woocommerce_after_single_product' ); ?>

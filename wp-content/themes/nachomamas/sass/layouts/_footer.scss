@@ -334,6 +334,11 @@
     margin: 0 auto;
   }
 }
+@media (min-width: 1650px){
+  .container{
+    width: 60%;
+  }
+}
 
 @media (max-width: 1501px){
   .footer-signup #mc_embed_signup{

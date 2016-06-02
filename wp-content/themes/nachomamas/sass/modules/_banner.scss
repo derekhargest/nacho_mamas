@@ -25,8 +25,6 @@
   width: 100%;
   z-index: 25;
 	background-attachment: fixed;
-	position: absolute;
-	top: 65%;
   h2, h3{
     font-family: $font-stack-heading;
     color: $c-white;
@@ -57,11 +55,14 @@
 	}
 }
 
+.banner-overlay.page{
+	padding-bottom: 0px !important;
+}
+
 .banner-overlay.home, .banner-overlay-notitle{
   width: 100%;
   z-index: 25;
 	background-attachment: fixed;
-	position: absolute;
 	top: 2.75%;
 }
 
@@ -79,7 +80,14 @@
 }
 
 .banner.main-banner{
-  position: relative;
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+	img.banner-image{
+		position: absolute;
+		top: 0px;
+		width: 100%;
+	}
 }
 
 @media ( min-width: 703px ) and (max-width: 1140px ){
@@ -93,7 +101,7 @@
 @media (min-width: 450px){
   .banner-overlay, .banner-overlay-notitle{
     &.home .overlay-logo{
-      margin-top: 2.555em;
+      margin-top: 5.555em;
     }
     h2,h3{
       font-size: 2em;
@@ -109,9 +117,6 @@
 }
 
 @media (min-width: 700px){
-  .banner-overlay, .banner-overlay-notitle{
-    position: absolute;
-  }
   #content-block{
     margin-top: 0;
   }
@@ -141,8 +146,16 @@
 		}
   }
 
-  .banner-overlay.home{
+	.banner-overlay.page{
+		h3{
+			padding: 2em 0;
+		}
+		img{
+			height: auto !important;
+		}
+	}
 
+  .banner-overlay.home{
     .overlay-logo{
       margin-bottom: 2em;
     }
@@ -151,9 +164,10 @@
 
 
 @media (max-width: 1140px){
-	.banner-overlay.home{
-		top: 10%;
-	}
+	  .banner-overlay, .banner-overlay-notitle{
+			h2, h3{
+			}
+		}
 }
 
 @media (max-width: 700px){
@@ -161,15 +175,33 @@
 		font-size: 1.5em;
 	}
 	.banner-overlay.home{
-		top: 5.5%;
+		h3{
+			font-size: 2.5em;
+		}
+	}
+	.banner-overlay.page, .banner-overlay.home{
+		padding-top: 0px !important;
+
 	}
 }
 
+@media (max-width: 500px){
+	.banner-overlay.home{
+		h3{
+			font-size: 1.5em;
+		}
+	}
+}
 @media (max-width: 400px){
 	.banner-overlay h3, .banner-overlay-notitle h3{
 		font-size: 1.5em;
 	}
 	.banner-overlay.home{
-		top: 3.5%;
+	}
+}
+
+@media (max-width: 1400px){
+	.banner-overlay h3{
+		font-size: 4em;
 	}
 }

@@ -27,6 +27,7 @@ get_header(); ?>
       <?php get_template_part( 'template-parts/content-banner-shop' ); ?>
 
   	<div id="content-block">
+			<?php // get_template_part( 'template-parts/cta-link' ); ?>
       <div class="container page">
 
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>

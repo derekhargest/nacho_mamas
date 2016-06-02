@@ -556,7 +556,7 @@ small {
   clear: both;
 }
 .container.page {
-  padding-top: 1.25em;
+  padding-top: 3em;
 }
 
 article > .content-container, .single-product .content-container {
@@ -921,7 +921,7 @@ button#follow-us {
   width: 60%;
 }
 .mobile-logo .header-logo {
-  width: 12%;
+  width: 30%;
   padding-top: 1em;
   padding-bottom: 1em;
 }
@@ -1228,6 +1228,18 @@ button#follow-us {
   .logo {
     padding-left: 4.4%;
     padding-right: 5.555%;
+  }
+}
+@media (max-width: 700px) {
+  .site-header-main {
+    position: relative;
+    background: #2394be;
+  }
+
+  .mobile-logo .header-logo {
+    width: 50%;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
   }
 }
 @media (min-width: 1140px) and (max-width: 1491px) {
@@ -1619,6 +1631,11 @@ button#follow-us {
     margin: 0 auto;
   }
 }
+@media (min-width: 1650px) {
+  .container {
+    width: 60%;
+  }
+}
 @media (max-width: 1501px) {
   .footer-signup #mc_embed_signup {
     width: 44%;
@@ -1817,8 +1834,6 @@ button#follow-us {
   width: 100%;
   z-index: 25;
   background-attachment: fixed;
-  position: absolute;
-  top: 65%;
 }
 .banner-overlay h2, .banner-overlay h3, .banner-overlay-notitle h2, .banner-overlay-notitle h3 {
   font-family: "Walter Turncoat", cursive;
@@ -1847,11 +1862,14 @@ button#follow-us {
   font-size: 3em;
 }
 
+.banner-overlay.page {
+  padding-bottom: 0px !important;
+}
+
 .banner-overlay.home, .banner-overlay-notitle {
   width: 100%;
   z-index: 25;
   background-attachment: fixed;
-  position: absolute;
   top: 2.75%;
 }
 
@@ -1866,7 +1884,14 @@ button#follow-us {
 }
 
 .banner.main-banner {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.banner.main-banner img.banner-image {
+  position: absolute;
+  top: 0px;
+  width: 100%;
 }
 
 @media (min-width: 703px) and (max-width: 1140px) {
@@ -1876,7 +1901,7 @@ button#follow-us {
 }
 @media (min-width: 450px) {
   .banner-overlay.home .overlay-logo, .banner-overlay-notitle.home .overlay-logo {
-    margin-top: 2.555em;
+    margin-top: 5.555em;
   }
   .banner-overlay h2, .banner-overlay h3, .banner-overlay-notitle h2, .banner-overlay-notitle h3 {
     font-size: 2em;
@@ -1890,10 +1915,6 @@ button#follow-us {
 }
 
 @media (min-width: 700px) {
-  .banner-overlay, .banner-overlay-notitle {
-    position: absolute;
-  }
-
   #content-block {
     margin-top: 0;
   }
@@ -1918,13 +1939,15 @@ button#follow-us {
     display: block;
   }
 
+  .banner-overlay.page h3 {
+    padding: 2em 0;
+  }
+  .banner-overlay.page img {
+    height: auto !important;
+  }
+
   .banner-overlay.home .overlay-logo {
     margin-bottom: 2em;
-  }
-}
-@media (max-width: 1140px) {
-  .banner-overlay.home {
-    top: 10%;
   }
 }
 @media (max-width: 700px) {
@@ -1932,17 +1955,27 @@ button#follow-us {
     font-size: 1.5em;
   }
 
-  .banner-overlay.home {
-    top: 5.5%;
+  .banner-overlay.home h3 {
+    font-size: 2.5em;
+  }
+
+  .banner-overlay.page, .banner-overlay.home {
+    padding-top: 0px !important;
+  }
+}
+@media (max-width: 500px) {
+  .banner-overlay.home h3 {
+    font-size: 1.5em;
   }
 }
 @media (max-width: 400px) {
   .banner-overlay h3, .banner-overlay-notitle h3 {
     font-size: 1.5em;
   }
-
-  .banner-overlay.home {
-    top: 3.5%;
+}
+@media (max-width: 1400px) {
+  .banner-overlay h3 {
+    font-size: 4em;
   }
 }
 /**
@@ -2177,6 +2210,8 @@ button#follow-us {
   background: #7ac561;
   transition: all linear 200ms;
   box-shadow: 0px 3px 2px #225f0d;
+  width: 100%;
+  float: left;
 }
 .cta-section:hover {
   background: #4a8c34;

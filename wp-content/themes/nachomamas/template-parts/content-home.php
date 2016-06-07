@@ -9,27 +9,25 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 	<div class="content-container">
+
 		<div class="content-title">
+
 			<header class="entry-header">
+
         <h1 class="entry-title">A true Baltimore institution</h1>
-			</header><!-- .entry-header -->
+
+			</header>
+
 		</div>
 
-
-
 		<div class="home-content">
-			<?php
-			// the_content();
-
-
-
-			?>
 
 			<?php get_template_part( 'template-parts/homepage-items' ); ?>
 
-		</div><!-- .entry-content -->
+		</div>
 
 	</div>
 
-</article><!-- #post-## -->
+</article>

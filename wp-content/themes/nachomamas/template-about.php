@@ -28,12 +28,15 @@ get_header(); ?>
 		?>
 
     <div class="content-container">
+
       <div class="page-content">
 
         <img src="<?php echo esc_url( get_template_directory_uri() ) ?>/assets/images/scunny-pics.png" alt="Scunny Pics" />
 
       </div>
+
     </div>
+
 	</main>
 
 </div>
@@ -67,6 +70,7 @@ get_header(); ?>
         <div class="page-content">
 
           <section class="quotes">
+
             <header class="entry-header">
 
   						<h1 class="entry-title">
@@ -78,14 +82,18 @@ get_header(); ?>
   					</header>
 
             <ul class="bxslider">
-              <li><div class="slide"><p>On a recent steaming hot evening, nothing appealed to the stomach more than Mexican food-a pitcher or two of margaritas, some healthy sweat-production from fresh, peppery, simply composed food. I didn’t want to think about food so much as consume it, and a casual, come-as-you-are joint felt ideal.</p><span>- City Paper</span></div></li>
-              <li><div class="slide"><p>On a recent steaming hot evening, nothing appealed to the stomach more than Mexican food-a pitcher or two of margaritas, some healthy sweat-production from fresh, peppery, simply composed food. I didn’t want to think about food so much as consume it, and a casual, come-as-you-are joint felt ideal.</p><span>- City Paper</span></div></li>
-            </ul>
+
+							<li><div class="slide"><p>On a recent steaming hot evening, nothing appealed to the stomach more than Mexican food-a pitcher or two of margaritas, some healthy sweat-production from fresh, peppery, simply composed food. I didn’t want to think about food so much as consume it, and a casual, come-as-you-are joint felt ideal.</p><span>- City Paper</span></div></li>
+
+							<li><div class="slide"><p>Elvis lives on in the spirit of this quirky Canton hangout. This tiny Mexican eatery is a shrine to things gone but not forgotten–the Colts, Baltimore-brewed National Bohemian beer, a winning Orioles team and, of course, Elvis. A nearly life-sized statue of the King greets customers at the door</p><span>- City Search</span></div></li>
+
+						</ul>
 
           </section>
 
           <section class="insta-feed">
-            <header class="entry-header">
+
+						<header class="entry-header">
 
               <h1 class="entry-title">
 
@@ -94,13 +102,19 @@ get_header(); ?>
               </h1>
 
             </header>
-            <div id="instafeed">
+
+						<div id="instafeed">
 
             </div>
+
 						<div class="insta-buttons">
-            <button id="load-more">Load More...</button>
-						<button id="follow-us"><i class="fa fa-instagram" aria-hidden="true"></i> Follow Us on Instagram</button>
+
+							<button id="load-more">Load More...</button>
+
+							<button id="follow-us"><i class="fa fa-instagram" aria-hidden="true"></i> Follow Us on Instagram</button>
+
 						</div>
+
 					</section>
 
         </div>

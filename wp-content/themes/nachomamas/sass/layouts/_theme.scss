@@ -138,6 +138,25 @@ button#follow-us{
 	}
 }
 
+nav.prev-next-posts{
+	width: 100%;
+	float: left;
+	padding-bottom: 1em;
+}
+
+.prev-posts-link a, .next-posts-link a{
+	@extend .button;
+	background: $c-green;
+	width: 48.71795%;
+	padding: 1em 0;
+	color: $c-white;
+	font-size: 1.25em;
+}
+
+.next-posts-link a{
+	float: right;
+}
+
 
 @media (max-width: 500px){
   #instafeed{

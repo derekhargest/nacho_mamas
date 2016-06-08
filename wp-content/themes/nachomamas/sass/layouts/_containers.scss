@@ -5,6 +5,10 @@ $susy: (
   gutters: .25,
 );
 
+#main{
+	@include clearfix;
+}
+
 .container{
 	@include container(1410px);
 	@include clearfix;

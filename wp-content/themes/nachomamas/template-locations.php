@@ -41,14 +41,14 @@ get_header(); ?>
 							 Baltimore, MD 21224<br /></address>
 								<p>T: 410-675-0898</p>
 								<p>Carryout: 410-342-2922</p>
-								<a href="#">Get Directions</a>
+								<a href="https://goo.gl/maps/4pnTeAN4dE32">Get Directions</a>
 
 					</div>
 					<div class="location-hours">
 						<h4>Hours</h4>
 						<p>Mon-Sat 11AM-2AM</p>
 						<p>Sunday Brunch 9AM-2PM</p>
-						<a href="" class="button"><span>Order Online</span></a>
+						<a href="https://webordering.rmwservices.com/v19.0.WebUI/restaurants.aspx?wci=NachoMama" class="button"><span>Order Online</span></a>
 					</div>
 				</div>
 				<div class="location-item last">
@@ -61,14 +61,14 @@ get_header(); ?>
 							 Towson, MD 21224<br /></address>
 								<p>T: 410-675-0898</p>
 								<p>Carryout: 410-342-2922</p>
-								<a href="#">Get Directions</a>
+								<a href="https://goo.gl/maps/o38QyPT6FCk">Get Directions</a>
 
 					</div>
 					<div class="location-hours">
 						<h4>Hours</h4>
 						<p>Mon-Sat 11AM-2AM</p>
 						<p>Sunday Brunch 9AM-2PM</p>
-						<a href="" class="button"><span>Order Online</span></a>
+						<a href="https://webordering.rmwservices.com/v19.0.WebUI/restaurants.aspx?wci=NachoMama" class="button"><span>Order Online</span></a>
 					</div>
 				</div>
       </div>

@@ -1,3 +1,8 @@
+#footer{
+	position: relative;
+	z-index: 10;
+}
+
 ::-webkit-input-placeholder {
  color: $c-white;
  padding-left: 4px;
@@ -37,13 +42,14 @@
   width: 100%;
   float: left;
   padding: 2.5em 0;
-
+  margin-top: 2em;
   .container{
     @include span(6 of 12 last);
     @include clearfix;
     float: none;
     margin: 0 auto;
     padding: 0;
+    max-width: 809px;
   }
   input.email{
     background: $c-orange;
@@ -147,9 +153,6 @@
   }
 }
 
-
-
-
 .subfooter{
   width: 100%;
   background: $c-light-blue;
@@ -164,7 +167,6 @@
     float: none;
     margin: 0 auto;
   }
-
 }
 
 .social-footer{
@@ -188,21 +190,20 @@
         font-size: 48px;
         color: $c-text-color;
       }
-
     }
   }
 
- a{
-  color: #f2f2f2;
-  text-decoration: none;
-  transition: opacity 100ms ease-in-out;
-  &:hover{
-    opacity: .65;
+  a{
+    color: #f2f2f2;
+    text-decoration: none;
+    transition: opacity 100ms ease-in-out;
+    &:hover{
+      opacity: .65;
+    }
+    span{
+      text-indent: -9999px;
+    }
   }
-  span{
-    text-indent: -9999px;
-  }
-}
 }
 
 @media (min-width: 1140px){
@@ -308,7 +309,6 @@
       }
     }
   }
-
   .footer-content{
     border-right: 1px solid #acacac;
     min-height: 270px;
@@ -369,14 +369,14 @@
       width: 90%;
       padding-left: 6%;
     }
-}
-.site-footer .footer-marker{
- width: 16.833%;
-}
+  }
+  .site-footer .footer-marker{
+   width: 16.833%;
+  }
 }
 
 @media (max-width: 560px){
-.subfooter .subfooter-wrapper{
+  .subfooter .subfooter-wrapper{
     @include span(10 of 12 last);
     float: none;
     margin-right: auto;
@@ -384,8 +384,7 @@
 }
 
 @media (max-width: 500px){
-
   .site-footer .footer-marker{
-   width: 26.833%;
+    width: 26.833%;
   }
 }

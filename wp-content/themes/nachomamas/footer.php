@@ -6,7 +6,7 @@
 
 		<div id="mc_embed_signup">
 
-			<form action="//derekhargest.us13.list-manage.com/subscribe/post?u=62d473a914ee32048e533f2a9&amp;id=bbf1d57278" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+			<form action="//mamasmd.us13.list-manage.com/subscribe/post?u=53556db7bc331c86dcf458435&amp;id=240abb9300" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
 				<div id="mc_embed_signup_scroll">
 
@@ -59,11 +59,11 @@
 
 			<ul>
 
-				<li><a href="#" target="_blank"><span class="icon-facebook"></span></a></li>
+				<li><a href="http://www.facebook.com/nachomamascanton" target="_blank"><span class="icon-facebook"></span></a></li>
 
-				<li><a href="#" target="_blank"><span class="icon-twitter"></span></a></li>
+				<li><a href="http://www.twitter.com/nachomamasmd" target="_blank"><span class="icon-twitter"></span></a></li>
 
-				<li><a href="#" target="_blank"><span class="icon-instagram"></span></a></li>
+				<li><a href="https://www.instagram.com/nachomamasmd" target="_blank"><span class="icon-instagram"></span></a></li>
 
 			</ul>
 

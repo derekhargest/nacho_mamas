@@ -56,7 +56,7 @@ get_header(); ?>
 						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3083.0359959948782!2d-76.60490268463471!3d39.400691679496184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c80faf04f0f349%3A0x16b9ec6c193a31e5!2s2+W+Pennsylvania+Ave%2C+Towson%2C+MD+21204!5e0!3m2!1sen!2sus!4v1464711265961" id="map2" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</div>
 					<div class="location-content">
-						<h3>Towson</h3>
+						<h3>Towson (Coming Soon!)</h3>
 						<address>York Road,<br />
 							 Towson, MD 21224<br /></address>
 								<p>T: 410-675-0898</p>
@@ -65,10 +65,7 @@ get_header(); ?>
 
 					</div>
 					<div class="location-hours">
-						<h4>Hours</h4>
-						<p>Mon-Sat 11AM-2AM</p>
-						<p>Sunday Brunch 9AM-2PM</p>
-						<a href="https://webordering.rmwservices.com/v19.0.WebUI/restaurants.aspx?wci=NachoMama" class="button"><span>Order Online</span></a>
+						<a href="https://webordering.rmwservices.com/v19.0.WebUI/restaurants.aspx?wci=NachoMama" class="button" style="margin-top: 0px;"><span>Order Online</span></a>
 					</div>
 				</div>
       </div>

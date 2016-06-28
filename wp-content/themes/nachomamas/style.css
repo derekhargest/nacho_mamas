@@ -88,16 +88,61 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-facebook:before {
+.icon-facebook .path1:before {
   content: "\e900";
+  color: #134e64;
 }
 
-.icon-instagram:before {
+.icon-facebook .path2:before {
   content: "\e901";
+  color: #f0d86a;
+  margin-left: -1.0439453125em;
 }
 
-.icon-twitter:before {
+.icon-facebook .path3:before {
   content: "\e902";
+  color: #134e64;
+  margin-left: -1.0439453125em;
+}
+
+.icon-instagram .path1:before {
+  content: "\e903";
+  color: #134e64;
+}
+
+.icon-instagram .path2:before {
+  content: "\e904";
+  color: #f0d86a;
+  margin-left: -1.0439453125em;
+}
+
+.icon-instagram .path3:before {
+  content: "\e905";
+  color: #f0d86a;
+  margin-left: -1.0439453125em;
+}
+
+.icon-instagram .path4:before {
+  content: "\e906";
+  color: #f0d86a;
+  margin-left: -1.0439453125em;
+}
+
+.icon-twitter .path1:before {
+  content: "\e907";
+  color: #134e64;
+}
+
+.icon-twitter .path2:before {
+  content: "\e908";
+  color: #f0d86a;
+  margin-left: -1.0439453125em;
+}
+
+.icon-twitter .path3:before {
+  content: "\e909";
+  color: #134e64;
+  margin-left: -1.0439453125em;
 }
 
 html {
@@ -1368,13 +1413,13 @@ nav.prev-next-posts {
   background: #f36c34;
   border: 1px solid #fffdf0;
   line-height: 1.5em;
-  font-size: 1.25em;
-  padding: 0;
+  font-size: 1em;
+  padding: .175em 0 .175em .5em;
   color: #fffdf0 !important;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   width: 95%;
-  padding-left: .5em;
+  letter-spacing: .06em;
 }
 .footer-signup label {
   text-indent: -99999px;
@@ -1490,14 +1535,14 @@ nav.prev-next-posts {
   *zoom: 1;
 }
 .social-footer ul {
-  margin-top: 2em;
+  margin-top: 2.5em;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .social-footer ul li {
   display: block;
-  width: 48px;
+  width: 50px;
   text-align: center;
 }
 .social-footer ul li:last-child {

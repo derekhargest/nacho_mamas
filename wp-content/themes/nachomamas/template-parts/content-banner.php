@@ -12,7 +12,6 @@
 					</div>
 				<?php else: ?>
 						<div class="banner-overlay page" id="banner-overlay">
-							<h3><?php the_field('headline_title'); ?></h3>
 						</div>
 					</div>
 				<?php endif; ?>
@@ -23,10 +22,7 @@
 	<div class="banner-wrapper" id="banner">
 		<div class="banner main-banner" id="main-banner">
 				<img src="<?php echo esc_url( get_template_directory_uri() ) ?>/assets/images/default-banner.jpg" alt="<?php the_title(); ?> Banner" title="<?php the_title(); ?> Banner" class="banner-image" />
-				<div class="banner-overlay page" id="banner-overlay">
-				<?php if (get_field('headline_title')): ?>
-					<h3><?php the_field('headline_title'); ?></h3>
-			<?php endif; ?>
+				<div class="banner-overlay page" id="banner-overlay"></div>
 			</div>
 		</div>
 

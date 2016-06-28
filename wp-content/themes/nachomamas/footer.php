@@ -14,7 +14,7 @@
 
 						<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
 
-						<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+						<input type="email" value="" name="EMAIL" placeholder="Enter Your Email" class="required email" id="mce-EMAIL">
 
 					</div>
 
@@ -28,7 +28,7 @@
 
 					<div style="position: absolute; left: -5000px;">
 
-						<input type="text" placeholder="Enter Your Email" name="b_62d473a914ee32048e533f2a9_bbf1d57278" tabindex="-1" class="email"></div>
+						<input type="text" name="b_62d473a914ee32048e533f2a9_bbf1d57278" tabindex="-1" class="email"></div>
 
 						<input type="submit" value="Go" name="subscribe" id="mc-embedded-subscribe" class="button">
 
@@ -59,11 +59,11 @@
 
 			<ul>
 
-				<li><a href="http://www.facebook.com/nachomamascanton" target="_blank"><span class="icon-facebook"></span></a></li>
+				<li><a href="http://www.facebook.com/nachomamascanton" target="_blank"><span class="icon-facebook"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></a></li>
 
-				<li><a href="http://www.twitter.com/nachomamasmd" target="_blank"><span class="icon-twitter"></span></a></li>
+				<li><a href="http://www.twitter.com/nachomamasmd" target="_blank"><span class="icon-twitter"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></a></li>
 
-				<li><a href="https://www.instagram.com/nachomamasmd" target="_blank"><span class="icon-instagram"></span></a></li>
+				<li><a href="https://www.instagram.com/nachomamasmd" target="_blank"><span class="icon-instagram"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span></a></li>
 
 			</ul>
 

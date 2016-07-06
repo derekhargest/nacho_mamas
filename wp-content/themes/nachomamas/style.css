@@ -348,6 +348,16 @@ small {
   line-height: 1em;
 }
 
+@media (max-width: 1040px) {
+  .woocommerce ul.products li.first {
+    clear: initial;
+  }
+}
+@media (max-width: 768px) {
+  .woocommerce ul.products li.product:nth-child(2n), .woocommerce-page ul.products li.product:nth-child(2n), .woocommerce-page[class*=columns-] ul.products li.product:nth-child(2n), .woocommerce[class*=columns-] ul.products li.product:nth-child(2n) {
+    float: left !important;
+  }
+}
 .slicknav_btn {
   position: relative;
   top: 36%;
@@ -972,6 +982,11 @@ nav.prev-next-posts {
   margin-right: 0;
 }
 
+.main-navigation nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
 .logo {
   float: left;
   width: 35.16666%;
@@ -1110,8 +1125,6 @@ nav.prev-next-posts {
   line-height: 1.25em;
   padding-top: 3em;
   padding-bottom: 1.875em;
-  padding-left: 7.25%;
-  padding-right: 7.25%;
 }
 .page-header .main-navigation ul.menu > li:hover {
   cursor: default;
@@ -1141,8 +1154,6 @@ nav.prev-next-posts {
   line-height: 1rem;
   padding-top: 2em;
   padding-bottom: 1.875em;
-  padding-left: 3.2%;
-  padding-right: 3.2%;
 }
 .main-navigation ul.menu > li:hover {
   cursor: default;
@@ -2368,6 +2379,12 @@ nav.prev-next-posts {
     width: 47.97959%;
   }
   .woocommerce ul.products li.product:nth-child(2n), .woocommerce-page ul.products li.product:nth-child(2n) {
+    margin-right: 0;
+  }
+  .woocommerce ul.products li.product:nth-child(3n), .woocommerce-page ul.products li.product:nth-child(3n) {
+    margin-right: 2.04082%;
+  }
+  .woocommerce ul.products li.product:nth-child(6), .woocommerce-page ul.products li.product:nth-child(6) {
     margin-right: 0;
   }
 }

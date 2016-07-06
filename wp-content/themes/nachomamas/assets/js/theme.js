@@ -36,7 +36,6 @@ var currentTallest = 0,
       var Headheight = document.getElementById("header").offsetHeight;
       var homeItemHeight = $(".home-image").height();
 
-      equalheight('.event-item');
 
       $('#mobile-menu .menu').slicknav({
         label: '',
@@ -70,7 +69,7 @@ var currentTallest = 0,
       var Headheight = document.getElementById("header").offsetHeight;
       var homeItemHeight = $(".home-image").height();
       var headerHeight2 = $(".mobile-logo").height();
-      equalheight('.event-item');
+
 
       $(".slicknav_btn").height(headerHeight2);
 

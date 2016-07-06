@@ -7,6 +7,11 @@
 	@include span(5 of 12 last);
 }
 
+.main-navigation nav ul{
+	display: flex;
+	justify-content: space-around;
+}
+
 .logo{
 	float: left;
 	width: 35.16666%;
@@ -144,8 +149,6 @@
 		line-height: 1.25em;
     padding-top: 3em;
     padding-bottom: 1.875em;
-    padding-left: 7.25%;
-    padding-right: 7.25%;
 		&:hover{
 			cursor: default;
 		}
@@ -176,8 +179,6 @@
 		line-height: 1rem;
     padding-top: 2em;
     padding-bottom: 1.875em;
-    padding-left: 3.2%;
-    padding-right: 3.2%;
 		&:hover{
 			cursor: default;
 		}

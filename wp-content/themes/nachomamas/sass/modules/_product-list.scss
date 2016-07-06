@@ -45,6 +45,12 @@
     &:nth-child(2n){
       margin-right: 0;
     }
+    &:nth-child(3n){
+    margin-right: 2.04082%;
+  }
+  &:nth-child(6){
+  margin-right: 0;
+}
   }
 }
 

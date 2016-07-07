@@ -668,7 +668,7 @@ article > .content-container, .single-product .content-container {
 }
 
 .content-title {
-  padding-bottom: 1em;
+  padding-bottom: 2.5em;
 }
 
 .site-main {
@@ -886,7 +886,7 @@ input, textarea {
   overflow: hidden;
   *zoom: 1;
   padding-bottom: 1em;
-  width: 43.5%;
+  width: 49.5%;
 }
 
 button#load-more {
@@ -2441,6 +2441,7 @@ nav.prev-next-posts {
   font-weight: 700;
   font-size: 1.875em;
   letter-spacing: normal;
+  line-height: 1em;
 }
 .events .event-item .event-info {
   width: 50%;
@@ -2453,6 +2454,15 @@ nav.prev-next-posts {
   margin-top: 1.75em;
 }
 
+@media (max-width: 1260px) {
+  .events .event-item .event-info {
+    width: 100%;
+  }
+
+  .events .event-item .facebook-event {
+    float: left;
+  }
+}
 @media (max-width: 1000px) {
   .events .event-item h3 {
     line-height: 1em;
@@ -2512,11 +2522,12 @@ nav.prev-next-posts {
 }
 .location-menus .menu .button span, .location-menus .menu #mc_embed_signup .button span, #mc_embed_signup .location-menus .menu .button span, .location-menus .menu button#load-more span, .location-menus .menu button#follow-us span, .location-menus .menu .prev-posts-link a span, .prev-posts-link .location-menus .menu a span, .location-menus .menu .next-posts-link a span, .next-posts-link .location-menus .menu a span {
   color: #fffdf0;
+  font-size: 1em;
 }
 .location-menus .menu .menu-buttons {
   width: 100%;
   float: left;
-  margin-top: 3.75em;
+  margin-top: 2.5em;
 }
 .location-menus .menu .menu-buttons .button, .location-menus .menu .menu-buttons #mc_embed_signup .button, #mc_embed_signup .location-menus .menu .menu-buttons .button, .location-menus .menu .menu-buttons button#load-more, .location-menus .menu .menu-buttons button#follow-us, .location-menus .menu .menu-buttons .prev-posts-link a, .prev-posts-link .location-menus .menu .menu-buttons a, .location-menus .menu .menu-buttons .next-posts-link a, .next-posts-link .location-menus .menu .menu-buttons a {
   width: 23.07692%;
@@ -2526,6 +2537,7 @@ nav.prev-next-posts {
 }
 .location-menus .menu .menu-buttons .button span, .location-menus .menu .menu-buttons #mc_embed_signup .button span, #mc_embed_signup .location-menus .menu .menu-buttons .button span, .location-menus .menu .menu-buttons button#load-more span, .location-menus .menu .menu-buttons button#follow-us span, .location-menus .menu .menu-buttons .prev-posts-link a span, .prev-posts-link .location-menus .menu .menu-buttons a span, .location-menus .menu .menu-buttons .next-posts-link a span, .next-posts-link .location-menus .menu .menu-buttons a span {
   color: #fffdf0;
+  font-size: 1em;
 }
 .location-menus .menu .menu-buttons .button:last-child, .location-menus .menu .menu-buttons #mc_embed_signup .button:last-child, #mc_embed_signup .location-menus .menu .menu-buttons .button:last-child, .location-menus .menu .menu-buttons button#load-more:last-child, .location-menus .menu .menu-buttons button#follow-us:last-child, .location-menus .menu .menu-buttons .prev-posts-link a:last-child, .prev-posts-link .location-menus .menu .menu-buttons a:last-child, .location-menus .menu .menu-buttons .next-posts-link a:last-child, .next-posts-link .location-menus .menu .menu-buttons a:last-child {
   margin-right: 0;

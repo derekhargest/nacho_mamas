@@ -26,17 +26,19 @@
       box-shadow: $drop-shadow;
       span{
         color: $c-white;
+        font-size: 1em;
       }
     }
     .menu-buttons{
       width: 100%;
       float: left;
-      margin-top: 3.75em;
+      margin-top: 2.5em;
       .button{
         @include span(2 of 8);
         background: $c-light-blue;
           span{
             color: $c-white;
+            font-size: 1em;
           }
 
         &:last-child{

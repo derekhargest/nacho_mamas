@@ -35,6 +35,7 @@
         font-weight: 700;
         font-size: 1.875em;
         letter-spacing: normal;
+        line-height: 1em;
       }
       .event-info{
         width: 50%;
@@ -46,6 +47,15 @@
         float: right;
         margin-top: 1.75em;
       }
+  }
+}
+
+@media (max-width: 1260px){
+  .events .event-item .event-info{
+    width: 100%;
+  }
+  .events .event-item .facebook-event{
+    float: left;
   }
 }
 

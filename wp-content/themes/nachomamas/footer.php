@@ -94,6 +94,7 @@
 	  speed: 2000,
 		pager: false
 	});
+
 </script>
 
 

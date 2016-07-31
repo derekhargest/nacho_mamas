@@ -30,7 +30,7 @@ var currentTallest = 0,
 }
 
 
-    $(window).load(function(){
+    $(document).ready(function(){
       var headerHeightMobile = $(".mobile-logo").height();
       var bannerHeight = $(".banner-image").height();
       var Headheight = document.getElementById("header").offsetHeight;

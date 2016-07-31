@@ -22,7 +22,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Walter+Turncoat|Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 		<script src="<?php echo get_stylesheet_directory_uri() ?>/assets/js/jquery.slicknav.js"></script>
-		<script src="<?php echo get_stylesheet_directory_uri() ?>/assets/js/imagesloaded.pkgd.min.js"></script>
+		<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
 		<script src="<?php echo get_stylesheet_directory_uri() ?>/assets/js/jquery.stellar.min.js"></script>
 		<script src="<?php echo get_stylesheet_directory_uri() ?>/assets/js/jquery.bxslider.min.js"></script>
 		<script src="<?php echo get_stylesheet_directory_uri() ?>/assets/js/instafeed.min.js"></script>

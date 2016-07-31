@@ -1997,10 +1997,12 @@ nav.prev-next-posts {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 .banner.main-banner img.banner-image {
   position: absolute;
-  top: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
 }
 

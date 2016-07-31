@@ -1,6 +1,6 @@
 .home-item{
-  background: $c-red-orange;
-  border-radius: 20px;
+  background: $c-red-orange url('assets/images/asfalt-dark.png');
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   overflow: hidden;
   margin-bottom: 4.444em;
   h3{
@@ -57,11 +57,11 @@
 }
 
 .home-item:nth-child(2){
-  background: $c-green;
+  background: $c-green url('assets/images/asfalt-dark.png');
 }
 
 .home-item:nth-child(3){
-  background: $c-dark-blue;
+  background: $c-dark-blue url('assets/images/asfalt-dark.png');
 }
 @media (max-width: 1260px){
 .home-item{

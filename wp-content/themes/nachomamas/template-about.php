@@ -37,10 +37,6 @@ get_header(); ?>
 
     </div>
 
-	</main>
-
-</div>
-
 	<?php if (get_field('secondary_content')): ?>
 
 		<div id="secondary" class="content-area secondary">
@@ -103,6 +99,8 @@ get_header(); ?>
 
 		<?php endif; ?>
 
+	</div>
+		</main>
 	</div>
 
 	<script type="text/javascript">

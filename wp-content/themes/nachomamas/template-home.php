@@ -17,9 +17,9 @@ get_header('home'); ?>
 
     <?php endif ?>
 
-		<div id="content-block">
+		<?php get_template_part( 'template-parts/cta-link' ); ?>
 
-	    <?php get_template_part( 'template-parts/cta-link' ); ?>
+		<div id="content-block">
 
       <div class="container">
 

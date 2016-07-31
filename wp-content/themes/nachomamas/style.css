@@ -272,6 +272,7 @@ small {
 }
 .button, .woocommerce .subfooter a.button, #mc_embed_signup .button, button#load-more, button#follow-us, .prev-posts-link a, .next-posts-link a {
   display: block;
+  box-sizing: border-box;
   text-decoration: none;
   border: 0;
   overflow: hidden;
@@ -286,10 +287,10 @@ small {
   font-size: .9em;
   text-transform: uppercase;
   border: 0;
-  border-radius: 5px;
-  box-shadow: 0px 5px 0px #0c4e64;
   padding: 0;
   line-height: normal;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border: solid 5px #134e64;
 }
 .button span, .woocommerce .subfooter a.button span, #mc_embed_signup .button span, button#load-more span, button#follow-us span, .prev-posts-link a span, .next-posts-link a span {
   margin: 0 auto;
@@ -317,12 +318,19 @@ small {
 .woocommerce #respond input#submit.alt.disabled, .woocommerce #respond input#submit.alt.disabled:hover, .woocommerce #respond input#submit.alt:disabled, .woocommerce #respond input#submit.alt:disabled:hover, .woocommerce #respond input#submit.alt:disabled[disabled], .woocommerce #respond input#submit.alt:disabled[disabled]:hover, .woocommerce a.button.alt.disabled, .woocommerce #mc_embed_signup a.alt.disabled.button, #mc_embed_signup .woocommerce a.alt.disabled.button, .woocommerce .prev-posts-link a.alt.disabled, .prev-posts-link .woocommerce a.alt.disabled, .woocommerce .next-posts-link a.alt.disabled, .next-posts-link .woocommerce a.alt.disabled, .woocommerce a.button.alt.disabled:hover, .woocommerce #mc_embed_signup a.alt.disabled.button:hover, #mc_embed_signup .woocommerce a.alt.disabled.button:hover, .woocommerce .prev-posts-link a.alt.disabled:hover, .prev-posts-link .woocommerce a.alt.disabled:hover, .woocommerce .next-posts-link a.alt.disabled:hover, .next-posts-link .woocommerce a.alt.disabled:hover, .woocommerce a.button.alt:disabled, .woocommerce #mc_embed_signup a.alt.button:disabled, #mc_embed_signup .woocommerce a.alt.button:disabled, .woocommerce .prev-posts-link a.alt:disabled, .prev-posts-link .woocommerce a.alt:disabled, .woocommerce .next-posts-link a.alt:disabled, .next-posts-link .woocommerce a.alt:disabled, .woocommerce a.button.alt:disabled:hover, .woocommerce #mc_embed_signup a.alt.button:disabled:hover, #mc_embed_signup .woocommerce a.alt.button:disabled:hover, .woocommerce .prev-posts-link a.alt:disabled:hover, .prev-posts-link .woocommerce a.alt:disabled:hover, .woocommerce .next-posts-link a.alt:disabled:hover, .next-posts-link .woocommerce a.alt:disabled:hover, .woocommerce a.button.alt:disabled[disabled], .woocommerce #mc_embed_signup a.alt.button:disabled[disabled], #mc_embed_signup .woocommerce a.alt.button:disabled[disabled], .woocommerce .prev-posts-link a.alt:disabled[disabled], .prev-posts-link .woocommerce a.alt:disabled[disabled], .woocommerce .next-posts-link a.alt:disabled[disabled], .next-posts-link .woocommerce a.alt:disabled[disabled], .woocommerce a.button.alt:disabled[disabled]:hover, .woocommerce #mc_embed_signup a.alt.button:disabled[disabled]:hover, #mc_embed_signup .woocommerce a.alt.button:disabled[disabled]:hover, .woocommerce .prev-posts-link a.alt:disabled[disabled]:hover, .prev-posts-link .woocommerce a.alt:disabled[disabled]:hover, .woocommerce .next-posts-link a.alt:disabled[disabled]:hover, .next-posts-link .woocommerce a.alt:disabled[disabled]:hover, .woocommerce button.button.alt.disabled, .woocommerce #mc_embed_signup button.alt.disabled.button, #mc_embed_signup .woocommerce button.alt.disabled.button, .woocommerce button.alt.disabled#load-more, .woocommerce button.alt.disabled#follow-us, .woocommerce button.button.alt.disabled:hover, .woocommerce #mc_embed_signup button.alt.disabled.button:hover, #mc_embed_signup .woocommerce button.alt.disabled.button:hover, .woocommerce button.alt.disabled#load-more:hover, .woocommerce button.alt.disabled#follow-us:hover, .woocommerce button.button.alt:disabled, .woocommerce #mc_embed_signup button.alt.button:disabled, #mc_embed_signup .woocommerce button.alt.button:disabled, .woocommerce button.alt#load-more:disabled, .woocommerce button.alt#follow-us:disabled, .woocommerce button.button.alt:disabled:hover, .woocommerce #mc_embed_signup button.alt.button:disabled:hover, #mc_embed_signup .woocommerce button.alt.button:disabled:hover, .woocommerce button.alt#load-more:disabled:hover, .woocommerce button.alt#follow-us:disabled:hover, .woocommerce button.button.alt:disabled[disabled], .woocommerce #mc_embed_signup button.alt.button:disabled[disabled], #mc_embed_signup .woocommerce button.alt.button:disabled[disabled], .woocommerce button.alt#load-more:disabled[disabled], .woocommerce button.alt#follow-us:disabled[disabled], .woocommerce button.button.alt:disabled[disabled]:hover, .woocommerce #mc_embed_signup button.alt.button:disabled[disabled]:hover, #mc_embed_signup .woocommerce button.alt.button:disabled[disabled]:hover, .woocommerce button.alt#load-more:disabled[disabled]:hover, .woocommerce button.alt#follow-us:disabled[disabled]:hover, .woocommerce input.button.alt.disabled, .woocommerce #mc_embed_signup input.alt.disabled.button, #mc_embed_signup .woocommerce input.alt.disabled.button, .woocommerce input.button.alt.disabled:hover, .woocommerce #mc_embed_signup input.alt.disabled.button:hover, #mc_embed_signup .woocommerce input.alt.disabled.button:hover, .woocommerce input.button.alt:disabled, .woocommerce #mc_embed_signup input.alt.button:disabled, #mc_embed_signup .woocommerce input.alt.button:disabled, .woocommerce input.button.alt:disabled:hover, .woocommerce #mc_embed_signup input.alt.button:disabled:hover, #mc_embed_signup .woocommerce input.alt.button:disabled:hover, .woocommerce input.button.alt:disabled[disabled], .woocommerce #mc_embed_signup input.alt.button:disabled[disabled], #mc_embed_signup .woocommerce input.alt.button:disabled[disabled], .woocommerce input.button.alt:disabled[disabled]:hover, .woocommerce #mc_embed_signup input.alt.button:disabled[disabled]:hover, #mc_embed_signup .woocommerce input.alt.button:disabled[disabled]:hover {
   background-color: #7ac561;
   color: #fffdf0;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border: solid 5px #134e64;
 }
 
 .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce #mc_embed_signup a.alt.button, #mc_embed_signup .woocommerce a.alt.button, .woocommerce .prev-posts-link a.alt, .prev-posts-link .woocommerce a.alt, .woocommerce .next-posts-link a.alt, .next-posts-link .woocommerce a.alt, .woocommerce button.button.alt, .woocommerce #mc_embed_signup button.alt.button, #mc_embed_signup .woocommerce button.alt.button, .woocommerce button.alt#load-more, .woocommerce button.alt#follow-us, .woocommerce input.button.alt, .woocommerce #mc_embed_signup input.alt.button, #mc_embed_signup .woocommerce input.alt.button {
   background-color: #7ac561;
   color: #fffdf0;
   line-height: 1.90em;
+}
+
+.woocommerce .quantity .qty {
+  line-height: 2.65em;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
 }
 
 .woocommerce #content .entry-summary p.price {
@@ -601,6 +609,11 @@ small {
   *zoom: 1;
 }
 
+#container {
+  position: relative;
+  z-index: 50;
+}
+
 .container {
   max-width: 1410px;
   margin-left: auto;
@@ -609,6 +622,8 @@ small {
   *zoom: 1;
   padding-left: 3%;
   padding-right: 3%;
+  position: relative;
+  z-index: 50;
 }
 .container:after {
   content: " ";
@@ -617,6 +632,8 @@ small {
 }
 .container.page {
   padding-top: 3em;
+  position: relative;
+  z-index: 50;
 }
 
 article > .content-container, .single-product .content-container {
@@ -1036,7 +1053,7 @@ nav.prev-next-posts {
   top: 0;
   font-size: 1.35em;
   padding: .25em .5em .5em;
-  box-shadow: 0px 3px 1px #134e64;
+  box-shadow: 0px 3px 3px #134e64;
   background: #f36c34;
   border-bottom-left-radius: 5px;
 }
@@ -1053,6 +1070,20 @@ nav.prev-next-posts {
   position: relative;
   z-index: 10;
   background: #fffdf0;
+  float: left;
+  width: 100%;
+}
+#content-block:after {
+  -moz-box-shadow: inset 0 0 10em #c3b597;
+  -webkit-box-shadow: inset 0 0 10em #c3b597;
+  box-shadow: inset 0 0 10em #c3b597;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  content: "";
 }
 
 .site-header-main {
@@ -1407,7 +1438,6 @@ nav.prev-next-posts {
   width: 100%;
   float: left;
   padding: 2.5em 0;
-  margin-top: 2em;
 }
 .footer-signup .container {
   width: 49.15254%;
@@ -1431,6 +1461,7 @@ nav.prev-next-posts {
   border-bottom-left-radius: 5px;
   width: 95%;
   letter-spacing: .06em;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 }
 .footer-signup label {
   text-indent: -99999px;
@@ -1471,7 +1502,7 @@ nav.prev-next-posts {
 }
 
 .site-footer {
-  background: #f1d96b;
+  background: #f1d96b url("assets/images/asfalt-dark.png");
   padding-top: 2.5em;
   float: left;
   width: 100%;
@@ -1760,8 +1791,8 @@ nav.prev-next-posts {
   }
 }
 .home-item {
-  background: #f04413;
-  border-radius: 20px;
+  background: #f04413 url("assets/images/asfalt-dark.png");
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   overflow: hidden;
   margin-bottom: 4.444em;
 }
@@ -1823,11 +1854,11 @@ nav.prev-next-posts {
 }
 
 .home-item:nth-child(2) {
-  background: #7ac561;
+  background: #7ac561 url("assets/images/asfalt-dark.png");
 }
 
 .home-item:nth-child(3) {
-  background: #134e64;
+  background: #134e64 url("assets/images/asfalt-dark.png");
 }
 
 @media (max-width: 1260px) {
@@ -2283,6 +2314,8 @@ nav.prev-next-posts {
   box-shadow: 0px 3px 2px #225f0d;
   width: 100%;
   float: left;
+  position: relative;
+  z-index: 100;
 }
 .cta-section:hover {
   background: #4a8c34;
@@ -2518,7 +2551,8 @@ nav.prev-next-posts {
   margin-right: 2.5641%;
   margin-right: 0;
   background: #7ac561;
-  box-shadow: 0px 3px 1px #134e64;
+  box-shadow: 0px 3px 3px #134e64;
+  border-width: 3px;
 }
 .location-menus .menu .button span, .location-menus .menu #mc_embed_signup .button span, #mc_embed_signup .location-menus .menu .button span, .location-menus .menu button#load-more span, .location-menus .menu button#follow-us span, .location-menus .menu .prev-posts-link a span, .prev-posts-link .location-menus .menu a span, .location-menus .menu .next-posts-link a span, .next-posts-link .location-menus .menu a span {
   color: #fffdf0;

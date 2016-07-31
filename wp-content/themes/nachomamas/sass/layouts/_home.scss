@@ -57,11 +57,11 @@
 }
 
 .home-item:nth-child(2){
-  background: $c-green url('assets/images/asfalt-dark.png');
+  background: darken($c-green, 10% ) url('assets/images/asfalt-dark.png');
 }
 
 .home-item:nth-child(3){
-  background: $c-dark-blue url('assets/images/asfalt-dark.png');
+  background:  darken($c-dark-blue, 10% )  url('assets/images/asfalt-dark.png');
 }
 @media (max-width: 1260px){
 .home-item{

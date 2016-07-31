@@ -193,6 +193,13 @@ h3 {
   letter-spacing: 2px;
 }
 
+h4 {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.25em;
+}
+
 a {
   color: #134e64;
 }
@@ -1854,11 +1861,11 @@ nav.prev-next-posts {
 }
 
 .home-item:nth-child(2) {
-  background: #7ac561 url("assets/images/asfalt-dark.png");
+  background: #5db241 url("assets/images/asfalt-dark.png");
 }
 
 .home-item:nth-child(3) {
-  background: #134e64 url("assets/images/asfalt-dark.png");
+  background: #0b2d39 url("assets/images/asfalt-dark.png");
 }
 
 @media (max-width: 1260px) {
@@ -2551,7 +2558,6 @@ nav.prev-next-posts {
   margin-right: 2.5641%;
   margin-right: 0;
   background: #7ac561;
-  box-shadow: 0px 3px 3px #134e64;
   border-width: 3px;
 }
 .location-menus .menu .button span, .location-menus .menu #mc_embed_signup .button span, #mc_embed_signup .location-menus .menu .button span, .location-menus .menu button#load-more span, .location-menus .menu button#follow-us span, .location-menus .menu .prev-posts-link a span, .prev-posts-link .location-menus .menu a span, .location-menus .menu .next-posts-link a span, .next-posts-link .location-menus .menu a span {

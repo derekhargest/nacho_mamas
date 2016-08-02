@@ -1,5 +1,5 @@
 .cta-section{
-  background: $c-green;
+  background: darken($c-green, 20%);
   transition: all linear 200ms;
   box-shadow: 0px 3px 2px #225f0d;
   width: 100%;
@@ -7,7 +7,8 @@
   position: relative;
   z-index: 100;
   &:hover{
-    background: darken($c-green, 20%);
+    background: darken($c-green, 40%);
+    box-shadow: 0px 3px 2px darken(#225f0d, 40%);
   }
 }
 

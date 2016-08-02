@@ -91,7 +91,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	z-index: 2;
+	z-index: -1;
 	content: "";
 		}
 }
@@ -99,7 +99,7 @@
 .site-header-main{
 	position: fixed;
 	z-index: 30;
-	background: rgba(35, 148, 190, 0.8);
+	background: rgba(25, 105, 135, 0.8);
 	width: 100%;
 	height: auto;
 	padding-top: 0;

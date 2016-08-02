@@ -1,5 +1,5 @@
 .home-item{
-  background: $c-red-orange url('assets/images/asfalt-dark.png');
+  background: $c-red-orange;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   overflow: hidden;
   margin-bottom: 4.444em;
@@ -8,6 +8,7 @@
     color: $c-white;
     padding-top: .5em;
     line-height: 1.3em;
+    font-size: 2em;
   }
   .home-image{
     @include span(6 of 9);
@@ -32,7 +33,9 @@
   .button{
     max-width: 225px;
     margin: 0 auto;
-    box-shadow: 0px 2px 1px #0c4e64;
+    span{
+      font-family: $font-stack-heading;
+    }
   }
 }
 
@@ -56,12 +59,34 @@
   }
 }
 
+.home-item:nth-child(1){
+  background: darken($c-red-orange, 10% );
+  .button{
+    border-color: darken($c-red-orange, 20% );
+    span{
+      color: darken($c-red-orange, 30% );
+    }
+  }
+}
+
 .home-item:nth-child(2){
-  background: darken($c-green, 10% ) url('assets/images/asfalt-dark.png');
+  background: darken($c-green, 10% );
+  .button{
+    border-color: darken($c-green, 20% );
+    span{
+      color: darken($c-green, 30% );
+    }
+  }
 }
 
 .home-item:nth-child(3){
-  background:  darken($c-dark-blue, 10% )  url('assets/images/asfalt-dark.png');
+  background:  $c-dark-blue;
+  .button{
+    border-color: darken($c-dark-blue, 10% );
+    span{
+      color: darken($c-dark-blue, 10% );
+    }
+  }
 }
 @media (max-width: 1260px){
 .home-item{

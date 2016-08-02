@@ -313,11 +313,6 @@ small {
   border: 0;
   letter-spacing: -.25px;
 }
-.button span::after, .woocommerce .subfooter a.button span::after, #mc_embed_signup .button span::after, button#load-more span::after, button#follow-us span::after, .prev-posts-link a span::after, .next-posts-link a span::after {
-  content: '\2192';
-  padding-left: 0.5em;
-  font-size: 1em;
-}
 .button:hover, .woocommerce .subfooter a.button:hover, #mc_embed_signup .button:hover, button#load-more:hover, button#follow-us:hover, .prev-posts-link a:hover, .next-posts-link a:hover {
   text-decoration: none;
   opacity: .85;
@@ -1090,14 +1085,14 @@ nav.prev-next-posts {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 2;
+  z-index: -1;
   content: "";
 }
 
 .site-header-main {
   position: fixed;
   z-index: 30;
-  background: rgba(35, 148, 190, 0.8);
+  background: rgba(25, 105, 135, 0.8);
   width: 100%;
   height: auto;
   padding-top: 0;
@@ -1560,7 +1555,7 @@ nav.prev-next-posts {
 
 .subfooter {
   width: 100%;
-  background: #2394be;
+  background: #196987;
   color: #fff;
   overflow: hidden;
   *zoom: 1;
@@ -1799,7 +1794,7 @@ nav.prev-next-posts {
   }
 }
 .home-item {
-  background: #f04413 url("assets/images/asfalt-dark.png");
+  background: #f04413;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   overflow: hidden;
   margin-bottom: 4.444em;
@@ -1809,6 +1804,7 @@ nav.prev-next-posts {
   color: #fffdf0;
   padding-top: .5em;
   line-height: 1.3em;
+  font-size: 2em;
 }
 .home-item .home-image {
   width: 65.90909%;
@@ -1834,7 +1830,9 @@ nav.prev-next-posts {
 .home-item .button, .home-item .woocommerce .subfooter a.button, .woocommerce .subfooter .home-item a.button, .home-item #mc_embed_signup .button, #mc_embed_signup .home-item .button, .home-item button#load-more, .home-item button#follow-us, .home-item .prev-posts-link a, .prev-posts-link .home-item a, .home-item .next-posts-link a, .next-posts-link .home-item a {
   max-width: 225px;
   margin: 0 auto;
-  box-shadow: 0px 2px 1px #0c4e64;
+}
+.home-item .button span, .home-item .woocommerce .subfooter a.button span, .woocommerce .subfooter .home-item a.button span, .home-item #mc_embed_signup .button span, #mc_embed_signup .home-item .button span, .home-item button#load-more span, .home-item button#follow-us span, .home-item .prev-posts-link a span, .prev-posts-link .home-item a span, .home-item .next-posts-link a span, .next-posts-link .home-item a span {
+  font-family: "Walter Turncoat", cursive;
 }
 
 .home-item:nth-child(odd) {
@@ -1861,12 +1859,34 @@ nav.prev-next-posts {
   float: left;
 }
 
+.home-item:nth-child(1) {
+  background: #c4350c;
+}
+.home-item:nth-child(1) .button, .home-item:nth-child(1) .woocommerce .subfooter a.button, .woocommerce .subfooter .home-item:nth-child(1) a.button, .home-item:nth-child(1) #mc_embed_signup .button, #mc_embed_signup .home-item:nth-child(1) .button, .home-item:nth-child(1) button#load-more, .home-item:nth-child(1) button#follow-us, .home-item:nth-child(1) .prev-posts-link a, .prev-posts-link .home-item:nth-child(1) a, .home-item:nth-child(1) .next-posts-link a, .next-posts-link .home-item:nth-child(1) a {
+  border-color: #942809;
+}
+.home-item:nth-child(1) .button span, .home-item:nth-child(1) #mc_embed_signup .button span, #mc_embed_signup .home-item:nth-child(1) .button span, .home-item:nth-child(1) button#load-more span, .home-item:nth-child(1) button#follow-us span, .home-item:nth-child(1) .prev-posts-link a span, .prev-posts-link .home-item:nth-child(1) a span, .home-item:nth-child(1) .next-posts-link a span, .next-posts-link .home-item:nth-child(1) a span {
+  color: #641b06;
+}
+
 .home-item:nth-child(2) {
-  background: #5db241 url("assets/images/asfalt-dark.png");
+  background: #5db241;
+}
+.home-item:nth-child(2) .button, .home-item:nth-child(2) .woocommerce .subfooter a.button, .woocommerce .subfooter .home-item:nth-child(2) a.button, .home-item:nth-child(2) #mc_embed_signup .button, #mc_embed_signup .home-item:nth-child(2) .button, .home-item:nth-child(2) button#load-more, .home-item:nth-child(2) button#follow-us, .home-item:nth-child(2) .prev-posts-link a, .prev-posts-link .home-item:nth-child(2) a, .home-item:nth-child(2) .next-posts-link a, .next-posts-link .home-item:nth-child(2) a {
+  border-color: #4a8c34;
+}
+.home-item:nth-child(2) .button span, .home-item:nth-child(2) #mc_embed_signup .button span, #mc_embed_signup .home-item:nth-child(2) .button span, .home-item:nth-child(2) button#load-more span, .home-item:nth-child(2) button#follow-us span, .home-item:nth-child(2) .prev-posts-link a span, .prev-posts-link .home-item:nth-child(2) a span, .home-item:nth-child(2) .next-posts-link a span, .next-posts-link .home-item:nth-child(2) a span {
+  color: #366726;
 }
 
 .home-item:nth-child(3) {
-  background: #0b2d39 url("assets/images/asfalt-dark.png");
+  background: #134e64;
+}
+.home-item:nth-child(3) .button, .home-item:nth-child(3) .woocommerce .subfooter a.button, .woocommerce .subfooter .home-item:nth-child(3) a.button, .home-item:nth-child(3) #mc_embed_signup .button, #mc_embed_signup .home-item:nth-child(3) .button, .home-item:nth-child(3) button#load-more, .home-item:nth-child(3) button#follow-us, .home-item:nth-child(3) .prev-posts-link a, .prev-posts-link .home-item:nth-child(3) a, .home-item:nth-child(3) .next-posts-link a, .next-posts-link .home-item:nth-child(3) a {
+  border-color: #0b2d39;
+}
+.home-item:nth-child(3) .button span, .home-item:nth-child(3) #mc_embed_signup .button span, #mc_embed_signup .home-item:nth-child(3) .button span, .home-item:nth-child(3) button#load-more span, .home-item:nth-child(3) button#follow-us span, .home-item:nth-child(3) .prev-posts-link a span, .prev-posts-link .home-item:nth-child(3) a span, .home-item:nth-child(3) .next-posts-link a span, .next-posts-link .home-item:nth-child(3) a span {
+  color: #0b2d39;
 }
 
 @media (max-width: 1260px) {
@@ -2319,7 +2339,7 @@ nav.prev-next-posts {
   }
 }
 .cta-section {
-  background: #7ac561;
+  background: #4a8c34;
   transition: all linear 200ms;
   box-shadow: 0px 3px 2px #225f0d;
   width: 100%;
@@ -2328,7 +2348,8 @@ nav.prev-next-posts {
   z-index: 100;
 }
 .cta-section:hover {
-  background: #4a8c34;
+  background: #234218;
+  box-shadow: 0px 3px 2px black;
 }
 
 .cta-section a {
@@ -2561,7 +2582,7 @@ nav.prev-next-posts {
   margin-right: 2.5641%;
   margin-right: 0;
   background: #7ac561;
-  border-width: 3px;
+  border-width: 0px;
 }
 .location-menus .menu .button span, .location-menus .menu #mc_embed_signup .button span, #mc_embed_signup .location-menus .menu .button span, .location-menus .menu button#load-more span, .location-menus .menu button#follow-us span, .location-menus .menu .prev-posts-link a span, .prev-posts-link .location-menus .menu a span, .location-menus .menu .next-posts-link a span, .next-posts-link .location-menus .menu a span {
   color: #fffdf0;

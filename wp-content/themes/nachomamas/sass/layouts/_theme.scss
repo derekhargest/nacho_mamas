@@ -105,12 +105,15 @@ input, textarea{
 	@include clearfix;
 	padding-bottom: 1em;
 	width: 49.5%;
+	button{
+	border: 0px;
+	}
 }
 
 
 button#load-more{
   @extend .button;
-  background: $c-green;
+  background: darken($c-green, 20%);
   padding: 1em 1em;
   color: $c-white;
 	float: left;
@@ -120,7 +123,7 @@ button#load-more{
 
 button#follow-us{
   @extend .button;
-  background: #4f80a5;
+  background: rgba(25, 105, 135, 1.0);
   padding: 1em 1em;
   color: $c-white;
 	float: left;
@@ -146,7 +149,7 @@ nav.prev-next-posts{
 
 .prev-posts-link a, .next-posts-link a{
 	@extend .button;
-	background: $c-green;
+	background: darken($c-green, 20%);
 	width: 48.71795%;
 	padding: 1em 0;
 	color: $c-white;

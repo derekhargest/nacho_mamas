@@ -22,7 +22,7 @@
     .button{
       @include span(2 of 8);
       margin-right: 0;
-      background: $c-green;
+      background: darken($c-green, 20%);
       border-width: 0px;
       span{
         color: $c-white;
@@ -35,7 +35,7 @@
       margin-top: 2.5em;
       .button{
         @include span(2 of 8);
-        background: $c-light-blue;
+        background: rgba(25, 105, 135, 1.0);
           span{
             color: $c-white;
             font-size: 1em;

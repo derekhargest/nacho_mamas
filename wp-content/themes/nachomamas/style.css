@@ -199,6 +199,7 @@ h4 {
   font-weight: 900;
   font-size: 1.25em;
   margin-bottom: .5em;
+  text-align: center;
 }
 
 a {
@@ -298,7 +299,6 @@ small {
   padding: 0;
   line-height: normal;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  border: solid 5px #134e64;
 }
 .button span, .woocommerce .subfooter a.button span, #mc_embed_signup .button span, button#load-more span, button#follow-us span, .prev-posts-link a span, .next-posts-link a span {
   margin: 0 auto;
@@ -322,13 +322,14 @@ small {
   background-color: #7ac561;
   color: #fffdf0;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  border: solid 5px #134e64;
+  line-height: 2.45em;
 }
 
 .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce #mc_embed_signup a.alt.button, #mc_embed_signup .woocommerce a.alt.button, .woocommerce .prev-posts-link a.alt, .prev-posts-link .woocommerce a.alt, .woocommerce .next-posts-link a.alt, .next-posts-link .woocommerce a.alt, .woocommerce button.button.alt, .woocommerce #mc_embed_signup button.alt.button, #mc_embed_signup .woocommerce button.alt.button, .woocommerce button.alt#load-more, .woocommerce button.alt#follow-us, .woocommerce input.button.alt, .woocommerce #mc_embed_signup input.alt.button, #mc_embed_signup .woocommerce input.alt.button {
   background-color: #7ac561;
   color: #fffdf0;
-  line-height: 1.90em;
+  line-height: 2.45em;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 }
 
 .woocommerce .quantity .qty {
@@ -912,9 +913,12 @@ input, textarea {
   padding-bottom: 1em;
   width: 49.5%;
 }
+.insta-buttons button {
+  border: 0px;
+}
 
 button#load-more {
-  background: #7ac561;
+  background: #4a8c34;
   padding: 1em 1em;
   color: #fffdf0;
   float: left;
@@ -925,7 +929,7 @@ button#load-more {
 }
 
 button#follow-us {
-  background: #4f80a5;
+  background: #196987;
   padding: 1em 1em;
   color: #fffdf0;
   float: left;
@@ -952,7 +956,7 @@ nav.prev-next-posts {
 }
 
 .prev-posts-link a, .next-posts-link a {
-  background: #7ac561;
+  background: #4a8c34;
   width: 48.71795%;
   padding: 1em 0;
   color: #fffdf0;
@@ -1482,6 +1486,8 @@ nav.prev-next-posts {
   box-shadow: none;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   color: #fffdf0 !important;
   padding: .075em .5em;
 }
@@ -2585,7 +2591,7 @@ nav.prev-next-posts {
   float: left;
   margin-right: 2.5641%;
   margin-right: 0;
-  background: #7ac561;
+  background: #4a8c34;
   border-width: 0px;
 }
 .location-menus .menu .button span, .location-menus .menu #mc_embed_signup .button span, #mc_embed_signup .location-menus .menu .button span, .location-menus .menu button#load-more span, .location-menus .menu button#follow-us span, .location-menus .menu .prev-posts-link a span, .prev-posts-link .location-menus .menu a span, .location-menus .menu .next-posts-link a span, .next-posts-link .location-menus .menu a span {
@@ -2601,7 +2607,7 @@ nav.prev-next-posts {
   width: 23.07692%;
   float: left;
   margin-right: 2.5641%;
-  background: #2394be;
+  background: #196987;
 }
 .location-menus .menu .menu-buttons .button span, .location-menus .menu .menu-buttons #mc_embed_signup .button span, #mc_embed_signup .location-menus .menu .menu-buttons .button span, .location-menus .menu .menu-buttons button#load-more span, .location-menus .menu .menu-buttons button#follow-us span, .location-menus .menu .menu-buttons .prev-posts-link a span, .prev-posts-link .location-menus .menu .menu-buttons a span, .location-menus .menu .menu-buttons .next-posts-link a span, .next-posts-link .location-menus .menu .menu-buttons a span {
   color: #fffdf0;
@@ -2689,9 +2695,8 @@ nav.prev-next-posts {
   margin-bottom: 0;
 }
 .locations .location-item .location-hours .button, .locations .location-item .location-hours #mc_embed_signup .button, #mc_embed_signup .locations .location-item .location-hours .button, .locations .location-item .location-hours button#load-more, .locations .location-item .location-hours button#follow-us, .locations .location-item .location-hours .prev-posts-link a, .prev-posts-link .locations .location-item .location-hours a, .locations .location-item .location-hours .next-posts-link a, .next-posts-link .locations .location-item .location-hours a {
-  background: #7ac561;
+  background: #4a8c34;
   margin-top: 2.65em;
-  box-shadow: 0px 3px 1px #134e64;
 }
 .locations .location-item .location-hours .button span, .locations .location-item .location-hours #mc_embed_signup .button span, #mc_embed_signup .locations .location-item .location-hours .button span, .locations .location-item .location-hours button#load-more span, .locations .location-item .location-hours button#follow-us span, .locations .location-item .location-hours .prev-posts-link a span, .prev-posts-link .locations .location-item .location-hours a span, .locations .location-item .location-hours .next-posts-link a span, .next-posts-link .locations .location-item .location-hours a span {
   color: #fffdf0;

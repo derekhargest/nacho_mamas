@@ -2,13 +2,14 @@
   background-color: $c-green;
   color: $c-white;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  border:solid 5px #134e64;
+  line-height: 2.45em;
 }
 
 .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt{
   background-color: $c-green;
   color: $c-white;
-  line-height: 1.90em;
+  line-height: 2.45em;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 }
 
 .woocommerce .quantity .qty{

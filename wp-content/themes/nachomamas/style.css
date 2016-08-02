@@ -691,6 +691,10 @@ article > .content-container, .single-product .content-container {
   padding-bottom: 2.5em;
 }
 
+.page-template .content-title {
+  padding-bottom: .5em;
+}
+
 .site-main {
   background: #fffdf0;
 }

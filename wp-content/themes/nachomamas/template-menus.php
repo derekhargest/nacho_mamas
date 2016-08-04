@@ -51,7 +51,7 @@ get_header(); ?>
 
 							<a href="<?php echo the_field('canton_specials_menu'); ?>" class="button"><span>Specials</span></a>
 
-							<a href="<?php echo the_field('canton_lunch_menu'); ?>" class="button"><span>Brunch</span></a>
+							<a href="<?php echo the_field('canton_brunch_menu'); ?>" class="button"><span>Brunch</span></a>
 
 							<a href="<?php echo the_field('canton_margarita_menu'); ?>" class="button"><span>Margs &amp; Cocktails</span></a>
 

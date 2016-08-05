@@ -37,6 +37,8 @@ equalheight = function(container){
       var homeItemHeight = $(".home-image").height();
 
       equalheight('.event-item');
+      equalheight('.product');
+
 
 
       $('#mobile-menu .menu').slicknav({
@@ -67,6 +69,7 @@ equalheight = function(container){
       var headerHeight2 = $(".mobile-logo").height();
 
        equalheight('.event-item');
+       equalheight('.product');
 
 
       $(".slicknav_btn").height(headerHeight2);

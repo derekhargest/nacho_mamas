@@ -2059,18 +2059,6 @@ nav.prev-next-posts {
   width: 100%;
 }
 
-@media (min-width: 700px) {
-  #content-block {
-    margin-top: 0;
-  }
-
-  .banner-overlay-notitle .dark {
-    display: none;
-  }
-  .banner-overlay-notitle .white {
-    display: block;
-  }
-}
 @media (max-width: 699px) {
   #content-block {
     margin-top: 0em !important;

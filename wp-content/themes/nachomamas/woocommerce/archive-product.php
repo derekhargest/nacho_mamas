@@ -29,7 +29,7 @@ get_header(); ?>
   	<div id="content-block">
 			<?php // get_template_part( 'template-parts/cta-link' ); ?>
 			<div class="content-container">
-      <div class="page-content">
+      <div class="container page">
 
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
@@ -79,7 +79,7 @@ get_header(); ?>
 	?>
 </div>
 </div>
-</div>
+
 </main>
 </div>
 

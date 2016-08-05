@@ -2048,7 +2048,8 @@ nav.prev-next-posts {
   .banner-overlay-notitle .overlay-logo {
     width: 10%;
   }
-
+}
+@media (max-width: 1140px) {
   .banner-overlay.home, .banner-overlay-notitle {
     width: 100%;
     z-index: 25;

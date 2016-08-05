@@ -67,13 +67,10 @@ equalheight = function(container){
 
       $(".slicknav_btn").height(headerHeightMobile);
 
-      if ($(window).width() < 700) {
-        $(".banner-wrapper").height(bannerHeight2);
-      }
+
 
       if ($(window).width() > 700) {
         $(".home-content").height(homeItemHeight);
-        $(".banner-wrapper").height(bannerHeight);
       }
 
   	});
@@ -93,13 +90,11 @@ equalheight = function(container){
 
       if ($(window).width() < 700) {
         $(".home-content").height('auto');
-        $(".banner-wrapper").height(bannerHeight);
       }
 
       if ($(window).width() > 700) {
 
             $(".home-content").height(homeItemHeight);
-            $(".banner-wrapper").height(bannerHeight);
       }
 
 		});

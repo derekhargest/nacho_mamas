@@ -67,7 +67,7 @@ equalheight = function(container){
       $(".slicknav_btn").height(headerHeightMobile);
 
       if ($(window).width() < 700) {
-        $(".banner-wrapper").height(bannerHeight);
+        $(".main-banner").height(bannerHeight);
       }
 
       if ($(window).width() > 700) {

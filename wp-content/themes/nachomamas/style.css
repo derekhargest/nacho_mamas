@@ -2059,6 +2059,11 @@ nav.prev-next-posts {
   width: 100%;
 }
 
+@media (min-width: 700px) {
+  #content-block {
+    margin-top: 0;
+  }
+}
 @media (max-width: 699px) {
   #content-block {
     margin-top: 0em !important;

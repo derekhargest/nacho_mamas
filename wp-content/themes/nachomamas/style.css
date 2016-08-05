@@ -2047,6 +2047,13 @@ nav.prev-next-posts {
   .banner-overlay-notitle .overlay-logo {
     width: 10%;
   }
+
+  .banner-overlay.home, .banner-overlay-notitle {
+    width: 100%;
+    z-index: 25;
+    background-attachment: fixed;
+    top: 37.75%;
+  }
 }
 @media (min-width: 450px) {
   .banner-overlay.home .overlay-logo, .banner-overlay-notitle.home .overlay-logo {

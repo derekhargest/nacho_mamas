@@ -18,7 +18,7 @@
 	else
 	{
 		$upload_photos = wp_create_nonce("manage_uploading");
-		$album_id = intval($_REQUEST["album_id"]);
+		$album_id = isset($_REQUEST["album_id"]) ? intval($_REQUEST["album_id"]) : 0;
 		$last_albums_id = $wpdb->get_var
 		(
 			$wpdb->prepare
@@ -144,7 +144,7 @@
 		    </style>
 		<div class="custom-message red" style="display: block;margin-top:30px">
 			<span>
-				<strong>You will be only allowed to add 3 galleries. Kindly purchase Premium Version for full access.</strong>
+				<strong>You will be only allowed to add 3 galleries. Kindly purchase Premium Editions for full access.</strong>
 			</span>
 		</div>
 		<form id="edit_album" class="layout-form">
@@ -220,7 +220,7 @@
 									            <div class="widget-layout">
 									                <div class="widget-layout-title">
 									                    <h4><?php _e("Upload Videos", gallery_bank); ?>
-									                    	<i class="widget_premium_feature"><?php _e(" (Available in Premium Versions)", gallery_bank); ?></i>
+									                    	<i class="widget_premium_feature"><?php _e(" (Available in Premium Editions)", gallery_bank); ?></i>
 									                    </h4>
 									                </div>
 									                <div class="widget-layout-body" id="edit_video_uploader">
@@ -265,7 +265,7 @@
 										                            </th>
 										                            <th style="width:20%">
 										                                <?php _e("Tags (comma separated list)", gallery_bank); ?>
-										                                <i class="widget_premium_feature"><?php _e(" (Available in Premium Versions)", gallery_bank); ?></i>
+										                                <i class="widget_premium_feature"><?php _e(" (Available in Premium Editions)", gallery_bank); ?></i>
 										                            </th>
 										                            <th style="width:25%">
 										                                <?php _e("Url to Redirect on click of an Image", gallery_bank); ?>
@@ -456,19 +456,21 @@
 		    jQuery("#edit_album").validate
 		    ({
 		        submitHandler: function ()
-				{
+						{
 		            jQuery("#update_album_success_message").css("display", "block");
 		            jQuery("body,html").animate
 		            ({
 		                scrollTop: jQuery("body,html").position().top
 					}, "slow");
-	            	var albumid = jQuery("#ux_hidden_album_id").val();
-					jQuery.post(ajaxurl,"albumid=" + albumid + "&delete_array=" + JSON.stringify(delete_array) +"&param=delete_pic&action=add_new_album_library", function ()
+					var albumid = jQuery("#ux_hidden_album_id").val();
+					if(delete_array.length > 0)
 					{
+						jQuery.post(ajaxurl,"albumid=" + albumid + "&delete_array=" + JSON.stringify(delete_array) +"&param=delete_pic&action=add_new_album_library", function (data)
+						{
+						});
+					}
 
-					});
-
-	            	var uxEditDescription = "";
+					var uxEditDescription = "";
 
 		            <?php
 			    	if(class_exists("ckeditor_wordpress"))
@@ -621,7 +623,7 @@
 		    }
 		    function insertVideoToDataTable()
 		    {
-		       alert("<?php _e( "This feature is only available in Paid Premium Version!", gallery_bank ); ?>");
+		       alert("<?php _e( "This feature is only available in Premium Editions!", gallery_bank ); ?>");
 		    }
 		    jQuery("#grp_select_items").click(function () {
 		        var oTable = jQuery("#data-table-edit-album").dataTable();
@@ -637,7 +639,7 @@
 		    });
 		    function deleteSelectedImages()
 		    {
-		        alert("<?php _e("This feature is only available in Paid Premium Version!", gallery_bank)?>");
+		        alert("<?php _e("This feature is only available in Premium Editions!", gallery_bank)?>");
 		    }
 
 		    function select_one_radio(control)

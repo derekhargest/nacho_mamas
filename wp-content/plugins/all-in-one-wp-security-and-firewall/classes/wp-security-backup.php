@@ -91,7 +91,7 @@ class AIOWPSecurity_Backup
         }
 
         //Generate a random prefix for more secure filenames
-        $random_prefix = AIOWPSecurity_Utility::generate_alpha_numeric_random_string(10);
+        $random_suffix = AIOWPSecurity_Utility::generate_alpha_numeric_random_string(10);
 
         if ($is_multi_site)
         {
@@ -110,28 +110,27 @@ class AIOWPSecurity_Backup
             
             //Convert whitespaces and underscore to dash
             $site_name = preg_replace("/[\s_]/", "-", $site_name);
-            
-            $file = $random_prefix.'-database-backup-site-name-' . $site_name . '-' . current_time( 'timestamp' );
-            
+
+            $file = 'database-backup-site-name-' . $site_name . '-' . current_time( 'Ymd-His' ) . '-' . $random_suffix;
+
             //We will create a sub dir for the blog using its blog id
-            $dirpath = $aiowps_backup_dir . '/blogid_' . $blog_id . '/';
-            
+            $dirpath = $aiowps_backup_dir . '/blogid_' . $blog_id;
+
             //Create a subdirectory for this blog_id
             if (!AIOWPSecurity_Utility_File::create_dir($dirpath))
             {
-                $aio_wp_security->debug_logger->log_debug("Creation failed of DB backup directory for the following multisite blog ID: ".$blog_details->blog_id,4);
+                $aio_wp_security->debug_logger->log_debug("Creation failed of DB backup directory for the following multisite blog ID: ".$blog_id,4);
                 return false;
             }
-            
-            $handle = @fopen( $dirpath . $file . '.sql', 'w+' );
         }
         else
         {
             $dirpath = $aiowps_backup_dir;
-            $file = $random_prefix.'-database-backup-' . current_time( 'timestamp' );
-            $handle = @fopen( $dirpath . '/' . $file . '.sql', 'w+' );
+            $file = 'database-backup-' . current_time( 'Ymd-His' ) . '-' . $random_suffix;
         }
-        
+
+        $handle = @fopen( $dirpath . '/' . $file . '.sql', 'w+' );
+
         $fw_res = @fwrite( $handle, $return );
         if (!$fw_res)
         {
@@ -155,7 +154,7 @@ class AIOWPSecurity_Backup
         {
             $fileext = '.sql';
         }
-        $this->last_backup_file_name = $file . $fileext;//database-backup-1367644822.zip or database-backup-1367644822.sql
+        $this->last_backup_file_name = $file . $fileext;//database-backup-YYYYMMDD-HHIISS-<random-string>.zip or database-backup-YYYYMMDD-HHIISS-<random-string>.sql
         $this->last_backup_file_path = $dirpath . '/' . $file . $fileext;
         if ($is_multi_site)
         {
@@ -209,7 +208,7 @@ class AIOWPSecurity_Backup
 
             foreach ( $files as $file ) 
             {
-                if ( strstr( $file, 'database-backup' ) ) 
+                if ( strpos( $file, 'database-backup' ) !== false )
                 {
                     if ( $count >= $aio_wp_security->configs->get_value('aiowps_backup_files_stored') ) 
                     {
@@ -228,7 +227,8 @@ class AIOWPSecurity_Backup
         if($aio_wp_security->configs->get_value('aiowps_enable_automated_backups')=='1')
         {
             $aio_wp_security->debug_logger->log_debug_cron("DB Backup - Scheduled backup is enabled. Checking if a backup needs to be done now...");
-            $current_time = strtotime(current_time('mysql'));
+            $time_now = date_i18n( 'Y-m-d H:i:s' );
+            $current_time = strtotime($time_now);
             $backup_frequency = $aio_wp_security->configs->get_value('aiowps_db_backup_frequency'); //Number of hours or days or months interval per backup
             $interval_setting = $aio_wp_security->configs->get_value('aiowps_db_backup_interval'); //Hours/Days/Months
             switch($interval_setting)
@@ -254,7 +254,7 @@ class AIOWPSecurity_Backup
                     $result = $this->execute_backup();
                     if ($result)
                     {
-                        $aio_wp_security->configs->set_value('aiowps_last_backup_time', current_time('mysql'));
+                        $aio_wp_security->configs->set_value('aiowps_last_backup_time', $time_now);
                         $aio_wp_security->configs->save_config();
                         $aio_wp_security->debug_logger->log_debug_cron("DB Backup - Scheduled backup was successfully completed.");
                     } 
@@ -267,7 +267,7 @@ class AIOWPSecurity_Backup
             else
             {
                 //Set the last backup time to now so it can trigger for the next scheduled period
-                $aio_wp_security->configs->set_value('aiowps_last_backup_time', current_time('mysql'));
+                $aio_wp_security->configs->set_value('aiowps_last_backup_time', $time_now);
                 $aio_wp_security->configs->save_config();
             }
         }

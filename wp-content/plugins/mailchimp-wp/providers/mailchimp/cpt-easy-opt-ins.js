@@ -2,12 +2,55 @@ jQuery( document ).ready( function( $ ) {
 
 	var $api_key = $( '[name="fca_eoi[mailchimp_api_key]"]' );
 	var $lists = $( '[name="fca_eoi[mailchimp_list_id]"]' );
+	var $group_input = $( '[name="fca_eoi[mailchimp_groups][]"]' );
 	var $lists_wrapper = $( '#mailchimp_list_id_wrapper' );
+	var $group_wrapper = $( '#mailchimp_group_wrapper' );
+	
+	var mailChimp_groups_active = useGroups == 'on' ? true: false;
 	var $double_opt_in_wrapper = $( '#mailchimp_double_opt_in_wrapper' );
             
 	mailchimp_toggle_fields();
 
-	fca_eoi_provider_status_setup( 'mailchimp', $api_key );
+	fca_eoi_provider_status_setup( 'mailchimp', $api_key ); 
+	fca_eoi_provider_status_setup( 'mailchimp-groups', $group_input );
+	
+	$lists.change(function() {
+		mailChimp_groups_active ? get_mailchimp_groups() : '';
+	});
+	
+	//IF EVERYTHING IS SET BUT THERE ARE NO GROUPS, TRY AGAIN
+	if ( $api_key.val() !== '' && $lists.find(":selected").val() !== 'Not set' && $('[name="fca_eoi[mailchimp_list_id]"] option').size() == 0 ) {
+		mailChimp_groups_active ? get_mailchimp_groups() : '';
+	}
+	
+	function get_mailchimp_groups() {
+		$lists = $( '[name="fca_eoi[mailchimp_list_id]"]' );
+		fca_eoi_provider_status_set( 'mailchimp-groups', fca_eoi_provider_status_codes.loading );
+		var data = {
+			'action': 'mailchimp_get_groups', /* API action name, do not change */
+			'api_key' : $api_key.val(),
+			'list_id' : $lists.find(":selected").val(),
+		};
+		
+		$.post( ajaxurl, data, function( response ) {
+
+			var groups = JSON.parse( response );
+			
+			fca_eoi_provider_status_set( 'mailchimp-groups', '' );
+			
+			var $group_select = $( '<select class="select2 mailchimp_group_select" style="width: 27em;" multiple="multiple" placeholder="Select Interest Groups Here" name="fca_eoi[mailchimp_groups][]" >' );
+
+			for ( group_id in groups ) {
+				$group_select.append( '<option value="' + group_id + '">' + groups[ group_id ] + '</option>' );
+			}
+
+			// Replace dropdown with new list of lists, apply Select2 then show
+			$( '[name="fca_eoi[mailchimp_groups][]"]' ).select2( 'destroy' );
+			$( '[name="fca_eoi[mailchimp_groups][]"]' ).replaceWith( $group_select );
+			$( '[name="fca_eoi[mailchimp_groups][]"]' ).select2();
+
+		} );
+	}
 
 	$api_key.change( function() {
 		if ( ! fca_eoi_provider_is_value_changed( $( this ) ) ) {
@@ -43,8 +86,12 @@ jQuery( document ).ready( function( $ ) {
 			$( '[name="fca_eoi[mailchimp_list_id]"]' ).replaceWith( $lists );
 			$( '[name="fca_eoi[mailchimp_list_id]"]' ).select2();
 			mailchimp_toggle_fields();
+			$lists.change(function() {
+				mailChimp_groups_active ? get_mailchimp_groups() : '';
+			});
+			mailChimp_groups_active ? get_mailchimp_groups() : '';
 		} );
-	} );
+	})
 
 	/**
 	 * Show/hide some fields if there are/aren't list options
@@ -60,12 +107,14 @@ jQuery( document ).ready( function( $ ) {
 			$()
 				.add( $double_opt_in_wrapper )
 				.add( $lists_wrapper )
+				.add( $group_wrapper )
 				.show( 'fast' )
 			;
 		} else {
 			$()
 				.add( $double_opt_in_wrapper )
 				.add( $lists_wrapper )
+				.add( $group_wrapper )
 				.hide( )
 			;
 		}
@@ -83,7 +132,7 @@ jQuery( document ).ready( function( $ ) {
       $( 'input[name="fca_eoi[is_send_opt_int_bait]"]' ).on('click', function(e) {
           if( $( 'input[name="fca_eoi[is_send_opt_int_bait]"]' ).is(":checked") ) {
               $( 'select[name="fca_eoi[mailchimp_double_opt_in]"]' ).select2('val', 'false'); 
-          } else {
+			  } else {
               $(  'select[name="fca_eoi[mailchimp_double_opt_in]"]' ).select2('val', 'true');  
           }
         }); 

@@ -1,17 +1,17 @@
 === MailChimp Forms by Optin Cat ===
 Contributors: Mailchimp Forms by Optin Cat, davidhme, fatcatapps
 Donate link: https://fatcatapps.com/optincat?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral
-Tags: mailchimp, mailchimp wordpress, mailchimp form, mailchimp widget, mailchimp plugin, mailchimp wordpress widget, popup, lightbox popup, mailchimp signup widget, Fatcat Apps
+Tags: mailchimp, mailchimp wordpress, mailchimp form, mailchimp widget, mailchimp plugin, mailchimp wordpress widget, mailchimp popup, mailchimp signup widget
 
 Author URI: https://fatcatapps.com/
 Plugin URI: https://fatcatapps.com/optincat/upgrade/m?utm_campaign=description%2Bcta&utm_source=https%3A%2F%2Fwordpress.org%2Fplugins%2Fmailchimp-wp%2F&utm_medium=referral
 Requires at least: 3.9.1
-Tested up to: 4.5.0
-Stable tag: 1.5.4
+Tested up to: 4.6.0
+Stable tag: 1.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The MailChimp Forms by Optin Cat WordPress Plugin Makes It Super Simple To Create Beautiful MailChimp Sign-up Widgets & Forms In Minutes.
+MailChimp Forms by Optin Cat for WordPress Makes It Super Simple To Create Beautiful, Conversion Optimized MailChimp Sign-up Widgets & Forms In Minutes.
 
 == Description ==
 
@@ -272,6 +272,39 @@ With MailChimp you will be able to build a list of people that you want to targe
 If you have been looking for the best email marketing software programs, look no further than MailChimp. This is truly an EMS program that will allow you to do everything that you need to. The pricing scheme is affordable, making MailChimp perfect for any size company large or small. 
 
 == Changelog ==
+
+= MailChimp Forms by Optin Cat 1.6.1 =
+* Fix button hover color being white on new forms 
+* Fix potential PHP issue 'Can't use function return value'
+
+= MailChimp Forms by Optin Cat 1.6.0 =
+* Performance improvements of up to 50%
+* UI Updates
+* Fix inconsistent loading of previous settings (API keys/mailing lists) when creating a new form
+* Revert sending 'unnamed user' as user name if empty
+
+= MailChimp Forms by Optin Cat 1.5.8 =
+* Add auto-focus on popup
+* Change 'Name' placeholders to 'First Name'
+* Fix MailChimp 10 lists maximum
+* Fix custom css box sometimes hidden for personal plan
+* Fix a FireFox popup display issue  
+
+= MailChimp Forms by Optin Cat 1.5.7 =
+* Fix an issue with some icons being removed/hidden
+* Fix potential MailChimp issue with empty user names
+* Fix for potential encoding type being changed by theme
+
+= MailChimp Forms by Optin Cat 1.5.6 =
+* Fix an issue with saving forms a small number users reported
+
+= MailChimp Forms by Optin Cat 1.5.5 =
+* Each form can now be connected to a unique account (API key)
+* Performance improvements: All CSS is pre-compiled, Removed several deprecated .css files
+* Upgraded to use MailChimp API 3.0
+* Fixed a form saving issue that affected some PHP/WordPress installations
+* Fixed PHP warnings related to remove_meta_box()
+
 = MailChimp Forms by Optin Cat 1.5.4 =
 * Performance improvements: optin forms (particularily widgets) now load much faster
 

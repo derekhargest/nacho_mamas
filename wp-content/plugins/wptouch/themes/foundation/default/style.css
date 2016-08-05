@@ -33,12 +33,22 @@ ol,ul {
 	padding: 0;
 }
 
+
+
 :focus {
 	outline: 0;
 }
 
 ins,a {
 	text-decoration: none;
+}
+
+.wptouch-clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
 }
 
 .clearfix:after {
@@ -63,7 +73,7 @@ iframe {
 
 sup {
 	vertical-align: super;
-	font-size: 50%;
+	font-size: 75%;
 	font-variant: small-caps;
 }
 
@@ -83,10 +93,11 @@ hr {
 	margin: 1% 8%;
 }
 
-blockquote {
+blockquote, q {
 	margin-left: 5%;
 	margin-right: 5%;
 	font-style: italic;
+	display: block;
 }
 
 .aligncenter,
@@ -96,7 +107,6 @@ blockquote {
 	margin-right: auto !important;
 	float: none !important;
 	display: block !important;
-	max-width: 100%;
 }
 
 .alignleft {
@@ -120,13 +130,6 @@ blockquote {
 .right-justify {
 	text-align: right;
 	direction: rtl;
-}
-
-code, pre {
-	overflow: scroll;
-	padding: 5px;
-	font-family: monospace;
-	background-color: rgba(0,0,0,.1);
 }
 
 #content input {
@@ -156,6 +159,39 @@ img.wp-smiley {
 
 .post table img, .page table img {
 	margin: 0;
+}
+
+code, kbd, pre, tt {
+	border: 1px solid #ffd478;
+	word-wrap: break-word;
+	background-color: #f2fdc7;
+	padding: 5px;
+}
+
+var {
+	color: red;
+}
+
+pre {
+}
+
+ins {
+	vertical-align: super;
+}
+
+table {
+	text-align: left;
+}
+
+table thead th {
+	border-bottom: 1px solid #ccc;
+}
+
+table tbody tr {
+}
+
+table td:first-of-type {
+	padding: 10px;
 }
 
 /* @group WP Gallery & Captions */
@@ -379,7 +415,7 @@ to {
 
 /* @group Load More, Infinite */
 
-.load-more-link, .infinite-link, .load-more-comments-wrap, .load-more-post-link, .load-more-page-link {
+.load-more-link, .infinite-link, .load-more-comments-wrap, .load-more-post-link, .load-more-page-link, .load-more-custom-link {
 	display: block;
 	width: 100%;
 	text-align: center;
@@ -397,7 +433,7 @@ to {
 
 /* @end */
 
-/* @group Showcase */
+/* @group Advertising */
 
 .wptouch-showcase {
 	text-align: center;
@@ -461,6 +497,7 @@ to {
 .nav-controls a.next-post {
 	padding-top: 8px;
 	padding-bottom: 8px;
+    word-wrap: break-word;
 }
 
 .nav-controls a.prev-post:before {
@@ -479,19 +516,24 @@ to {
 
 /* @group Swipe */
 
-.swipe {
+#slider {
 	overflow: hidden;
-	border-bottom: 1px solid rgba(255,255,255,.2);
+	position: relative;
+	border-bottom: 0;
 }
 
-.swipe * {
+#slider * {
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	-webkit-touch-callout: none;
 }
 
-.swipe img {
+#slider .owl-item {
+	height: 220px;
+	overflow: hidden;
+}
+
+#slider img {
 	width: 114%;
-	-webkit-box-reflect: below 1px -webkit-gradient(linear, center top, center bottom, from(rgba(0,0,0,.2)), to(rgba(0,0,0,.3)));
 	margin-left: -7%;
 }
 
@@ -510,13 +552,12 @@ to {
 	height: 274px;
 }
 
-.swipe p {
-	background-color: rgba(0,0,0,0.5);
+#slider p {
+	background-color: rgba(0,0,0,0.6);
 	text-align: center;
 	font-size: 100%;
-	text-shadow: #000000 0 -1px 0;
 	margin: 0;
-	padding: 8px 5%;
+	padding: 12px 5%;
 	line-height: 100%;
 	color: #fff;
 	position: absolute;
@@ -526,15 +567,11 @@ to {
 	left: 0;
 }
 
-.rtl .swipe p {
-	direction: rtl;
-}
-
 p.featured-date, #slider .comments-number {
 	display: none;
 }
 
-.dark-body .swipe {
+.dark-body #slider {
 	border-bottom: 1px solid rgba(0,0,0,.1);
 	-webkit-box-shadow: rgba(255,255,255,.05) 0px 1px 0px;
 	box-shadow: rgba(255,255,255,.05) 0px 1px 0px;
@@ -554,7 +591,15 @@ ul.dots {
 	margin-bottom: -30px;
 }
 
-ul.dots li {
+.owl-dots {
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 100%;
+}
+
+ul.dots li,
+.owl-dot {
 	width: 6px;
 	height: 6px;
 	border-radius: 4px;
@@ -566,7 +611,9 @@ ul.dots li {
 	display: inline-block;
 }
 
-ul.dots li.active {
+ul.dots li.active,
+.owl-dot.active {
+	background-color: rgba( 255, 255, 255, .75);
 	-webkit-box-shadow: inset rgba(255,255,255,.05) 0px 1px 0px, rgba(255,255,255,.05) 0px 1px 0px;
 	box-shadow: inset rgba(255,255,255,.05) 0px 1px 0px, rgba(255,255,255,.05) 0px 1px 0px;
 }
@@ -585,7 +632,6 @@ ul.dots li.active {
 	width: 25%;
 	max-width: 25%;
 	display: block;
-	text-shadow: rgba(255,255,255,.8) 0 1px 0;
 	font-weight: bold;
 	font-size: 90%;
 	background-color: rgba(0,0,0,.05);
@@ -727,7 +773,7 @@ ul.dots li.active {
 
 .sharing-options.style-vibrant a {
 	text-shadow: rgba(0,0,0,.4) 0 -1px 0;
-	color: #fff;
+	color: #fff !important;
 }
 
 .sharing-options.style-vibrant .facebook-btn {
@@ -1389,7 +1435,7 @@ span.wpcf7-form-control-wrap {
 	bottom: 30px;
 	left: 30px;
 	transition: background-color .5s linear;
-	z-index: 1;
+	z-index: 100;
 }
 
 .smartphone.web-app-mode .back-button.visible {

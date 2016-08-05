@@ -8,7 +8,7 @@ jQuery( document ).ready(function(){
 		
 		var $this = jQuery( this );
 		var $email_field = jQuery( '[name=email]', $this );
-		var $name_field = jQuery( '[name=name]', $this );
+		var $name_field = jQuery( '[name=name]:visible', $this );
 		var name = $name_field.val();
 		var email = $email_field.val();
 		var list_id = $this.data( 'fca_eoi_list_id' );
@@ -22,22 +22,22 @@ jQuery( document ).ready(function(){
 		var thank_you_page = $this.data( 'fca_eoi_thank_you_page' );
 		var has_error = false;
 		var form_id = jQuery( '[name=fca_eoi_form_id]', $this ).val();
-		var nonceValue = jQuery( '#fca_eoi_nonce' ).val();
+		
 		
 		// Attach tooltips
-		jQuery( '[name=email], [name=name]', jQuery( this ) ).each( function() {
+		jQuery( '[name=email], [name=name]', $this ).each( function() {
 
 			var $this = jQuery( this );
 			var tooltipWidth = $this.width() * .8;
 
 			$this.tooltipster( {
-				contentAsHTML: true
-				, fixedWidth: tooltipWidth
-				, minWidth: tooltipWidth
-				, maxWidth: tooltipWidth
-				, trigger: 'none'
-			} );
-		} );
+				contentAsHTML: true,
+				fixedWidth: tooltipWidth,
+				minWidth: tooltipWidth,
+				maxWidth: tooltipWidth,
+				trigger: 'none'
+			} )
+		} )
 
 		// Remove tooltip and tick on focus
 		jQuery( '[name=email], [name=name]', jQuery( this ) ).focus( function() {
@@ -98,8 +98,6 @@ jQuery( document ).ready(function(){
 			event.preventDefault(); 
 		});	
 		
-		
-			
 		if ( $button.closest('.fca_eoi_form').hasClass('fca_eoi_layout_1') ) {
 			//without extra border
 			scaleSpinnerDiv($button, $div);
@@ -109,18 +107,20 @@ jQuery( document ).ready(function(){
 			scaleSpinnerDiv($input_div, $div);
 		}
 		scaleSpinnerSize($button, $spinner);
+		
+		//Match div border radius with button's
+		var radius = $button.css("borderRadius");
+		$div.css('borderRadius', radius);
 						
 		//animate out the button and in the spinner div
-		
 		$div.animate({ width: '100%'});
 		
 		$spinner.css("display", "block");
 		$button.attr('style', 'cursor: default' );
 					
-		jQuery.ajax( {
-		
+		jQuery.ajax({
 			url: fca_eoi.ajax_url,
-			data: { 'email': email, 'name': name, 'action': 'fca_eoi_subscribe', 'list_id': list_id ,'form_id': form_id, 'nonce': nonceValue },
+			data: { 'email': email, 'name': name, 'action': 'fca_eoi_subscribe', 'list_id': list_id ,'form_id': form_id, 'nonce': fca_eoi.nonce },
 			type: 'POST',
 			datatype: 'text',
 			timeout: 15000
@@ -134,11 +134,9 @@ jQuery( document ).ready(function(){
 				} else {
 					$button.val( data );
 				}
-			
-			
+						
 				$spinner.css("display", "none"); 
 				$div.animate({ width: '0', padding: '0', left: '100%' });
-
 			
 				clearInterval( highlight_interval );
 				if ( thank_you_page && '✓' === data ) {
@@ -157,17 +155,17 @@ jQuery( document ).ready(function(){
 					$email_field.prop('disabled', true);
 					$name_field.prop('disabled', true);
 					
-					jQuery('.tooltipster-content').css("background-color", "#148544");
-									
-				
+					jQuery('.tooltipster-content').css("background-color", "#148544");		
+					setTimeout(function() {
+						$button.tooltipster( 'hide' );
+					}, 5000);
 				}
 			} else {
 				window.location.href = thank_you_page;
 			}
 		});				
 	});
-} );
-
+});
 
 //set height, top and (-)margin top to same size as the fca_eoi_layout_submit_button_wrapper height
 
@@ -181,7 +179,6 @@ function scaleSpinnerDiv ($button, $div){
 	$div.css('z-index', '1');
 	
 }
-
 
 function scaleSpinnerSize( $button, $spinner ) {
 	var h = $button.outerHeight();

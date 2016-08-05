@@ -56,9 +56,6 @@ $layout = array(
 				'background-color' => array( __( 'Color' ), '#f5d03b' ),
 				'border-color' => array( __( 'Border Color' ), '#EEC22B' ),
 			),
-			'.fca_eoi_lightbox_1 .fca_eoi_lightbox_1_submit_button_wrapper input:hover' => array(
-				'background-color' => array( __( 'Hover Background Color' ), '#e9bd0c' ),
-			),
 		),
 		'privacy' => array(
 			'.fca_eoi_lightbox_1 .fca_eoi_lightbox_1_privacy_copy_wrapper' => array(
@@ -71,36 +68,5 @@ $layout = array(
 				'color' => array( __('Font Color'), '#BAA34E'),
 			),
 		),
-	),
-
-	'autocolors' => array(
-		array(
-			'source' => '[.fca_eoi_lightbox_1 .fca_eoi_lightbox_1_submit_button_wrapper input][background-color]',
-			'destination' => '[.fca_eoi_lightbox_1 .fca_eoi_lightbox_1_submit_button_wrapper input][border-color]',
-			'operations' => array(
-				'spin' => '-1.6029776674937963',
-				'desaturate' => '5.13842370797476',
-				'darken' => '4.5098039215686225',
-			),
-		),
-		array(
-		'source' => '[.fca_eoi_lightbox_1 .fca_eoi_lightbox_1_submit_button_wrapper input][background-color]',
-			'source' => '[.fca_eoi_lightbox_1 .fca_eoi_lightbox_1_submit_button_wrapper input][background-color]',
-			'destination' => '[.fca_eoi_lightbox_1 .fca_eoi_lightbox_1_submit_button_wrapper input:hover][background-color]',
-			'operations' => array(
-				'spin' => '-0.010217486498312667',
-				'saturate' => '-0.08718050326927962',
-				'lighten' => '-11.568627450980395',
-			),
-		),
-	),
-
-	'texts' => array(
-		'headline_copy' => 'Free Email Updates',
-		'description_copy' => 'Get the latest content first.',
-		'name_placeholder' => 'Name',
-		'email_placeholder' => 'Email',
-		'button_copy' => 'Join Now',
-		'privacy_copy' => "We respect your privacy.",
-	),
+	)
 );

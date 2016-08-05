@@ -10,12 +10,11 @@ function doBauhausReady() {
 	bauhausVideoUnwrap();
 	bauhausHandleSearch();
 	bauhausHandlePostImgs();
-	bauhausCheckForPushIt();
 }
 
 // Spice up the appearance of Foundation's Featured Slider
 function bauhausSliderMods(){
-	jQuery( '.swipe-wrap a' ).each( function(){
+	jQuery( '#slider a' ).each( function(){
 		imgCloned = jQuery( this ).find( 'img' ).clone();
 		jQuery( this ).append( imgCloned );
 		imgCloned.addClass( 'clone' );
@@ -87,17 +86,6 @@ function bauhausHandleSearch() {
 			jQuery( sectionName ).show();
 			e.preventDefault();
 		}).trigger( 'change' );
-	}
-}
-
-function bauhausOffCanvasMods(){
-	jQuery( '.wptouch-login-wrap' ).detach().appendTo( 'body' );
-}
-
-function bauhausCheckForPushIt(){
-	if ( jQuery.fn.pushIt ) {
-		jQuery( 'body' ).pushIt( { menuWidth: '270' } );
-		bauhausOffCanvasMods();
 	}
 }
 

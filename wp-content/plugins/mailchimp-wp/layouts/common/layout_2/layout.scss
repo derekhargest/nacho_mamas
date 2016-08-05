@@ -19,6 +19,7 @@ form.fca_eoi_layout_2 {
 			width: $fold_size;
 			height: $fold_size;
 			bottom: -( $fold_size );
+			fill: #595959;
 		}
 
 		&.fca_eoi_layout_fold_left {
@@ -42,18 +43,19 @@ form.fca_eoi_layout_2 {
 
 	div.fca_eoi_layout_submit_button_wrapper {
 		width: 100%;
-
+		padding-bottom: 5px;
+		
 		input {
-			background: transparent none;
 			border: 0 transparent;
-			border-bottom: 3px solid;
 			border-radius: $border_radius;
 			box-shadow: none;
 			font-weight: bold;
 			padding: .5em;
 			width: 100%;
 			white-space: normal;
+		
 		}
+
 	}
 
 	@media ( min-width: 1px ) and ( max-width: $content_small_breakpoint ),

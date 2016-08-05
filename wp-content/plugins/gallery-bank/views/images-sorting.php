@@ -19,8 +19,8 @@
 	else
 	{
 		$unique_id = rand(100, 10000);
-		$album_id = intval($_REQUEST["album_id"]);
-		$img_in_row = intval($_REQUEST["row"]);
+		$album_id = isset($_REQUEST["album_id"]) ? intval($_REQUEST["album_id"]) : 0;
+		$img_in_row = isset($_REQUEST["row"]) ? intval($_REQUEST["row"]) : 0;
 		if (isset($_REQUEST["order_id"])) {
 		    switch (esc_attr($_REQUEST["order_id"])) {
 		        case "unsort":
@@ -104,7 +104,7 @@
 		                )
 		        );
 		}
-		
+
 		$album = $wpdb->get_row
 		(
 		    $wpdb->prepare
@@ -119,35 +119,35 @@
 		);
 	if(isset($pics_order))
 	{
-		if (count($album_css) != 0) 
+		if (count($album_css) != 0)
 		{
 		    $setting_keys = array();
-		    for ($flag = 0; $flag < count($album_css); $flag++) 
+		    for ($flag = 0; $flag < count($album_css); $flag++)
 		    {
 		        array_push($setting_keys, $album_css[$flag]->setting_key);
 		    }
 		    $index = array_search("thumbnails_width", $setting_keys);
 		    $thumbnails_width = $album_css[$index]->setting_value;
-		
+
 		    $index = array_search("thumbnails_height", $setting_keys);
 		    $thumbnails_height = $album_css[$index]->setting_value;
-		
+
 		    $index = array_search("thumbnails_opacity", $setting_keys);
 		    $thumbnails_opacity = $album_css[$index]->setting_value;
-		
+
 		    $index = array_search("thumbnails_border_size", $setting_keys);
 		    $thumbnails_border_size = $album_css[$index]->setting_value;
 		    $new_thumb_width = $thumbnails_width + ($thumbnails_border_size * 4);
-		
+
 		    $index = array_search("thumbnails_border_radius", $setting_keys);
 		    $thumbnails_border_radius = $album_css[$index]->setting_value;
-		
+
 		    $index = array_search("thumbnails_border_color", $setting_keys);
 		    $thumbnails_border_color = $album_css[$index]->setting_value;
-		
+
 		    $index = array_search("margin_btw_thumbnails", $setting_keys);
 		    $margin_btw_thumbnails = $album_css[$index]->setting_value;
-		
+
 		    $video_thumb_url = plugins_url("/assets/images/video.jpg",dirname(__FILE__));
 		    ?>
 		    <!--suppress ALL -->
@@ -165,19 +165,19 @@
 		            margin-right: <?php echo $margin_btw_thumbnails;?>px;
 		            margin-bottom: <?php echo $margin_btw_thumbnails;?>px;
 		        }
-		        .layout-controls > a#<?php echo $_REQUEST["order_id"];?>
+		        .layout-controls > a#<?php echo esc_attr($_REQUEST["order_id"]);?>
 		        {
 		            color: #000000 !important;
 		            font-weight: bold !important;
 		        }
-		
+
 		        .imgLiquidFill {
 		            width: <?php echo $thumbnails_width;?>px;
 		            height: <?php echo $thumbnails_height;?>px;
 		            cursor: move;
 		            display: inline-block;
 		        }
-		
+
 		        .sort {
 		            padding: 6px;
 		            clear: both;
@@ -290,7 +290,7 @@
 				</div>
 			</div>
 		</form>
-	<?php 
+	<?php
 	}
 	?>
 		<script type="text/javascript">
@@ -305,13 +305,13 @@
 		    jQuery(".imgLiquidFill").imgLiquid({fill: true});
 		    function show_premium_message()
 		    {
-		    	alert("<?php _e( "This feature is only available in Paid Premium Version!", gallery_bank ); ?>");
+		    	alert("<?php _e( "This feature is only available in Premium Editions!", gallery_bank ); ?>");
 		    }
 		    function img_in_row() {
 		        var row = jQuery("#ux_ddl_img_in_Row").val();
 		        window.location.href = "<?php echo site_url();?>/wp-admin/admin.php?page=images_sorting&album_id=<?php echo $album_id;?>&row=" + row;
 		    }
 		</script>
-	<?php 
+	<?php
 	}
 	?>

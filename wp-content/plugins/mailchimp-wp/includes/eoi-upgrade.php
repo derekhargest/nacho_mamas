@@ -21,30 +21,46 @@ class EasyOptInsUpgrade {
             $this->submenu_link = 'https://fatcatapps.com/optincat/upgrade/?utm_campaign=wp%2Bsubmenu&utm_source=Optin%2BCat%2BFree%2BAweber&utm_medium=plugin';
             $this->sidebar_link = 'https://fatcatapps.com/optincat/upgrade/?utm_campaign=sidebar%2Bad&utm_source=Optin%2BCat%2BFree%2BAweber&utm_medium=plugin';
             $this->editor_link  = 'https://fatcatapps.com/optincat/upgrade/?utm_campaign=editor%2Bad&utm_source=Optin%2BCat%2BFree%2BAweber&utm_medium=plugin';
-        } elseif ( $this->has_provider( 'campaignmonitor' ) ) {
+			$this->review_link  = 'https://wordpress.org/support/view/plugin-reviews/aweber-wp?rate=5#postform';
+			$this->support_link = 'https://wordpress.org/support/plugin/aweber-wp';
+			  
+		} elseif ( $this->has_provider( 'campaignmonitor' ) ) {
             $this->submenu_link = 'https://fatcatapps.com/optincat/upgrade/?utm_campaign=wp%2Bsubmenu&utm_source=Optin%2BCat%2BFree%2BCampaign%2BMonitor&utm_medium=plugin';
             $this->sidebar_link = 'https://fatcatapps.com/optincat/upgrade/?utm_campaign=sidebar%2Bad&utm_source=Optin%2BCat%2BFree%2BCampaign%2BMonitor&utm_medium=plugin';
             $this->editor_link  = 'https://fatcatapps.com/optincat/upgrade/?utm_campaign=editor%2Bad&utm_source=Optin%2BCat%2BFree%2BCampaign%2BMonitor&utm_medium=plugin';
-        } elseif ( $this->has_provider( 'getresponse' ) ) {
+        	$this->review_link  = 'https://wordpress.org/support/view/plugin-reviews/campaign-monitor-wp?rate=5#postform';
+			$this->support_link = 'https://wordpress.org/support/plugin/campaign-monitor-wp';
+		
+		} elseif ( $this->has_provider( 'getresponse' ) ) {
             $this->submenu_link = 'https://fatcatapps.com/optincat/upgrade/?utm_campaign=wp%2Bsubmenu&utm_source=Optin%2BCat%2BFree%2BGetResponse&utm_medium=plugin';
             $this->sidebar_link = 'https://fatcatapps.com/optincat/upgrade/?utm_campaign=sidebar%2Bad&utm_source=Optin%2BCat%2BFree%2BGetResponse&utm_medium=plugin';
             $this->editor_link  = 'https://fatcatapps.com/optincat/upgrade/?utm_campaign=editor%2Bad&utm_source=Optin%2BCat%2BFree%2BGetResponse&utm_medium=plugin';
-        } elseif ( $this->has_provider( 'mailchimp' ) ) {
+          	$this->review_link  = 'https://wordpress.org/support/view/plugin-reviews/getresponse?rate=5#postform';
+			$this->support_link = 'https://wordpress.org/support/plugin/getresponse';
+			
+		} elseif ( $this->has_provider( 'mailchimp' ) ) {
             $this->submenu_link = 'https://fatcatapps.com/optincat/upgrade/m?utm_campaign=wp%2Bsubmenu&utm_source=Optin%2BCat%2BFree%2BMailChimp&utm_medium=plugin';
             $this->sidebar_link = 'https://fatcatapps.com/optincat/upgrade/m?utm_campaign=sidebar%2Bad&utm_source=Optin%2BCat%2BFree%2BMailChimp&utm_medium=plugin';
             $this->editor_link  = 'https://fatcatapps.com/optincat/upgrade/m?utm_campaign=editor%2Bad&utm_source=Optin%2BCat%2BFree%2BMailChimp&utm_medium=plugin';
-        } elseif ( $this->has_provider('customform') ) {
+           	$this->review_link  = 'https://wordpress.org/support/view/plugin-reviews/mailchimp-wp?rate=5#postform';
+			$this->support_link = 'https://wordpress.org/support/plugin/mailchimp-wp';       
+		} elseif ( $this->has_provider('customform') ) {
             $this->submenu_link = 'https://fatcatapps.com/optincat/upgrade/p?utm_campaign=wp%2Bsubmenu&utm_source=Optin%2BCat%2BFree%2BPopup&utm_medium=plugin';
             $this->sidebar_link = 'https://fatcatapps.com/optincat/upgrade/p?utm_campaign=sidebar%2Bad&utm_source=Optin%2BCat%2BFree%2BPopup&utm_medium=plugin';
             $this->editor_link  = 'https://fatcatapps.com/optincat/upgrade/p?utm_campaign=editor%2Bad&utm_source=Optin%2BCat%2BFree%2BPopup&utm_medium=plugin';
-        } else {
+                      
+		} else {
             $this->submenu_link = 'https://fatcatapps.com/optincat/upgrade/p?utm_campaign=wp%2Bsubmenu&utm_source=Optin%2BCat%2BFree&utm_medium=plugin';
             $this->sidebar_link = 'https://fatcatapps.com/optincat/upgrade/p?utm_campaign=sidebar%2Bad&utm_source=Optin%2BCat%2BFree&utm_medium=plugin';
             $this->editor_link  = 'https://fatcatapps.com/optincat/upgrade/p?utm_campaign=editor%2Bad&utm_source=Optin%2BCat%2BFree&utm_medium=plugin';
-        }
+            $this->review_link  = 'https://wordpress.org/support/view/plugin-reviews/mailchimp-wp?rate=5#postform';
+			$this->support_link = 'https://wordpress.org/support/plugin/mailchimp-wp';       
+		}
 
         add_action( 'admin_menu', array( $this, 'fca_eoi_upgrade_to_premium_menu' ));
         add_action( 'admin_footer', array( $this, 'admin_footer' ) );
+		add_filter( 'admin_footer_text', array( $this, 'show_upgrade_encouragement' ) );
+		add_action( 'admin_notices', array( $this, 'show_quick_links' ) );
     }
 
     private function has_provider( $provider ) {
@@ -53,30 +69,30 @@ class EasyOptInsUpgrade {
 
     function admin_footer() {
         $this->fca_eoi_upgrade_to_premium_menu_js();
-        $this->show_upgrade_encouragement();
         $this->show_upgrade_bar();
     }
-
-    function show_upgrade_encouragement() {
+	
+	function show_quick_links() {
         if ( ! $this->is_in_eoi_page() ) {
             return;
         }
+        echo '<div class="notice notice-info is-dismissible">';
+		echo	'<p><strong>Quick Links:</strong> <a href="'. $this->support_link .'" target="_blank">Problems?  Get help here</a>. | <a href="'. $this->review_link .'" target="_blank"> Like this plugin?  Please leave a review</a>.</p>';
+		echo '</div>';
+        
+    }
 
-        $message =
-            '<div>' .
-                'Thanks for using Optin Cat. Do you like this plugin? ' .
-                '<a href="' . $this->sidebar_link . '" target="_blank">Optin Cat Premium</a> ' .
-                'comes with even more features that help you grow your list. Love it or get your money back. ' .
-                '<a href="' . $this->sidebar_link . '" target="_blank">Learn more here</a>.' .
-            '</div>';
+    function show_upgrade_encouragement( $text ) {
+        if ( ! $this->is_in_eoi_page() ) {
+            return $text;
+        }
 
-        ?>
-        <script>
-            jQuery( function( $ ) {
-                $( '#wpbody-content' ).append( <?php echo json_encode( $message ) ?> );
-            } );
-        </script>
-        <?php
+        $message =  "<span style='font-style: italic;'>| Thank you for using <a href='$this->sidebar_link' target='_blank'>Optin Cat</a>. " .
+					"Wanna grow your list faster? Check out <a href='$this->sidebar_link' target='_blank'>Optin Cat Premium</a>. " .
+					"Love it or get your money back. </span>";
+								
+        return $text . $message;
+        
     }
 
     function show_upgrade_bar() {
@@ -91,6 +107,12 @@ class EasyOptInsUpgrade {
             .fca_eoi_upgrade_bar {
                 padding: 12px;
                 background-color: #FCF8E3;
+				width: 100%;
+            }
+			
+			.fca_eoi_upgrade_bar.top_border {
+                border-top: 1px solid #ccc;
+				width: auto;
             }
 
             .fca_eoi_upgrade_bar.fca_eoi_upgrade_bar_inner {
@@ -179,12 +201,19 @@ class EasyOptInsUpgrade {
                 jQuery(document).ready( function($) {
                     var layouts_message = <?php echo json_encode( str_replace(
                         array( '__class__', '__text__' ),
-                        array( 'fca_eoi_upgrade_bar fca_eoi_upgrade_bar_inner', 'Upgrade to Premium for more layouts & design options' ),
+                        array( 'fca_eoi_upgrade_bar top_border', 'Upgrade to Premium for more layouts & design options' ),
                         $template
                     ) ) ?>;
 
-                    $( '#fca_eoi_layout_select' ).before( layouts_message );
-                    $( '#fca_eoi_settings' ).after( '<br class="clear"/>' + layouts_message );
+                    $( '.fca_eoi_accordion_tab' ).last().next().after( layouts_message );
+					
+					 layouts_message = <?php echo json_encode( str_replace(
+                        array( '__class__', '__text__' ),
+                        array( 'fca_eoi_upgrade_bar', 'Upgrade to Premium for more layouts & design options' ),
+                        $template
+                    ) ) ?>;
+									
+                    $( '#fca_eoi_form_preview' ).next().after( layouts_message );
 
                     $( '#fca_eoi_publish_lightbox_mode_two_step_optin' ).after( <?php echo json_encode( str_replace(
                         array( '__class__', '__text__' ),

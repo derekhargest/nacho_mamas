@@ -119,7 +119,8 @@ class EoiNewCssMigration {
 				$to_selector = $to_selectors[ $i ];
 
 				if ( ! empty( $fca_eoi[ $layout_id ][ $from_selector ] ) ) {
-					$fca_eoi_changed = true;
+					$fca_eoi_changed == true ? '' : $fca_eoi_changed = true;
+					
 					$this->migrate_selector( $from_selector, $to_selector, $layout_id, $fca_eoi );
 				}
 			}

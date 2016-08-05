@@ -476,22 +476,22 @@
 				//noinspection JSUnresolvedVariable
 				jQuery.post(ajaxurl, "album_id="+album_id+"&param=Delete_album&action=add_new_album_library", function()
 				{
-					var check_page = "<?php echo $_REQUEST["page"]; ?>";
+					var check_page = "<?php echo isset($_GET["page"]) ? esc_attr($_GET["page"]) : ""; ?>";
 					window.location.href = "admin.php?page="+check_page;
 				});
 			}
 		}
 		function delete_all_albums()
 		{
-			alert("<?php _e( "This feature is only available in Paid Premium Version!", gallery_bank ); ?>");
+			alert("<?php _e( "This feature is only available in Premium Editions!", gallery_bank ); ?>");
 		}
 		function restore_factory_settings()
 		{
-			alert("<?php _e( "This feature is only available in Paid Premium Version!", gallery_bank ); ?>");
+			alert("<?php _e( "This feature is only available in Premium Editions!", gallery_bank ); ?>");
 		}
 		function purge_all_images()
 		{
-			alert("<?php _e( "This feature is only available in Paid Premium Version!", gallery_bank ); ?>");
+			alert("<?php _e( "This feature is only available in Premium Editions!", gallery_bank ); ?>");
 		}
 	</script>
 	<?php

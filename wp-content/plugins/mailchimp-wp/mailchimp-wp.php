@@ -4,7 +4,7 @@
     Plugin URI: https://fatcatapps.com/optincat
     Description: The Mailchimp Optin Cat WordPress Plugin Makes It Super Simple To Create Beautiful Mailchimp Sign-up Widgets & Forms In Minutes.
     Author: Fatcat Apps
-    Version: 1.5.4
+    Version: 1.6.1
     Author URI: https://fatcatapps.com/
 */
 
@@ -25,25 +25,6 @@ define( 'FCA_EOI_EDITION', 'mailchimp' );
 if( ! defined ( 'FCA_EOI_DEBUG' ) ) {
     define( 'FCA_EOI_DEBUG', false );
 }
-if ( ! class_exists ( 'Mustache_Engine' ) ) {
-    require FCA_EOI_PLUGIN_DIR . 'includes/classes/Mustache/Autoloader.php';
-    Mustache_Autoloader::register();
-}
-
-/**
- * Include scssphp
- * 
- * Latest version requires PHP 5.3
- * Version 0.0.15 works with PHP 5.2
- * We detect PHP > 5.3 by checking the constant __DIR__
- */
-if ( ! class_exists ( 'scssc' ) ) {
-    if( defined( '__DIR__' ) ) {
-        require FCA_EOI_PLUGIN_DIR . 'includes/classes/scssphp/scss.inc.php';
-    } else {
-        require FCA_EOI_PLUGIN_DIR . 'includes/classes/scssphp-0.0.15/scss.inc.php';
-    }
-}
 
 /**
  * Include and instantiate Mobile Detect
@@ -55,7 +36,7 @@ if ( ! class_exists ( 'Mobile_Detect' ) ) {
 if( ! class_exists( 'DhEasyOptIns' ) ) {
 class DhEasyOptIns {
 
-    var $ver = '1.5.4';
+    var $ver = '1.6.1';
     var $distro = '';
     var $shortcode = 'optin-cat';
     var $shortcode_aliases = array(
@@ -137,7 +118,7 @@ class DhEasyOptIns {
         $providers_available = array_keys( $this->settings[ 'providers' ] );
         
         //set current post type to setting array
-        $this->settings[ 'post_type' ] = $post_type;
+        $this->settings[ 'post_type' ] = get_post_type();
 
         // If there is only one provider, use it
         if( 1 == count( $providers_available ) ) {
@@ -152,9 +133,6 @@ class DhEasyOptIns {
             $this->distro = 'premium';
             $this->settings['distribution'] = 'premium';
         }
-
-        // Add options that are stored in DB if any
-        $this->settings[ 'eoi_settings' ] = $eoi_settings;
 
         // Include provider helper class(es)
         foreach ( $providers_available as $provider ) {
@@ -246,15 +224,21 @@ if ( ! is_plugin_active( plugin_basename( __FILE__ ) ) ) {
 				
 		//convert everyone to new CSS if they are on OLD
 		fca_eoi_migrate_css();
+		//convert everyone to new Post Meta Format if they are on OLD
+		fca_eoi_convert_post_meta();
+		
+		//check for users of custom form, otherwise that feature is disabled
+		$opt = get_option ( 'fca_eoi_allow_customform', '' );
+		if ( empty ( $opt ) ) {
+			fca_eoi_set_custom_form_depreciation();
+		}
 				
-		//pre-compile SCSS
-		fca_eoi_compile_scss();
-			
         // If everything went well, continue with the activation setup
         require FCA_EOI_PLUGIN_DIR . 'includes/eoi-activity.php';
         EasyOptInsActivity::get_instance()->setup();
-
 		
+		
+
     }
 
     // If the plugin is not yet active, check for any obstacles in activation

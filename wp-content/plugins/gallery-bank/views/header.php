@@ -133,7 +133,7 @@ if(!function_exists("gallery_get_minisize"))
 					</li>
 					<li>
 						<a href="http://tech-banker.com/products/wp-gallery-bank/pricing/" target="_blank" class="welcome-icon">
-							<?php _e("Premium Pricing Plans", gallery_bank); ?>
+							<?php _e("Pricing Plans", gallery_bank); ?>
 						</a>
 					</li>
 				</ul>
@@ -154,8 +154,8 @@ if(!function_exists("gallery_get_minisize"))
 						</a>
 					</li>
 					<li>
-						<a href="http://tech-banker.com/products/wp-gallery-bank/" target="_blank" class="welcome-icon">
-							<?php _e("Detailed Features", gallery_bank); ?>
+						<a href="http://tech-banker.com/products/renew-premium-support-wp-gallery-bank/" target="_blank" class="welcome-icon">
+							<?php _e("Renew Premium Support", gallery_bank); ?>
 						</a>
 					</li>
 				</ul>
@@ -183,14 +183,18 @@ if(!function_exists("gallery_get_minisize"))
 		</div>
 	</div>
 </div>
+<?php
+if(isset($_GET["page"]))
+{
+?>
 <script>
 jQuery(document).ready(function()
 {
-	jQuery(".nav-tab-wrapper > a#<?php echo $_REQUEST["page"];?>").addClass("nav-tab-active");
+	jQuery(".nav-tab-wrapper > a#<?php echo esc_attr($_GET["page"]);?>").addClass("nav-tab-active");
 });
 </script>
-<?php
-switch($_REQUEST["page"])
+	<?php
+switch(esc_attr($_GET["page"]))
 {
 	case "gallery_bank":
 		$page = "Dashboard";
@@ -221,7 +225,7 @@ switch($_REQUEST["page"])
 		$page = "System Status";
 	break;
 	case "gallery_bank_purchase":
-		$page = "Purchase Pro Version";
+		$page = "Purchase Pro Edition";
 	break;
 	case "save_album":
 		$page = "Album";
@@ -313,7 +317,7 @@ switch ($gb_role)
 		<?php
 	break;
 }
-if($_REQUEST["page"] != "gallery_bank_feature_request")
+if(esc_attr($_GET["page"]) != "gallery_bank_feature_request")
 {
 	?>
 	<div class="custom-message green" style="display: block;margin-top:30px">
@@ -370,5 +374,6 @@ function is_dir_empty($dir)
 		}
 	}
 	return TRUE;
+}
 }
 ?>

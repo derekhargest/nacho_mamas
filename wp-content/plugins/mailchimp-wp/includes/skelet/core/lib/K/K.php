@@ -78,13 +78,6 @@ class K {
 			wp_enqueue_style( 'wp-color-picker' );
 			wp_enqueue_script( 'wp-color-picker' );
 			ob_start();
-			?>
-			<script>
-				jQuery( 'document' ).ready( function($) {
-					$( '[name="<?php echo $name; ?>"]' ).wpColorPicker();
-				});
-			</script>
-			<?php
 			$input .= ob_get_clean();
 		}
 
@@ -217,7 +210,7 @@ class K {
 			}
 		}
 
-		// Use 'default' is 'selected' is empty
+		// Use 'default' if 'selected' is empty
 		if( ! $selected ) {
 			$selected = array( $args[ 'default' ] );
 		}

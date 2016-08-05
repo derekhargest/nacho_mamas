@@ -3,16 +3,25 @@
 #poststuff {
 	opacity: 0;
 }
-#poststuff .inside {
-    margin-top: 0;
-    padding-right: 0;
+#fca_eoi_meta_box_setup .inside {
+	border: 1px solid #ccc;
+	border-top: none;
+    padding: 0;
+    margin-top: 30px;
+    border-top: none;
+	
 }
-
+#slugdiv {
+	display: none !important;
+}
+#fca_eoi_show_setup{
+    float: right;
+    margin-top: 10px;
+}
 .disabledButton {
 	pointer-events: none;
 	opacity: 0.4;
 }
-
 
 .fca_eoi_layout {
 	min-width: 214px;
@@ -22,8 +31,8 @@
 	position:relative;
 	padding: 0;
 	text-align: center;
-    margin: 0 4% 4% 0;
-    width: 30.6%;
+    margin: 0 1% 3% 1.2%;
+	width: 22.7%;
 	min-height: 210px;
     border: 1px solid #dedede;
     -webkit-box-shadow: 0 1px 1px -1px rgba(0,0,0,.1);
@@ -44,8 +53,6 @@
 	opacity: 0.4;
 }
 
-
-
 .fca_eoi_layout_info h3 {
 	display: table-cell;
 	vertical-align: bottom;
@@ -54,10 +61,13 @@
 	padding: 15px !important;
 
 }
-.fca_eoi_layout_info input {
+.fca_eoi_layout_info button {
 	margin-top: 9px !important;
 	margin-right: 10px !important;
+	visibility: hidden;
+	font-weight: normal;
 }
+
 
 .fca_eoi_layout_info {
 	position:absolute;
@@ -76,23 +86,12 @@
 	width: 100%;
 
 }
-
-.fca_eoi_layout_info  input {
-	visibility: hidden;
-}
-
-#publish {
-	font-weight: normal;
-}
-
-.fca_eoi_layout:hover  #publish {
+.fca_eoi_layout:hover  .fca_eoi_layout_info button {
 	visibility: visible;
 }
 
 .fca_eoi_layout.active .fca_eoi_layout_info{
-
 	background: #2f2f2f;
-
 }
 
 .fca_eoi_layout.active h3:before{
@@ -103,10 +102,6 @@
 .fca_eoi_layout.active h3{
 	color: white;
 	font-weight: 300;
-}
-
-.fca_eoi_layout:nth-of-type(3n) {
-	margin-right: 0;
 }
 
 
@@ -179,8 +174,11 @@ div[id^=fca_eoi_] .control-title {
 }
 #fca_eoi_preview_form {
 	margin: auto;
-	padding: 1em;
+	display: inline-block;
+	padding: 0;
+	border: 1px solid transparent;
 }
+
 html[dir=rtl] #fca_eoi_preview {
 	float: right;
 }
@@ -216,6 +214,37 @@ html[dir=rtl] #fca_eoi_preview {
 	border-style: solid;
 	max-width: 100%;
 }
+
+div#fca_eoi_preview div.fca_eoi_layout_popup_close {
+	display: none;
+}
+
+div#fca_eoi_preview div.fca_eoi_layout_popup_content_wrapper {
+	overflow: inherit;
+}
+
+#fca_eoi_preview_form_container {
+	display: table;
+	width: 100%;
+	margin-top: 50px;
+}
+
+#fca_eoi_preview_form_wrapper {
+	display: table-cell;
+	text-align: center;
+}
+
+.fca_eoi_form_text_element.fca_eoi_highlighted,
+.fca_eoi_highlighted {
+	outline: 2px dashed #44C0FE !important;
+}
+
+.fca-eoi-thank-you-ajax {
+	width: 25em;
+	font-family: monospace;
+}
+
+
 /* Toggles */
 .fca_eoi_toggle {
 	border: solid 1px lightgray;
@@ -288,11 +317,6 @@ html[dir=rtl] #fca_eoi_preview {
 	display: none;
 }
 
-/* Hide all unwanted post boxes */
-.postbox {
-	display: none;
-}
-
 #submitdiv,
 #fca_eoi_meta_box_nav,
 #fca_eoi_meta_box_setup {
@@ -305,6 +329,10 @@ html[dir=rtl] #fca_eoi_preview {
 }
 #layouts_types_tabs{
 	margin-bottom: 0px;
+	position: relative;
+    top: -30px;
+	left: -1px;
+	border-bottom: 1px solid #ccc;
 }
 #layouts_types_tabs li {
 	border: 1px solid #ccc;
@@ -348,6 +376,9 @@ html[dir=rtl] #fca_eoi_preview {
 	padding: 0;
 	overflow: hidden;
 }
+#fca_eoi_meta_box_build .inside {
+	padding: 0;
+}
 
 #submitdiv {
 	background: white;
@@ -379,11 +410,6 @@ html[dir=rtl] #publishing-action {
 
 #fca_eoi_preview #wp-image-toolbar {
 	display: none;
-}
-
-div[id^=layouts_type_] {
-	border-top: solid 1px #DFDFDF;
-	padding-top: 15px;
 }
 
 fieldset[id^=fca_eoi_fieldset_form_][id$=_integration] {
@@ -424,74 +450,107 @@ a[id^="fca-eoi-tour-pointer-previous"] {
   box-shadow: inset 0 1px 0 rgba(245,166,145,48),0 1px 0 rgba(0,0,0,.15);
 }
 
+
+/* ON OFF SWITCH */
+
+.switch {
+	position: relative;
+	display: inline-block !important;
+	vertical-align: top;
+	width: 70px;
+	height: 25px;
+	padding: 0;
+	background: #eeeeee;
+	border-radius: 18px;
+	cursor: pointer;
+	margin: 0;
+	margin-top: 3px;
+	vertical-align: middle;
+}
+.switch-input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+.switch-label {
+	position: relative;
+	display: block !important;
+	height: inherit;
+	font-size: 12px;
+	text-transform: uppercase;
+	border-radius: inherit;
+
+}
+.switch-label:before, .switch-label:after {
+	position: absolute;
+	top: 53%;
+	margin-top: -.5em;
+	line-height: 1;
+	-webkit-transition: inherit;
+	-moz-transition: inherit;
+	-o-transition: inherit;
+	transition: inherit;
+}
+.switch-label:before {
+	content: attr(data-off);
+	right: 12px;
+	color: #aaaaaa;
+}
+.switch-label:after {
+	content: attr(data-on);
+	left: 8px;
+	color: #FFFFFF;
+	opacity: 0;
+}
+.switch-input:checked ~ .switch-label {
+	background: #39b0ff;
+}
+.switch-input:checked ~ .switch-label:before {
+	opacity: 0;
+}
+.switch-input:checked ~ .switch-label:after {
+	opacity: 1;
+}
+.switch-handle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 23px;
+	height: 23px;
+	background: #FFFFFF;
+	border: 1px solid #ccc;
+	border-radius: 100%;
+}
+
+.switch-input:checked ~ .switch-handle {
+	left: 48px;
+}
+
+
 /* RESPONSIVE */
 
+@media only screen and (max-width: 1161px) {
 
-@media only screen and (max-width: 1120px) {
-
-	.fca_eoi_layout  {
-		margin-right: 5%;
-		width: 47.5%;
+	.fca_eoi_layout {
+		width: 30.6%;
 	}
-	.fca_eoi_layout:nth-of-type(3n)  {
-		margin-right: 5%;
-	}
-	.fca_eoi_layout:nth-of-type(even) {
-		margin-right: 0%;
-	}
-	
 
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 731px) {
 	.fca_eoi_layout  {
-		margin-right: 0;
+		width: 47%;
+	}
+	
+}
+
+@media only screen and (max-width: 491px) {
+	.fca_eoi_layout  {
 		width: 100%;
 	}
-	
 	#layouts_types_tabs li {
-		padding-left: 0;
-		padding-right: 0;
-		margin-top: 2px;
-		
+		padding: 3px 5px 5px 5px;
 	}
-	
-	#layouts_types_tabs li a{
-		font-size: 14px;
-		
-	}
-	
-}
-
-@media only screen and (min-width: 1640px) {
-
-	.fca_eoi_layout {
-		width: 22.7%;
-		margin: 0 3% 3% 0;
-	}
-	
-	.fca_eoi_layout:nth-of-type(3n), .fca_eoi_layout:nth-of-type(even) {
-		margin-right: 3%;
-	}
-	
-	.fca_eoi_layout:nth-of-type(4n) {
-		margin-right: 0%;
-	}
-
-
-
-}
-
-@media only screen and (min-width: 2000px) {
-
-	.fca_eoi_layout {
-		width: 17.6%;
-		margin: 0 3% 3% 0;
-	}
-	
-	.fca_eoi_layout:nth-of-type(3n), .fca_eoi_layout:nth-of-type(4n), .fca_eoi_layout:nth-of-type(even)  {
-		margin-right: 3%;
-	}
-
 }
 

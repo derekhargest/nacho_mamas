@@ -55,13 +55,6 @@ $layout = array(
 				'color' => array( __( 'Font Color' ), '#FFF' ),
 				'background-color' => array( __( 'Button Color' ), '#E67E22' ),
 			),
-			'.fca_eoi_lightbox_5 .fca_eoi_lightbox_5_submit_button_wrapper input:hover' => array(
-				'background-color' => array( __( 'Hover Background Color' ), '##D35400' ),
-			),
-			'.fca_eoi_lightbox_5 .fca_eoi_lightbox_5_submit_button_wrapper' => array(
-				'background-color' => array( __( 'Container Background Color' ), '#D35400' ),
-				'border-color' => array( __( 'Container Bottom Bolor' ), '#D35400' ),
-			),
 		),
 		'privacy' => array(
 			'.fca_eoi_lightbox_5 .fca_eoi_lightbox_5_privacy_copy_wrapper' => array(
@@ -74,45 +67,5 @@ $layout = array(
 				'color' => array( __('Font Color'), '#8F8F8F'),
 			),
 		),
-	),
-
-	'autocolors' => array(
-		array(
-			'source' => '[.fca_eoi_lightbox_5 .fca_eoi_lightbox_5_submit_button_wrapper input][background-color]',
-			'destination' => '[.fca_eoi_lightbox_5 .fca_eoi_lightbox_5_submit_button_wrapper input:hover][background-color]',
-			'operations' => array(
-				'spin' => '-4.277009381951832',
-				'saturate' => '20.32520325203253',
-				'darken' => '10.392156862745106',
-			),
-		),
-		array(
-			'source' => '[.fca_eoi_lightbox_5 .fca_eoi_lightbox_5_submit_button_wrapper input][background-color]',
-			'destination' => '[.fca_eoi_lightbox_5 .fca_eoi_lightbox_5_submit_button_wrapper][background-color]',
-			'operations' => array(
-				'spin' => '-4.277009381951832',
-				'saturate' => '20.32520325203253',
-				'darken' => '10.392156862745106',
-			),
-		),
-		array(
-			'source' => '[.fca_eoi_lightbox_5 .fca_eoi_lightbox_5_submit_button_wrapper input][background-color]',
-			'destination' => '[.fca_eoi_lightbox_5 .fca_eoi_lightbox_5_submit_button_wrapper][border-color]',
-			'operations' => array(
-				'spin' => '-4.277009381951832',
-				'saturate' => '20.32520325203253',
-				'darken' => '10.392156862745106',
-			),
-		),
-
-	),
-
-	'texts' => array(
-		'headline_copy' => 'Free Email Updates',
-		'description_copy' => 'Get the latest content first.',
-		'name_placeholder' => 'Name',
-		'email_placeholder' => 'Email',
-		'button_copy' => 'Join Now',
-		'privacy_copy' => "We respect your privacy.",
-	),
+	)
 );

@@ -1,9 +1,9 @@
 === Gallery Bank - Photo Galleries & Albums ===
 Contributors: Gallery-Bank,contact-banker
-Tags: add album, add gallery, add pictures, admin, AJAX, album, best gallery, best gallery plugin, Facebook, filterable gallery, foto, fotoalbum, fotogalerie, free photo gallery, fullscreen gallery, fullscreen slider, galeri, galerie, Galleria, galleries, gallery, gallery decription, gallery image, gallery lightbox, gallery shortcode, gallery slider, image, image album, image gallery, image lightbox, image rotate, image slider, image slideshow, images, images gallery, instagram, jquery, jquery gallery, lightbox, media, mosaic, multiple pictures, photo, photo album, photo albums, photo gallery, photoalbum, photogallery, photography, photos, photoset, picture, pictures, responsive, responsive gallery, responsive wordpress photo gallery, sidebar, Simple gallery, slide, slide show, slideshow, thumbnail, thumbnail view, thumbnails, thumbs, upload images, upload photos, video gallery, videos, view images, view pictures, website gallery, widget gallery, wordpress gallery, wordpress gallery plugin, wordpress photo gallery plugin, wp gallery, wp gallery plugins, youtube, gallery bank
+Tags: add album, add gallery, add pictures, best gallery plugin, filterable gallery, gallery decription, gallery image, gallery lightbox, gallery shortcode, image lightbox, image rotate, image slider, image slideshow, lightbox, mosaic, photo albums, photo gallery, photoalbum, responsive gallery, thumbnail view, video gallery, widget gallery, wordpress gallery, wp gallery, gallery bank
 Requires at least: 3.4
-Tested up to: 4.5.2
-Stable tag: 3.1.10
+Tested up to: 4.5.3
+Stable tag: 3.1.24
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -500,6 +500,76 @@ is False in shortcode.
 
 == Changelog ==
 
+= 3.1.24 =
+
+* Tooltip Renamed
+* Few Bugs Fixed
+
+= 3.1.23 =
+
+* Code Optimized
+* Few Bugs Fixed
+
+= 3.1.22 =
+
+* Major Cross Site Scripting Security Issue Fix
+* Few Bugs Fixed
+
+= 3.1.21 =
+
+* Few Bugs Fixed
+
+= 3.1.20 =
+
+* Strings Updated
+* Few Bugs Fixed
+* Pricing Table Changed
+* Code Optimized
+
+= 3.1.19 =
+
+* Header Section Updated
+* Few Bugs Fixed
+* Other Services Content Updated
+* Pricing Table Changed
+
+= 3.1.18 =
+
+* Few Bugs Fixed
+
+= 3.1.17 =
+
+* Other Services Content Updated
+* Pricing Table Changed
+
+= 3.1.16 =
+
+* Few CSS Bugs Fixed
+* Pricing Table Changed
+
+= 3.1.15 =
+
+* Compatibility with 4.5.3
+
+= 3.1.14 =
+
+* Few CSS Bugs Fixed
+
+= 3.1.13 =
+
+* Few Bugs Fixed
+* Code Optimized
+
+= 3.1.12 =
+
+* Few Bugs Fixed
+* Code Optimized
+
+= 3.1.11 =
+
+* Few Bugs Fixed
+* Code Optimized
+
 = 3.1.10 =
 
 * Few Bugs Fixed
@@ -529,7 +599,7 @@ is False in shortcode.
 
 * Few Bugs Fixed
 * Code Optimized
- 
+
 = 3.1.3 =
 
 * Few Bugs Fixed

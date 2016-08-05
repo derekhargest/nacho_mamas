@@ -45,7 +45,9 @@ equalheight = function(container){
         infiniteLoop: false,
         hideControlOnEnd: true,
         speed: 2000,
-        pager: false
+        pager: false,
+        minSlides: 2,
+        maxSlides: 2
       });
 
 

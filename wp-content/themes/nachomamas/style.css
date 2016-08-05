@@ -2028,6 +2028,8 @@ nav.prev-next-posts {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  width: 100%;
+  float: left;
 }
 .banner.main-banner img.banner-image {
   position: absolute;

@@ -11,8 +11,6 @@
 						<h3>"Where Baw/mer meets Mexico"</h3>
 					</div>
 				<?php else: ?>
-						<div class="banner-overlay page" id="banner-overlay">
-						</div>
 					</div>
 				<?php endif; ?>
 		</div>

@@ -65,7 +65,7 @@ get_header(); ?>
 
 						<div class="menu-content">
 
-							<p>For Carryout Call: <span class="number">410-324-2922</span></p>
+							<p>Coming Soon!</p>
 
 						</div>
 

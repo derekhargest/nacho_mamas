@@ -28,6 +28,7 @@ get_header(); ?>
 
   	<div id="content-block">
 			<?php // get_template_part( 'template-parts/cta-link' ); ?>
+			<div class="content-container">
       <div class="container page">
 
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
@@ -76,6 +77,7 @@ get_header(); ?>
 		 */
 		do_action( 'woocommerce_after_main_content' );
 	?>
+</div>
 </div>
 </div>
 </main>

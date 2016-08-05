@@ -47,9 +47,9 @@ get_header(); ?>
 
 						<div class="menu-buttons">
 
-							<a href="<?php echo the_field('canton_dining_menu'); ?>" class="button" onclick="event.preventDefault();"><span>Lunch &amp; Dinner</span></a>
+							<a href="<?php echo the_field('canton_dining_menu'); ?>" class="button"><span>Lunch &amp; Dinner</span></a>
 
-							<a href="<?php echo the_field('canton_specials_menu'); ?>" class="button" onclick="event.preventDefault();"><span>Specials</span></a>
+							<a href="<?php echo the_field('canton_specials_menu'); ?>" class="button"><span>Specials</span></a>
 
 							<a href="<?php echo the_field('canton_brunch_menu'); ?>" class="button"><span>Brunch</span></a>
 

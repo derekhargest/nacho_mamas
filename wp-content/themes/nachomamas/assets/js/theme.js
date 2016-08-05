@@ -33,6 +33,7 @@ equalheight = function(container){
     $(document).ready(function(){
       var headerHeightMobile = $(".mobile-logo").height();
       var bannerHeight = $(".banner-image").height();
+      var bannerHeight2 = $(".main-banner").height();
       var Headheight = document.getElementById("header").offsetHeight;
       var homeItemHeight = $(".home-image").height();
 
@@ -67,7 +68,7 @@ equalheight = function(container){
       $(".slicknav_btn").height(headerHeightMobile);
 
       if ($(window).width() < 700) {
-        $(".main-banner").height(bannerHeight);
+        $(".banner-wrapper").height(bannerHeight2);
       }
 
       if ($(window).width() > 700) {

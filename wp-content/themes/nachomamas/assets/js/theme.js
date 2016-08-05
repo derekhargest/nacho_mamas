@@ -39,6 +39,15 @@ equalheight = function(container){
       equalheight('.event-item');
       equalheight('.product');
 
+      $('.bxslider').bxSlider({
+        mode: 'horizontal',
+        useCSS: false,
+        infiniteLoop: false,
+        hideControlOnEnd: true,
+        speed: 2000,
+        pager: false
+      });
+
 
 
       $('#mobile-menu .menu').slicknav({

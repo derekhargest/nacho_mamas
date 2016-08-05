@@ -85,18 +85,6 @@
 
 <?php wp_footer(); ?>
 
-<script>
-	$('.bxslider').bxSlider({
-	  mode: 'horizontal',
-	  useCSS: false,
-	  infiniteLoop: false,
-	  hideControlOnEnd: true,
-	  speed: 2000,
-		pager: false
-	});
-
-</script>
-
 
 
 </body>

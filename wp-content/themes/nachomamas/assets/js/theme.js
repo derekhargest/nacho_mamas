@@ -49,12 +49,12 @@ equalheight = function(container){
       $(".slicknav_btn").height(headerHeightMobile);
 
       if ($(window).width() < 700) {
-        $(".main-banner").height(bannerHeight);
+        $(".banner-wrapper").height(bannerHeight);
       }
 
       if ($(window).width() > 700) {
         $(".home-content").height(homeItemHeight);
-        $(".main-banner").height(bannerHeight);
+        $(".banner-wrapper").height(bannerHeight);
       }
 
   	});
@@ -73,13 +73,13 @@ equalheight = function(container){
 
       if ($(window).width() < 700) {
         $(".home-content").height('auto');
-        $(".main-banner").height(bannerHeight);
+        $(".banner-wrapper").height(bannerHeight);
       }
 
       if ($(window).width() > 700) {
 
             $(".home-content").height(homeItemHeight);
-            $(".main-banner").height(bannerHeight);
+            $(".banner-wrapper").height(bannerHeight);
       }
 
 		});

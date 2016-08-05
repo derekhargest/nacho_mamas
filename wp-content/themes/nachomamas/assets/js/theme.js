@@ -30,7 +30,7 @@ equalheight = function(container){
 }
 
 
-    $(document).ready(function(){
+    $(window).load(function(){
       var headerHeightMobile = $(".mobile-logo").height();
       var bannerHeight = $(".banner-image").height();
       var Headheight = document.getElementById("header").offsetHeight;

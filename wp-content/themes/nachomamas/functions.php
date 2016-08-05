@@ -29,7 +29,7 @@
 			'after_title' => '',
 		) );
 	}
-	
+
 	add_action( 'widgets_init', 'tcf_widgets_init' );
 
 	// function tcf_widgets_init() {
@@ -108,6 +108,11 @@ function woo_remove_product_tabs( $tabs ) {
 
     return $tabs;
 
+}
+
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
 }
 
 

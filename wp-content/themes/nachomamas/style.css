@@ -2059,6 +2059,70 @@ nav.prev-next-posts {
   width: 100%;
 }
 
+@media (min-width: 700px) {
+  #content-block {
+    margin-top: 0;
+  }
+
+  .banner-overlay-notitle .dark {
+    display: none;
+  }
+  .banner-overlay-notitle .white {
+    display: block;
+  }
+}
+@media (max-width: 699px) {
+  #content-block {
+    margin-top: 0em !important;
+  }
+}
+@media (min-width: 1140px) {
+  .banner-overlay h2, .banner-overlay h3, .banner-overlay-notitle h2, .banner-overlay-notitle h3 {
+    font-size: 5em;
+  }
+  .banner-overlay.home .overlay-logo, .banner-overlay-notitle.home .overlay-logo {
+    display: block;
+  }
+
+  .banner-overlay.page h3 {
+    padding: 2em 0;
+  }
+  .banner-overlay.page img {
+    height: auto !important;
+  }
+
+  .banner-overlay.home .overlay-logo {
+    margin-bottom: 2em;
+  }
+}
+@media (max-width: 700px) {
+  .banner-overlay.page h3 {
+    font-size: 1.5em;
+  }
+
+  .banner-overlay.home h3 {
+    font-size: 2.5em;
+  }
+
+  .banner-overlay.page, .banner-overlay.home {
+    padding-top: 0px !important;
+  }
+}
+@media (max-width: 500px) {
+  .banner-overlay.home h3 {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 400px) {
+  .banner-overlay h3, .banner-overlay-notitle h3 {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 1400px) {
+  .banner-overlay h3 {
+    font-size: 4em;
+  }
+}
 /**
  * BxSlider v4.1.2 - Fully loaded, responsive content slider
  * http://bxslider.com

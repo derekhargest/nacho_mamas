@@ -1,0 +1,281 @@
+08-05-2016 @ 11:05:44 - customers request: Array
+(
+    [email] => kallie@mamasmd.com
+    [description] => kallie
+)
+
+08-05-2016 @ 11:05:45 - customers/cus_8x094CbAXX3hEg/sources request: Array
+(
+    [source] => tok_18f695LcSmC2X0eXFC9FbEWn
+)
+
+08-05-2016 @ 11:05:46 - customers/cus_8x094CbAXX3hEg request: Array
+(
+    [default_source] => card_18f695LcSmC2X0eX2O99ZDN0
+)
+
+08-05-2016 @ 11:05:47 - Info: Begin processing payment for order 744 for the amount of 69.6
+08-05-2016 @ 11:05:47 - charges request: Array
+(
+    [currency] => usd
+    [amount] => 6960
+    [description] => Nacho Mama's - Order 744
+    [capture] => true
+    [expand[]] => balance_transaction
+    [customer] => cus_8x094CbAXX3hEg
+    [source] => card_18f695LcSmC2X0eX2O99ZDN0
+)
+
+08-05-2016 @ 11:05:47 - Processing response: stdClass Object
+(
+    [id] => ch_18f699LcSmC2X0eXgwoXKzOX
+    [object] => charge
+    [amount] => 6960
+    [amount_refunded] => 0
+    [application_fee] => 
+    [balance_transaction] => stdClass Object
+        (
+            [id] => txn_18f699LcSmC2X0eXPmBpEQVj
+            [object] => balance_transaction
+            [amount] => 6960
+            [available_on] => 1470700800
+            [created] => 1470395147
+            [currency] => usd
+            [description] => Nacho Mama's - Order 744
+            [fee] => 232
+            [fee_details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [amount] => 232
+                            [application] => 
+                            [currency] => usd
+                            [description] => Stripe processing fees
+                            [type] => stripe_fee
+                        )
+
+                )
+
+            [net] => 6728
+            [source] => ch_18f699LcSmC2X0eXgwoXKzOX
+            [sourced_transfers] => stdClass Object
+                (
+                    [object] => list
+                    [data] => Array
+                        (
+                        )
+
+                    [has_more] => 
+                    [total_count] => 0
+                    [url] => /v1/transfers?source_transaction=ch_18f699LcSmC2X0eXgwoXKzOX
+                )
+
+            [status] => pending
+            [type] => charge
+        )
+
+    [captured] => 1
+    [created] => 1470395147
+    [currency] => usd
+    [customer] => cus_8x094CbAXX3hEg
+    [description] => Nacho Mama's - Order 744
+    [destination] => 
+    [dispute] => 
+    [failure_code] => 
+    [failure_message] => 
+    [fraud_details] => stdClass Object
+        (
+        )
+
+    [invoice] => 
+    [livemode] => 
+    [metadata] => stdClass Object
+        (
+        )
+
+    [order] => 
+    [paid] => 1
+    [receipt_email] => 
+    [receipt_number] => 
+    [refunded] => 
+    [refunds] => stdClass Object
+        (
+            [object] => list
+            [data] => Array
+                (
+                )
+
+            [has_more] => 
+            [total_count] => 0
+            [url] => /v1/charges/ch_18f699LcSmC2X0eXgwoXKzOX/refunds
+        )
+
+    [shipping] => 
+    [source] => stdClass Object
+        (
+            [id] => card_18f695LcSmC2X0eX2O99ZDN0
+            [object] => card
+            [address_city] => Baltimore
+            [address_country] => US
+            [address_line1] => 6 Silver Gate Ct
+            [address_line1_check] => pass
+            [address_line2] => 
+            [address_state] => MD
+            [address_zip] => 21128
+            [address_zip_check] => pass
+            [brand] => Visa
+            [country] => US
+            [customer] => cus_8x094CbAXX3hEg
+            [cvc_check] => pass
+            [dynamic_last4] => 
+            [exp_month] => 4
+            [exp_year] => 2019
+            [fingerprint] => ZpuplCUBqP31L8So
+            [funding] => credit
+            [last4] => 4242
+            [metadata] => stdClass Object
+                (
+                )
+
+            [name] => Kallie Amentas
+            [tokenization_method] => 
+        )
+
+    [source_transfer] => 
+    [statement_descriptor] => 
+    [status] => succeeded
+)
+
+08-05-2016 @ 11:05:52 - Successful charge: ch_18f699LcSmC2X0eXgwoXKzOX
+08-05-2016 @ 17:14:21 - Info: Begin processing payment for order 752 for the amount of 85.5
+08-05-2016 @ 17:14:21 - charges request: Array
+(
+    [currency] => usd
+    [amount] => 8550
+    [description] => Nacho Mama's - Order 752
+    [capture] => true
+    [expand[]] => balance_transaction
+    [source] => tok_18fBtoLcSmC2X0eX0v1iDHcO
+)
+
+08-05-2016 @ 17:14:23 - Processing response: stdClass Object
+(
+    [id] => ch_18fBtpLcSmC2X0eXcIXu7TcO
+    [object] => charge
+    [amount] => 8550
+    [amount_refunded] => 0
+    [application_fee] => 
+    [balance_transaction] => stdClass Object
+        (
+            [id] => txn_18fBtqLcSmC2X0eXhii4rLSJ
+            [object] => balance_transaction
+            [amount] => 8550
+            [available_on] => 1470700800
+            [created] => 1470417261
+            [currency] => usd
+            [description] => Nacho Mama's - Order 752
+            [fee] => 278
+            [fee_details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [amount] => 278
+                            [application] => 
+                            [currency] => usd
+                            [description] => Stripe processing fees
+                            [type] => stripe_fee
+                        )
+
+                )
+
+            [net] => 8272
+            [source] => ch_18fBtpLcSmC2X0eXcIXu7TcO
+            [sourced_transfers] => stdClass Object
+                (
+                    [object] => list
+                    [data] => Array
+                        (
+                        )
+
+                    [has_more] => 
+                    [total_count] => 0
+                    [url] => /v1/transfers?source_transaction=ch_18fBtpLcSmC2X0eXcIXu7TcO
+                )
+
+            [status] => pending
+            [type] => charge
+        )
+
+    [captured] => 1
+    [created] => 1470417261
+    [currency] => usd
+    [customer] => 
+    [description] => Nacho Mama's - Order 752
+    [destination] => 
+    [dispute] => 
+    [failure_code] => 
+    [failure_message] => 
+    [fraud_details] => stdClass Object
+        (
+        )
+
+    [invoice] => 
+    [livemode] => 1
+    [metadata] => stdClass Object
+        (
+        )
+
+    [order] => 
+    [paid] => 1
+    [receipt_email] => 
+    [receipt_number] => 
+    [refunded] => 
+    [refunds] => stdClass Object
+        (
+            [object] => list
+            [data] => Array
+                (
+                )
+
+            [has_more] => 
+            [total_count] => 0
+            [url] => /v1/charges/ch_18fBtpLcSmC2X0eXcIXu7TcO/refunds
+        )
+
+    [shipping] => 
+    [source] => stdClass Object
+        (
+            [id] => card_18fBtnLcSmC2X0eXevCxhOGg
+            [object] => card
+            [address_city] => Vancouver
+            [address_country] => US
+            [address_line1] => 7302 N.E. 16th Ave.
+            [address_line1_check] => pass
+            [address_line2] => #1
+            [address_state] => WA
+            [address_zip] => 98665
+            [address_zip_check] => pass
+            [brand] => Visa
+            [country] => US
+            [customer] => 
+            [cvc_check] => pass
+            [dynamic_last4] => 
+            [exp_month] => 3
+            [exp_year] => 2018
+            [fingerprint] => CaKb6FW6a3aFRs1n
+            [funding] => credit
+            [last4] => 2707
+            [metadata] => stdClass Object
+                (
+                )
+
+            [name] => Alvin Gromek
+            [tokenization_method] => 
+        )
+
+    [source_transfer] => 
+    [statement_descriptor] => 
+    [status] => succeeded
+)
+
+08-05-2016 @ 17:14:24 - Successful charge: ch_18fBtpLcSmC2X0eXcIXu7TcO

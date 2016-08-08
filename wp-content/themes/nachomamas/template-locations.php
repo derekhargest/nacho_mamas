@@ -41,6 +41,7 @@ get_header(); ?>
 							 Baltimore, MD 21224<br /></address>
 								<p>T: 410-675-0898</p>
 								<p>Carryout: 410-342-2922</p>
+								<p style="font-weight: bold;">Contact Us: <br/><a href="mailto: contactus@mamasmd.com">contactus@mamasmd.com</a></p>
 								<a href="https://goo.gl/maps/4pnTeAN4dE32">Get Directions</a>
 
 					</div>

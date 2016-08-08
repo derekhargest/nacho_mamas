@@ -1,8 +1,5 @@
 <?php
 
-define('WP_HOME','https://www.mamasmd.com/NachosSite/');
-define('WP_SITEURL','https://www.mamasmd.com/NachosSite/');
-
 	function tcf_scripts() {
 		wp_enqueue_style( 'style-name', get_stylesheet_uri() );
 	}

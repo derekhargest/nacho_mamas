@@ -9,6 +9,14 @@
 	background-attachment: fixed;
 }
 
+.banner-overlay{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
 .banner-overlay.home .overlay-logo{
 	margin: 0 auto;
 	max-width: 120px;
@@ -38,7 +46,7 @@
   &.home .overlay-logo{
     margin: 0 auto;
     max-width: 319px;
-    margin-top: 1.15em;
+    margin-top: 2em;
     width: 18.7%;
 		display: none;
   }
@@ -110,15 +118,11 @@
   width: 100%;
   z-index: 25;
 	background-attachment: fixed;
-	top: 37.75%;
 }
 }
 
 @media (min-width: 450px){
   .banner-overlay, .banner-overlay-notitle{
-    &.home .overlay-logo{
-      margin-top: 5.555em;
-    }
     h2,h3{
       font-size: 2em;
       font-weight: 200;
@@ -201,5 +205,11 @@
 @media (max-width: 1400px){
 	.banner-overlay h3{
 		font-size: 4em;
+	}
+}
+
+@media (max-width: 1140px){
+	.banner-overlay h3{
+		margin-top: 1em;
 	}
 }

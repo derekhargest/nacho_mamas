@@ -1104,7 +1104,7 @@ nav.prev-next-posts {
 .site-header-main {
   position: absolute;
   z-index: 30;
-  background: rgba(25, 105, 135, 0.8);
+  background: #196987;
   width: 100%;
   height: auto;
   padding-top: 0;
@@ -1962,6 +1962,14 @@ nav.prev-next-posts {
   background-attachment: fixed;
 }
 
+.banner-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
 .banner-overlay.home .overlay-logo {
   margin: 0 auto;
   max-width: 120px;
@@ -1992,7 +2000,7 @@ nav.prev-next-posts {
 .banner-overlay.home .overlay-logo, .banner-overlay-notitle.home .overlay-logo {
   margin: 0 auto;
   max-width: 319px;
-  margin-top: 1.15em;
+  margin-top: 2em;
   width: 18.7%;
   display: none;
 }
@@ -2054,13 +2062,9 @@ nav.prev-next-posts {
     width: 100%;
     z-index: 25;
     background-attachment: fixed;
-    top: 37.75%;
   }
 }
 @media (min-width: 450px) {
-  .banner-overlay.home .overlay-logo, .banner-overlay-notitle.home .overlay-logo {
-    margin-top: 5.555em;
-  }
   .banner-overlay h2, .banner-overlay h3, .banner-overlay-notitle h2, .banner-overlay-notitle h3 {
     font-size: 2em;
     font-weight: 200;
@@ -2127,6 +2131,11 @@ nav.prev-next-posts {
 @media (max-width: 1400px) {
   .banner-overlay h3 {
     font-size: 4em;
+  }
+}
+@media (max-width: 1140px) {
+  .banner-overlay h3 {
+    margin-top: 1em;
   }
 }
 /**

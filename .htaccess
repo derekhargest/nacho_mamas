@@ -37,11 +37,11 @@ RewriteRule .* - [F,NS,L]
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /nacho_live/
+RewriteBase /NachosSite/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /nacho_live/index.php [L]
+RewriteRule . /NachosSite/index.php [L]
 </IfModule>
 
 # END WordPress

@@ -1,6 +1,8 @@
 #banner{
 	position: relative;
 	z-index: 20;
+	float: left;
+	width: 100%;
 }
 
 .banner-wrapper{
@@ -104,36 +106,24 @@
 	}
 }
 
-@media ( min-width: 703px ) and (max-width: 1140px ){
+/* Responsive Banner Styles */
 
-.banner-overlay-notitle .overlay-logo{
-  width: 10%;
-}
-
-
-
-}
 @media (max-width: 1140px ){
-.banner-overlay.home, .banner-overlay-notitle{
-  width: 100%;
-  z-index: 25;
-	background-attachment: fixed;
-}
-}
-
-@media (min-width: 450px){
-  .banner-overlay, .banner-overlay-notitle{
-    h2,h3{
-      font-size: 2em;
-      font-weight: 200;
-      line-height: 1.15em;
-    }
-  }
+	.banner-overlay.home, .banner-overlay-notitle{
+	  width: 100%;
+	  z-index: 25;
+		background-attachment: fixed;
+	}
 }
 
-#banner{
-	float: left;
-	width: 100%;
+@media ( min-width: 703px ) and (max-width: 1140px ){
+	.banner-overlay-notitle .overlay-logo{
+	  width: 10%;
+	}
+
+	.banner-overlay h3{
+		margin-top: 1em;
+	}
 }
 
 @media (min-width: 700px){
@@ -148,6 +138,17 @@
   }
 }
 
+
+@media (min-width: 450px){
+  .banner-overlay, .banner-overlay-notitle{
+    h2,h3{
+      font-size: 2em;
+      font-weight: 200;
+      line-height: 1.15em;
+    }
+  }
+}
+
 @media (min-width: 1140px){
   .banner-overlay, .banner-overlay-notitle{
     h2,h3{
@@ -157,7 +158,6 @@
 			display: block;
 		}
   }
-
 	.banner-overlay.page{
 		h3{
 			padding: 2em 0;
@@ -166,7 +166,6 @@
 			height: auto !important;
 		}
 	}
-
   .banner-overlay.home{
     .overlay-logo{
       margin-bottom: 2em;
@@ -185,7 +184,6 @@
 	}
 	.banner-overlay.page, .banner-overlay.home{
 		padding-top: 0px !important;
-
 	}
 }
 
@@ -196,6 +194,7 @@
 		}
 	}
 }
+
 @media (max-width: 400px){
 	.banner-overlay h3, .banner-overlay-notitle h3{
 		font-size: 1.5em;
@@ -205,11 +204,5 @@
 @media (max-width: 1400px){
 	.banner-overlay h3{
 		font-size: 4em;
-	}
-}
-
-@media (max-width: 1140px){
-	.banner-overlay h3{
-		margin-top: 1em;
 	}
 }

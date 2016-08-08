@@ -1954,6 +1954,8 @@ nav.prev-next-posts {
 #banner {
   position: relative;
   z-index: 20;
+  float: left;
+  width: 100%;
 }
 
 .banner-wrapper {
@@ -2052,11 +2054,7 @@ nav.prev-next-posts {
   width: 100%;
 }
 
-@media (min-width: 703px) and (max-width: 1140px) {
-  .banner-overlay-notitle .overlay-logo {
-    width: 10%;
-  }
-}
+/* Responsive Banner Styles */
 @media (max-width: 1140px) {
   .banner-overlay.home, .banner-overlay-notitle {
     width: 100%;
@@ -2064,18 +2062,15 @@ nav.prev-next-posts {
     background-attachment: fixed;
   }
 }
-@media (min-width: 450px) {
-  .banner-overlay h2, .banner-overlay h3, .banner-overlay-notitle h2, .banner-overlay-notitle h3 {
-    font-size: 2em;
-    font-weight: 200;
-    line-height: 1.15em;
+@media (min-width: 703px) and (max-width: 1140px) {
+  .banner-overlay-notitle .overlay-logo {
+    width: 10%;
+  }
+
+  .banner-overlay h3 {
+    margin-top: 1em;
   }
 }
-#banner {
-  float: left;
-  width: 100%;
-}
-
 @media (min-width: 700px) {
   #content-block {
     margin-top: 0;
@@ -2084,6 +2079,13 @@ nav.prev-next-posts {
 @media (max-width: 699px) {
   #content-block {
     margin-top: 0em !important;
+  }
+}
+@media (min-width: 450px) {
+  .banner-overlay h2, .banner-overlay h3, .banner-overlay-notitle h2, .banner-overlay-notitle h3 {
+    font-size: 2em;
+    font-weight: 200;
+    line-height: 1.15em;
   }
 }
 @media (min-width: 1140px) {
@@ -2131,11 +2133,6 @@ nav.prev-next-posts {
 @media (max-width: 1400px) {
   .banner-overlay h3 {
     font-size: 4em;
-  }
-}
-@media (max-width: 1140px) {
-  .banner-overlay h3 {
-    margin-top: 1em;
   }
 }
 /**
@@ -2408,6 +2405,7 @@ nav.prev-next-posts {
   bottom: .065em;
 }
 
+/* Responsive CTA styles */
 @media (min-width: 585px) {
   .cta-section a span {
     font-size: 1.675em;
@@ -2546,6 +2544,7 @@ nav.prev-next-posts {
   margin-top: 1.75em;
 }
 
+/* Responsive Event Page styles */
 @media (max-width: 1260px) {
   .events .event-item .event-info {
     width: 100%;

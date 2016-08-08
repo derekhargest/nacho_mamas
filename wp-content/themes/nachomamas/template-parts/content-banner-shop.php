@@ -1,3 +1,13 @@
+<?php
+/**
+ * The template used for displaying the banner on a shopping page
+ *
+ * @package Nacho Mama's
+ * @subpackage Nacho Mama's
+ * @since 2016
+ */
+?>
+
 <?php if (get_field('page_main_banner')): ?>
 
 	<div class="banner-wrapper" id="banner">

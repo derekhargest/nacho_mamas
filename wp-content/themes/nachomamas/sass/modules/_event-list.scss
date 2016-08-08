@@ -20,17 +20,17 @@
     .event-content{
       padding: 1.875em;
       @include clearfix;
-      a{
-        text-decoration: none;
+        a{
+          text-decoration: none;
+        }
+        p{
+          margin-bottom: 0;
+          font-size: 1em;
+        }
+        & > p{
+          margin-bottom: 1em;
+        }
       }
-      p{
-        margin-bottom: 0;
-        font-size: 1em;
-      }
-      & > p{
-        margin-bottom: 1em;
-      }
-    }
       h3{
         font-weight: 700;
         font-size: 1.875em;
@@ -49,6 +49,8 @@
       }
   }
 }
+
+/* Responsive Event Page styles */
 
 @media (max-width: 1260px){
   .events .event-item .event-info{

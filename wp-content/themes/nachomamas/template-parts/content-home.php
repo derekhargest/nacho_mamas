@@ -1,6 +1,6 @@
 <?php
 /**
- * The template used for displaying page content
+ * The template used for displaying page content on the home page
  *
  * @package Nacho Mama's
  * @subpackage Nacho Mama's

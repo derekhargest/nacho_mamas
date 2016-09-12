@@ -1,0 +1,51 @@
+.blog{
+  .blog-title{
+    text-decoration: none;
+    h2{
+      font-weight: 900;
+    }
+  }
+}
+
+.single{
+  .comment-form-comment{
+    label{
+      width: 100%;
+      display: block;
+      font-weight: 900;
+    }
+  }
+}
+
+p.logged-in-as{
+  display: none;
+}
+
+#secondary #primary-sidebar{
+  aside{
+    margin-bottom: 1em;
+  }
+}
+
+.comment-form{
+  textarea#comment{
+    border: 1px solid #d3d6db;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: .75em;
+  }
+  input{
+      border: 1px solid #d3d6db;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: .75em;
+  }
+  p.comment-notes{
+    font-size: 1em;
+    text-align: center;
+  }
+}
+
+.comments-evolved-embed-container iframe{
+  width: 100% !important;
+}

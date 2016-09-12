@@ -168,12 +168,24 @@ h1 {
   font-size: 2.62em;
 }
 
-h2.entry-title, .home h1.entry-title, h1.page-title {
+h2.entry-title, .home h1.entry-title, h1.page-title, h3.comment-reply-title, h2.comments-title {
   font-size: 3em;
   font-weight: 900;
   color: #f04413;
   text-align: center;
   line-height: 1em;
+}
+
+h3.comment-reply-title, h2.comments-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.5em;
+}
+
+h1.widget-title {
+  font-weight: 900;
+  line-height: 1em;
+  font-size: 1.5em;
+  margin-bottom: .5em;
 }
 
 h1.entry-title {
@@ -260,6 +272,56 @@ small {
   margin-bottom: 1em;
 }
 
+ol.comment-list {
+  margin-top: 2em;
+}
+
+.comment-body {
+  color: #134e64;
+  margin-top: 1em;
+}
+.comment-body .comment-meta {
+  margin-bottom: 1em;
+}
+.comment-body a {
+  color: #134e64;
+  text-decoration: none;
+}
+.comment-body p {
+  font-size: 1em !important;
+}
+
+.single .comment-form label {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  color: #134e64;
+  margin-bottom: .5em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: .75em;
+}
+
+.comment-form textarea#comment {
+  font-size: 1em;
+}
+
+.comment-author {
+  font-weight: 900;
+}
+
+.commentmetadata {
+  font-size: .75em;
+  line-height: .5em;
+}
+
+.comment-reply-title small {
+  font-size: .45em;
+  width: 100%;
+  display: block;
+}
+.comment-reply-title a {
+  color: #f04413;
+}
+
 @media (min-width: 450px) {
   h1 {
     font-size: 2.62em;
@@ -279,7 +341,7 @@ small {
     font-size: 2.5em;
   }
 }
-.button, .woocommerce .subfooter a.button, #mc_embed_signup .button, button#load-more, button#follow-us, .prev-posts-link a, .next-posts-link a {
+.button, .woocommerce .subfooter a.button, #mc_embed_signup .button, button#load-more, button#follow-us, .prev-posts-link a, .next-posts-link a, .form-submit {
   display: block;
   box-sizing: border-box;
   text-decoration: none;
@@ -300,7 +362,7 @@ small {
   line-height: normal;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
 }
-.button span, .woocommerce .subfooter a.button span, #mc_embed_signup .button span, button#load-more span, button#follow-us span, .prev-posts-link a span, .next-posts-link a span {
+.button span, .woocommerce .subfooter a.button span, #mc_embed_signup .button span, button#load-more span, button#follow-us span, .prev-posts-link a span, .next-posts-link a span, .form-submit span {
   margin: 0 auto;
   float: none;
   overflow: hidden;
@@ -313,7 +375,30 @@ small {
   border: 0;
   letter-spacing: -.25px;
 }
-.button:hover, .woocommerce .subfooter a.button:hover, #mc_embed_signup .button:hover, button#load-more:hover, button#follow-us:hover, .prev-posts-link a:hover, .next-posts-link a:hover {
+.button:hover, .woocommerce .subfooter a.button:hover, #mc_embed_signup .button:hover, button#load-more:hover, button#follow-us:hover, .prev-posts-link a:hover, .next-posts-link a:hover, .form-submit:hover {
+  text-decoration: none;
+  opacity: .85;
+}
+
+.form-submit {
+  padding: 0 !important;
+}
+.form-submit input {
+  margin: 0 auto;
+  float: none;
+  overflow: hidden;
+  *zoom: 1;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.25em;
+  line-height: 3em;
+  border: 0;
+  letter-spacing: -.25px;
+  background: #7ac561;
+  padding: 0 !important;
+}
+.form-submit:hover {
   text-decoration: none;
   opacity: .85;
 }
@@ -676,7 +761,7 @@ article > .content-container, .single-product .content-container {
   padding-top: 2em;
 }
 
-.page-content {
+.page-content, #comments-evolved-tabs {
   width: 79.59184%;
   float: right;
   margin-right: 0;
@@ -687,9 +772,44 @@ article > .content-container, .single-product .content-container {
   margin-top: 2.5em;
 }
 
+#comments-evolved-tabs.ui-tabs {
+  margin: 0 auto !important;
+  float: none;
+}
+
 .single .page-content p {
-  font-size: 1.5em;
-  line-height: 1.25em;
+  font-size: 1.55em;
+  line-height: 1.45em;
+}
+
+.blog .content-container article {
+  width: 74.57627%;
+  float: left;
+  margin-right: 1.69492%;
+  margin-bottom: 2em;
+}
+.blog #secondary {
+  width: 23.72881%;
+  float: right;
+  margin-right: 0;
+  padding-top: 1em;
+}
+.blog .page-content p {
+  font-size: 1.55em;
+  line-height: 1.45em;
+}
+.blog .entry-content {
+  margin-top: 1em;
+}
+.blog .entry-meta {
+  margin-top: .5em;
+}
+.blog h1.entry-title {
+  text-align: left;
+}
+.blog h1.entry-title a {
+  text-decoration: none;
+  color: #f04413;
 }
 
 .content-title {
@@ -702,6 +822,15 @@ article > .content-container, .single-product .content-container {
 
 .site-main {
   background: #fffdf0;
+}
+
+#sidebar h2 {
+  font-weight: 900;
+  font-size: 1.5em;
+  margin-bottom: .25em;
+}
+#sidebar > ul > li {
+  margin-bottom: 1em;
 }
 
 section.quotes {
@@ -2767,4 +2896,46 @@ nav.prev-next-posts {
 .checkout h3 {
   font-size: 1.25em;
   font-weight: 900;
+}
+
+.blog .blog-title {
+  text-decoration: none;
+}
+.blog .blog-title h2 {
+  font-weight: 900;
+}
+
+.single .comment-form-comment label {
+  width: 100%;
+  display: block;
+  font-weight: 900;
+}
+
+p.logged-in-as {
+  display: none;
+}
+
+#secondary #primary-sidebar aside {
+  margin-bottom: 1em;
+}
+
+.comment-form textarea#comment {
+  border: 1px solid #d3d6db;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: .75em;
+}
+.comment-form input {
+  border: 1px solid #d3d6db;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: .75em;
+}
+.comment-form p.comment-notes {
+  font-size: 1em;
+  text-align: center;
+}
+
+.comments-evolved-embed-container iframe {
+  width: 100% !important;
 }

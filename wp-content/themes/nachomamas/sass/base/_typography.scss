@@ -95,12 +95,24 @@ h1, h2, h3, h4, h5, h6{
 
 h1 { font-size: 2.62em;}
 
-h2.entry-title, .home h1.entry-title, h1.page-title{
+h2.entry-title, .home h1.entry-title, h1.page-title, h3.comment-reply-title, h2.comments-title{
     font-size: 3em;
     font-weight: 900;
     color: $c-content-heading;
     text-align: center;
     line-height: 1em;
+   }
+
+h3.comment-reply-title, h2.comments-title{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.5em;
+}
+
+   h1.widget-title{
+     font-weight: 900;
+     line-height: 1em;
+     font-size: 1.5em;
+     margin-bottom: .5em;
    }
 
 h1.entry-title{ font-size: 3em; color: $c-content-heading; font-weight: 900; text-align: center;}
@@ -172,6 +184,56 @@ small{
 
 .page-content p{
   margin-bottom: 1em;
+}
+ol.comment-list{
+  margin-top: 2em;
+}
+.comment-body{
+  color: $c-text-color;
+  margin-top: 1em;
+  .comment-meta{
+    margin-bottom: 1em;
+  }
+  a{
+    color: $c-text-color;
+    text-decoration: none;
+  }
+  p{
+    font-size: 1em !important;
+  }
+}
+
+.single .comment-form label{
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  color: $c-text-color;
+  margin-bottom: .5em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: .75em;
+}
+
+.comment-form textarea#comment{
+  font-size: 1em;
+}
+
+.comment-author{
+  font-weight: 900;
+}
+
+.commentmetadata{
+  font-size: .75em;
+  line-height: .5em;
+}
+
+.comment-reply-title {
+  small{
+    font-size: .45em;
+    width: 100%;
+    display: block;
+  }
+  a{
+  color: $c-red-orange;
+}
 }
 
 

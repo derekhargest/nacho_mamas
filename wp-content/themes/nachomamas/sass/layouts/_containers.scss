@@ -51,7 +51,8 @@ article > .content-container, .single-product .content-container{
   }
 }
 
-.page-content{
+
+.page-content, #comments-evolved-tabs{
   @include span(8 of 10 last);
   float: none;
   margin: 0 auto;
@@ -59,11 +60,46 @@ article > .content-container, .single-product .content-container{
   margin-top: 2.5em;
 }
 
+#comments-evolved-tabs.ui-tabs{
+  margin: 0 auto !important;
+  float: none;
+}
+
 .single{
   .page-content{
     p{
-      font-size: 1.5em;
-      line-height: 1.25em;
+      font-size: 1.55em;
+      line-height: 1.45em;
+    }
+  }
+}
+
+.blog{
+  .content-container article{
+    @include span(9 of 12);
+    margin-bottom: 2em;
+  }
+  #secondary{
+    @include span(3 of 12 last);
+    padding-top: 1em;
+  }
+  .page-content{
+    p{
+      font-size: 1.55em;
+      line-height: 1.45em;
+    }
+  }
+  .entry-content{
+    margin-top: 1em;
+  }
+  .entry-meta{
+    margin-top: .5em;
+  }
+  h1.entry-title{
+    text-align: left;
+    a{
+      text-decoration: none;
+      color: $c-red-orange;
     }
   }
 }
@@ -78,6 +114,17 @@ article > .content-container, .single-product .content-container{
 
 .site-main{
   background: $c-white;
+}
+
+#sidebar{
+  h2{
+    font-weight: 900;
+    font-size: 1.5em;
+    margin-bottom: .25em;
+  }
+  & > ul > li{
+    margin-bottom: 1em;
+  }
 }
 
 section.quotes{

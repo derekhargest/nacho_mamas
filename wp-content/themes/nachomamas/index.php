@@ -1,45 +1,64 @@
-<?php
-/**
- * The main template file
- *
- * @package Nacho Mama's
- * @subpackage Nacho Mama's
- * @since 2016
- */
 
-get_header(); ?>
 
-	<div id="primary" class="content-area">
+<?php /**
+	 * The main template file
+	 *
+	 * This is the most generic template file in a WordPress theme and one
+	 * of the two required files for a theme (the other being style.css).
+	 * It is used to display a page when nothing more specific matches a query,
+	 * e.g., it puts together the home page when no home.php file exists.
+	 *
+	 * @link http://codex.wordpress.org/Template_Hierarchy
+	 *
+	 * @package WordPress
+	 * @subpackage Twenty_Fourteen
+	 * @since Twenty Fourteen 1.0
+	 */
 
-		<main id="main" class="site-main" role="main">
+	get_header(); ?>
 
-		<?php if ( have_posts() ) : ?>
+	<div id="main-content" class="main-content">
 
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
+		<div id="primary" class="content-area">
+			<div id="content" class="site-content" role="main">
+				<?php get_template_part( 'template-parts/content-banner' ); ?>
 
-			<?php
-			// Start the loop.
-			while ( have_posts() ) : the_post();
+					<?php get_template_part( 'template-parts/cta-link' ); ?>
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+		<div id="content-block">
+			<div class="content-container">
+				<div class="page-content">
+					<?php get_sidebar( 'content' ); ?>
+				<?php
+					if ( have_posts() ) :
+						// Start the Loop.
+						while ( have_posts() ) : the_post();
 
-			// End the loop.
-			endwhile;
+							/*
+							 * Include the post format-specific template for the content. If you want to
+							 * use this in a child theme, then include a file called called content-___.php
+							 * (where ___ is the post format) and that will be used instead.
+							 */
+							get_template_part( 'content', get_post_format() );
 
-		endif;
-		?>
+						endwhile;
 
-		</main>
 
+					else :
+						// If no content, include the "No posts found" template.
+						get_template_part( 'content', 'none' );
+
+					endif;
+				?>
+				</div><!-- #content -->
+
+			</div><!-- #primary -->
+
+		</div><!-- #main-content -->
+		</div>
+	</div>
 	</div>
 
-<?php get_footer(); ?>
+	<?php
+	get_sidebar();
+	get_footer();

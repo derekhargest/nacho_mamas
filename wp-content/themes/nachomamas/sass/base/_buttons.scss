@@ -1,4 +1,4 @@
-.button{
+.button, .form-submit{
 	display: block;
   box-sizing: border-box;
 	text-decoration: none;
@@ -28,6 +28,28 @@
 		line-height: 3em;
 		border: 0;
     letter-spacing: -.25px;
+	}
+	&:hover{
+		text-decoration: none;
+		opacity: .85;
+	}
+}
+
+.form-submit{
+	padding: 0 !important;
+	input{
+		margin: 0 auto;
+		float: none;
+		@include clearfix;
+		color: #fff;
+		text-decoration: none;
+		font-weight: 700;
+		font-size: 1.25em;
+		line-height: 3em;
+		border: 0;
+    letter-spacing: -.25px;
+		background: $c-green;
+		padding: 0 !important;
 	}
 	&:hover{
 		text-decoration: none;

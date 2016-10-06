@@ -1,5 +1,3 @@
-
-
 <?php /**
 	 * The main template file
 	 *
@@ -17,48 +15,63 @@
 
 	get_header(); ?>
 
-	<div id="main-content" class="main-content">
+<div id="content" class="site-content">
 
-		<div id="primary" class="content-area">
-			<div id="content" class="site-content" role="main">
-				<?php get_template_part( 'template-parts/content-banner' ); ?>
+	<?php get_template_part( 'template-parts/content-banner' ); ?>
 
-					<?php get_template_part( 'template-parts/cta-link' ); ?>
+	<?php get_template_part( 'template-parts/cta-link' ); ?>
 
 		<div id="content-block">
-			<div class="content-container">
-				<div class="page-content">
-					<?php get_sidebar( 'content' ); ?>
-				<?php
-					if ( have_posts() ) :
-						// Start the Loop.
-						while ( have_posts() ) : the_post();
 
-							/*
-							 * Include the post format-specific template for the content. If you want to
-							 * use this in a child theme, then include a file called called content-___.php
-							 * (where ___ is the post format) and that will be used instead.
-							 */
-							get_template_part( 'content', get_post_format() );
+			<div class="container">
 
-						endwhile;
+				<div class="content-container">
+
+				<div id="primary">
+
+					<main id="main" class="site-main" role="main">
+
+					<div class="page-content">
+
+						<?php
+							if ( have_posts() ) :
+								// Start the Loop.
+								while ( have_posts() ) : the_post();
+
+									/*
+									 * Include the post format-specific template for the content. If you want to
+									 * use this in a child theme, then include a file called called content-___.php
+									 * (where ___ is the post format) and that will be used instead.
+									 */
+									get_template_part( 'content', get_post_format() );
+
+								endwhile;
 
 
-					else :
-						// If no content, include the "No posts found" template.
-						get_template_part( 'content', 'none' );
+							else :
+								// If no content, include the "No posts found" template.
+								get_template_part( 'content', 'none' );
 
-					endif;
-				?>
-				</div><!-- #content -->
+							endif;
+						?>
 
-			</div><!-- #primary -->
+					</div><!-- #content -->
 
-		</div><!-- #main-content -->
+				</main>
+
+				</div><!-- #primary -->
+
+			<?php
+			get_sidebar('content');
+			?>
+
 		</div>
+
 	</div>
-	</div>
+</div>
+
+</div>
+
 
 	<?php
-	get_sidebar();
 	get_footer();

@@ -14,11 +14,38 @@ $susy: (
   z-index: 50;
 }
 
+#content-block{
+	position: relative;
+	z-index: 10;
+	background: $c-white;
+	float: left;
+	width: 100%;
+	padding: 3.63em 0;
+		&:after{
+			-moz-box-shadow: inset 0 0 10em #c3b597;
+	-webkit-box-shadow: inset 0 0 10em #c3b597;
+	box-shadow: inset 0 0 10em #c3b597;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	content: "";
+		}
+}
+
+.blog #primary{
+  @include span(6 of 10);
+}
+
+.blog #secondary{
+  @include span(4 of 12 last);
+}
+
 .container{
 	@include container(1410px);
 	@include clearfix;
-  padding-left: 3%;
-  padding-right: 3%;
   position: relative;
   z-index: 50;
   &.page{
@@ -26,10 +53,6 @@ $susy: (
     position: relative;
     z-index: 50;
   }
-}
-
-article > .content-container, .single-product .content-container{
-  padding-top: 2.5em;
 }
 
 .site-header-main.page-header{
@@ -42,8 +65,9 @@ article > .content-container, .single-product .content-container{
 }
 
 .content-container{
-  @include span(12 of 12);
-  margin: 0 auto;
+  @include span(10 of 12);
+  margin-left: span(1 of 12) + gutter(12);
+  margin-right: 0;
   @include clearfix;
 
   .entry-content{
@@ -51,14 +75,24 @@ article > .content-container, .single-product .content-container{
   }
 }
 
+.small-content-container{
+  @include span(8 of 12);
+  margin-left: span(2 of 12) + gutter(12);
+  margin-right: 0;
+
+}
+
 
 .page-content, #comments-evolved-tabs{
-  @include span(8 of 10 last);
   float: none;
   margin: 0 auto;
   @include clearfix;
-  margin-top: 2.5em;
 }
+
+.page-template-template-about .page-content{
+  padding-bottom: 3.63em;
+}
+
 
 #comments-evolved-tabs.ui-tabs{
   margin: 0 auto !important;
@@ -76,12 +110,13 @@ article > .content-container, .single-product .content-container{
 
 .blog{
   .content-container article{
-    @include span(9 of 12);
     margin-bottom: 2em;
   }
   #secondary{
-    @include span(3 of 12 last);
-    padding-top: 1em;
+    @include span(3 of 10 last);
+    @media (max-width: 960px){
+      @include span(12 of 12);
+    }
   }
   .page-content{
     p{
@@ -91,9 +126,6 @@ article > .content-container, .single-product .content-container{
   }
   .entry-content{
     margin-top: 1em;
-  }
-  .entry-meta{
-    margin-top: .5em;
   }
   h1.entry-title{
     text-align: left;
@@ -105,15 +137,11 @@ article > .content-container, .single-product .content-container{
 }
 
 .content-title{
-  padding-bottom: 2.5em;
+  padding-bottom: 3.63em;
 }
 
 .page-template .content-title{
-  padding-bottom: .5em;
-}
-
-.site-main{
-  background: $c-white;
+  padding-bottom: 3.63em;
 }
 
 #sidebar{
@@ -170,19 +198,19 @@ section.quotes{
   }
 }
 @media (min-width: 1140px){
-  .content-container{
-    width: 91.295%;
-    margin: 0 auto;
-  }
-  .content-container{
-    @include container(1170px);
-    float: none;
-    margin: 0 auto;
-    margin-bottom: 0;
-      &.bottom{
-        margin-top: 3em;
-      }
-  }
+// .content-container{
+//    width: 91.295%;
+//    margin: 0 auto;
+//  }
+//  .content-container{
+//    @include container(1170px);
+//    float: none;
+//    margin: 0 auto;
+//    margin-bottom: 0;
+//      &.bottom{
+//        margin-top: 3em;
+//      }
+//  }
   .content-container.secondary{
     margin-bottom: 9em;
   }
@@ -192,9 +220,9 @@ section.quotes{
 }
 
 @media (min-width: 1260px){
-  .content-container{
-    width: 100%;
-  }
+  // .content-container{
+  //  width: 100%;
+//  }
 }
 
 @media (max-width: 1260px){

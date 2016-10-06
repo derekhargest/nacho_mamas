@@ -8,187 +8,102 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
+<div id="content" class="site-content">
 
-	<main id="main" class="site-main" role="main">
+	<?php get_template_part( 'template-parts/content-banner' ); ?>
 
-		<?php get_template_part( 'template-parts/content-banner' ); ?>
+	<?php get_template_part( 'template-parts/cta-link' ); ?>
 
 		<div id="content-block">
 
-		<?php get_template_part( 'template-parts/cta-link' ); ?>
+			<div class="container">
 
-		<?php
+				<div class="small-content-container">
 
-		while ( have_posts() ) : the_post();
+					<div id="primary">
 
-			get_template_part( 'template-parts/content', 'page' );
+						<main id="main" class="site-main" role="main">
 
-		endwhile;
-		?>
+							<div class="page-content">
 
-    <div class="content-container">
+								<?php
 
-      <div class="page-content">
+								while ( have_posts() ) : the_post();
 
-	      <div class="location-menus">
+									get_template_part( 'template-parts/content', 'page' );
 
-	      	<div class="menu">
+								endwhile;
+								?>
 
-						<h4>Canton</h4>
+	      					<div class="location-menus">
 
-						<div class="menu-content">
+	      						<div class="menu">
 
-							<p>For Carryout Call: <span class="number">410-342-2922</span></p>
+											<h4>Canton</h4>
 
-						</div>
+											<div class="menu-content">
 
-						<a href="https://webordering.rmwservices.com/v19.0.WebUI/restaurants.aspx?wci=NachoMama" class="button"><span>Order Online</span></a>
+												<p>For Carryout Call: <span class="number">410-342-2922</span></p>
 
-						<div class="menu-buttons">
+											</div>
 
-							<a href="<?php echo the_field('canton_dining_menu'); ?>" class="button"><span>Lunch &amp; Dinner</span></a>
+											<a href="https://webordering.rmwservices.com/v19.0.WebUI/restaurants.aspx?wci=NachoMama" class="button"><span>Order Online</span></a>
 
-							<a href="http://www.mamasmd.com/special_menus/Nacho Specials.pdf" class="button"><span>Specials</span></a>
+											<div class="menu-buttons">
 
-							<a href="<?php echo the_field('canton_brunch_menu'); ?>" class="button"><span>Brunch</span></a>
+												<a href="<?php echo the_field('canton_dining_menu'); ?>" class="button"><span>Lunch &amp; Dinner</span></a>
 
-							<a href="<?php echo the_field('canton_margarita_menu'); ?>" class="button"><span>Margs &amp; Cocktails</span></a>
+												<a href="http://www.mamasmd.com/special_menus/Nacho Specials.pdf" class="button"><span>Specials</span></a>
 
-						</div>
+												<a href="<?php echo the_field('canton_brunch_menu'); ?>" class="button"><span>Brunch</span></a>
+
+												<a href="<?php echo the_field('canton_margarita_menu'); ?>" class="button"><span>Margs &amp; Cocktails</span></a>
+
+											</div>
+
+										</div>
+
+									<div class="menu">
+
+										<h4>Towson</h4>
+
+										<div class="menu-content">
+
+											<p>Coming Soon!</p>
+
+										</div>
+
+										<a href="https://webordering.rmwservices.com/v19.0.WebUI/restaurants.aspx?wci=NachoMama" class="button"><span>Order Online</span></a>
+
+										<div class="menu-buttons">
+
+											<a href="<?php echo the_field('towson_dining_menu'); ?>" class="button" onclick="event.preventDefault();"><span>Dining Menu</span></a>
+
+											<a href="<?php echo the_field('towson_specials_menu'); ?>" class="button" onclick="event.preventDefault();"><span>Specials Menu</span></a>
+
+											<a href="<?php echo the_field('towson_lunch_menu'); ?>" class="button" onclick="event.preventDefault();"><span>Lunch Menu</span></a>
+
+											<a href="<?php echo the_field('towson_margarita_menu'); ?>" class="button" onclick="event.preventDefault();"><span>Margarita Menu</span></a>
+
+										</div>
+
+									</div>
+
+	      				</div>
+
+							</div>
+
+						</main>
 
 					</div>
 
-					<div class="menu">
-
-						<h4>Towson</h4>
-
-						<div class="menu-content">
-
-							<p>Coming Soon!</p>
-
-						</div>
-
-						<a href="https://webordering.rmwservices.com/v19.0.WebUI/restaurants.aspx?wci=NachoMama" class="button"><span>Order Online</span></a>
-
-						<div class="menu-buttons">
-
-							<a href="<?php echo the_field('towson_dining_menu'); ?>" class="button" onclick="event.preventDefault();"><span>Dining Menu</span></a>
-
-							<a href="<?php echo the_field('towson_specials_menu'); ?>" class="button" onclick="event.preventDefault();"><span>Specials Menu</span></a>
-
-							<a href="<?php echo the_field('towson_lunch_menu'); ?>" class="button" onclick="event.preventDefault();"><span>Lunch Menu</span></a>
-
-							<a href="<?php echo the_field('towson_margarita_menu'); ?>" class="button" onclick="event.preventDefault();"><span>Margarita Menu</span></a>
-
-						</div>
-
-					</div>
-
-	      </div>
-
-      </div>
-
-		</div>
-
-	</main>
-
-</div>
-
-	<?php if (get_field('secondary_content')): ?>
-
-		<div id="secondary" class="content-area secondary">
-
-			<div class="content-container secondary">
-
-				<div class="content-title">
-
-					<header class="entry-header">
-
-						<h1 class="entry-title">
-
-							<?php the_field('secondary_title'); ?>
-
-						</h1>
-
-					</header>
-
 				</div>
-
-				<div class="page-content">
-
-					<p><?php the_field('secondary_content'); ?></p>
-
-				</div>
-
-        <div class="content-title">
-
-          <header class="entry-header">
-
-            <h1 class="entry-title">
-
-              Word On the Street
-
-            </h1>
-
-          </header>
-
-        </div>
-
-        <div class="page-content">
-
-          <p><?php the_field('secondary_content'); ?></p>
-
-          <section class="quotes">
-
-						<header class="entry-header">
-
-  						<h1 class="entry-title">
-
-  							Word on the Street
-
-  						</h1>
-
-  					</header>
-
-            <ul class="bxslider">
-
-							<li><div class="slide"><p>On a recent steaming hot evening, nothing appealed to the stomach more than Mexican food-a pitcher or two of margaritas, some healthy sweat-production from fresh, peppery, simply composed food. I didn’t want to think about food so much as consume it, and a casual, come-as-you-are joint felt ideal.</p><span>- City Paper</span></div></li>
-
-							<li><div class="slide"><p>On a recent steaming hot evening, nothing appealed to the stomach more than Mexican food-a pitcher or two of margaritas, some healthy sweat-production from fresh, peppery, simply composed food. I didn’t want to think about food so much as consume it, and a casual, come-as-you-are joint felt ideal.</p><span>- City Paper</span></div></li>
-
-						</ul>
-
-          </section>
-
-          <section class="insta-feed">
-
-						<header class="entry-header">
-
-              <h1 class="entry-title">
-
-                Some Photos
-
-              </h1>
-
-            </header>
-
-						<div id="instafeed">
-
-            </div>
-
-						<button id="load-more">Load More</button>
-
-					</section>
-
-        </div>
 
 			</div>
 
 		</div>
 
-		<?php endif; ?>
-
 	</div>
+
 
 <?php get_footer(); ?>

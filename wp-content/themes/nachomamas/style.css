@@ -183,8 +183,8 @@ h3.comment-reply-title, h2.comments-title {
 
 h1.widget-title {
   font-weight: 900;
-  line-height: 1em;
   font-size: 1.5em;
+  line-height: 1.35em;
   margin-bottom: .5em;
 }
 
@@ -707,14 +707,45 @@ ol.comment-list {
   z-index: 50;
 }
 
+#content-block {
+  position: relative;
+  z-index: 10;
+  background: #fffdf0;
+  float: left;
+  width: 100%;
+  padding: 3.63em 0;
+}
+#content-block:after {
+  -moz-box-shadow: inset 0 0 10em #c3b597;
+  -webkit-box-shadow: inset 0 0 10em #c3b597;
+  box-shadow: inset 0 0 10em #c3b597;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  content: "";
+}
+
+.blog #primary {
+  width: 59.18367%;
+  float: left;
+  margin-right: 2.04082%;
+}
+
+.blog #secondary {
+  width: 32.20339%;
+  float: right;
+  margin-right: 0;
+}
+
 .container {
   max-width: 1410px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
   *zoom: 1;
-  padding-left: 3%;
-  padding-right: 3%;
   position: relative;
   z-index: 50;
 }
@@ -727,10 +758,6 @@ ol.comment-list {
   padding-top: 3em;
   position: relative;
   z-index: 50;
-}
-
-article > .content-container, .single-product .content-container {
-  padding-top: 2.5em;
 }
 
 .site-header-main.page-header .main-navigation {
@@ -749,11 +776,11 @@ article > .content-container, .single-product .content-container {
 }
 
 .content-container {
-  width: 100%;
+  width: 83.05085%;
   float: left;
-  margin-left: 0;
+  margin-right: 1.69492%;
+  margin-left: 8.47458%;
   margin-right: 0;
-  margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
@@ -761,15 +788,23 @@ article > .content-container, .single-product .content-container {
   padding-top: 2em;
 }
 
-.page-content, #comments-evolved-tabs {
-  width: 79.59184%;
-  float: right;
+.small-content-container {
+  width: 66.10169%;
+  float: left;
+  margin-right: 1.69492%;
+  margin-left: 16.94915%;
   margin-right: 0;
+}
+
+.page-content, #comments-evolved-tabs {
   float: none;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
-  margin-top: 2.5em;
+}
+
+.page-template-template-about .page-content {
+  padding-bottom: 3.63em;
 }
 
 #comments-evolved-tabs.ui-tabs {
@@ -783,16 +818,20 @@ article > .content-container, .single-product .content-container {
 }
 
 .blog .content-container article {
-  width: 74.57627%;
-  float: left;
-  margin-right: 1.69492%;
   margin-bottom: 2em;
 }
 .blog #secondary {
-  width: 23.72881%;
+  width: 28.57143%;
   float: right;
   margin-right: 0;
-  padding-top: 1em;
+}
+@media (max-width: 960px) {
+  .blog #secondary {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 .blog .page-content p {
   font-size: 1.55em;
@@ -800,9 +839,6 @@ article > .content-container, .single-product .content-container {
 }
 .blog .entry-content {
   margin-top: 1em;
-}
-.blog .entry-meta {
-  margin-top: .5em;
 }
 .blog h1.entry-title {
   text-align: left;
@@ -813,15 +849,11 @@ article > .content-container, .single-product .content-container {
 }
 
 .content-title {
-  padding-bottom: 2.5em;
+  padding-bottom: 3.63em;
 }
 
 .page-template .content-title {
-  padding-bottom: .5em;
-}
-
-.site-main {
-  background: #fffdf0;
+  padding-bottom: 3.63em;
 }
 
 #sidebar h2 {
@@ -874,39 +906,12 @@ section.quotes {
   }
 }
 @media (min-width: 1140px) {
-  .content-container {
-    width: 91.295%;
-    margin: 0 auto;
-  }
-
-  .content-container {
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-    float: none;
-    margin: 0 auto;
-    margin-bottom: 0;
-  }
-  .content-container:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-  .content-container.bottom {
-    margin-top: 3em;
-  }
-
   .content-container.secondary {
     margin-bottom: 9em;
   }
 
   .content-container .entry-content {
     padding-top: 0;
-  }
-}
-@media (min-width: 1260px) {
-  .content-container {
-    width: 100%;
   }
 }
 @media (max-width: 1260px) {
@@ -1208,26 +1213,6 @@ nav.prev-next-posts {
 }
 .header-cart a span {
   font-size: .75em;
-}
-
-#content-block {
-  position: relative;
-  z-index: 10;
-  background: #fffdf0;
-  float: left;
-  width: 100%;
-}
-#content-block:after {
-  -moz-box-shadow: inset 0 0 10em #c3b597;
-  -webkit-box-shadow: inset 0 0 10em #c3b597;
-  box-shadow: inset 0 0 10em #c3b597;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  content: "";
 }
 
 .site-header-main {
@@ -1964,6 +1949,7 @@ nav.prev-next-posts {
   float: right;
   padding: 0 2.6383%;
   position: relative;
+  margin-top: 3em;
 }
 .home-item .button-wrap {
   position: absolute;
@@ -1976,6 +1962,10 @@ nav.prev-next-posts {
 }
 .home-item .button span, .home-item .woocommerce .subfooter a.button span, .woocommerce .subfooter .home-item a.button span, .home-item #mc_embed_signup .button span, #mc_embed_signup .home-item .button span, .home-item button#load-more span, .home-item button#follow-us span, .home-item .prev-posts-link a span, .prev-posts-link .home-item a span, .home-item .next-posts-link a span, .next-posts-link .home-item a span {
   font-family: "Walter Turncoat", cursive;
+}
+
+.home-content {
+  margin-top: 3em;
 }
 
 .home-item:nth-child(odd) {
@@ -2587,7 +2577,6 @@ nav.prev-next-posts {
   width: 74.39716312%;
   float: none;
   margin: 0 auto;
-  padding-top: 3.75em;
 }
 
 @media (max-width: 1040px) {

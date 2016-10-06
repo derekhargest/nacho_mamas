@@ -40,22 +40,6 @@ equalheight = function(container){
       equalheight('.event-item');
       equalheight('.product');
 
-      slider=$('.bxslider').bxSlider({
-        mode: 'horizontal',
-        useCSS: false,
-        infiniteLoop: false,
-        hideControlOnEnd: true,
-        speed: 2000,
-        pager: false,
-        minSlides: 2,
-        maxSlides: 2,
-        moveSlides: 1
-      });
-      setTimeout(function(){
-        slider.redrawSlider();
-
-      },100);
-
 
 
       $('#mobile-menu .menu').slicknav({

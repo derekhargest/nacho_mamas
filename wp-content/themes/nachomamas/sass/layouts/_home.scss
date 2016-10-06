@@ -23,6 +23,7 @@
     float: right;
     padding: 0 2.6383%;
     position: relative;
+    margin-top: 3em;
   }
 
   .button-wrap{
@@ -37,6 +38,10 @@
       font-family: $font-stack-heading;
     }
   }
+}
+
+.home-content{
+  margin-top: 3em;
 }
 
 .home-item:nth-child(odd){

@@ -8,15 +8,27 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
+<div id="content" class="site-content">
+
+	<?php get_template_part( 'template-parts/content-banner' ); ?>
+
+	<?php get_template_part( 'template-parts/cta-link' ); ?>
+
+			<div id="content-block">
+
+				<div class="container">
+
+						<div class="small-content-container">
+
+							<div id="primary">
 
 	<main id="main" class="site-main" role="main">
 
-		<?php get_template_part( 'template-parts/content-banner' ); ?>
 
-		<div id="content-block">
 
-		<?php get_template_part( 'template-parts/cta-link' ); ?>
+
+
+
 
 		<?php
 
@@ -27,21 +39,13 @@ get_header(); ?>
 		endwhile;
 		?>
 
-    <div class="content-container">
-
-      <div class="page-content">
 
         <img src="<?php echo esc_url( get_template_directory_uri() ) ?>/assets/images/scunny-pics.png" alt="Scunny Pics" />
 
-      </div>
-
-    </div>
 
 	<?php if (get_field('secondary_content')): ?>
 
-		<div id="secondary" class="content-area secondary">
-
-			<div class="content-container secondary">
+		<div class="content-area secondary">
 
 				<div class="content-title">
 
@@ -67,6 +71,8 @@ get_header(); ?>
 
           <section class="insta-feed">
 
+						<div class="content-title">
+
 						<header class="entry-header">
 
               <h1 class="entry-title">
@@ -76,6 +82,8 @@ get_header(); ?>
               </h1>
 
             </header>
+
+					</div>
 
 						<div id="instafeed">
 
@@ -95,13 +103,17 @@ get_header(); ?>
 
 			</div>
 
-		</div>
-
 		<?php endif; ?>
-
-	</div>
 		</main>
 	</div>
+
+</div>
+
+	</div>
+
+</div>
+
+</div>
 
 	<script type="text/javascript">
 			var loadButton = document.getElementById('load-more');

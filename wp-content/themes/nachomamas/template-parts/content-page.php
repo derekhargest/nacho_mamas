@@ -9,7 +9,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="content-container">
 		<div class="content-title">
 			<header class="entry-header">
         <h1 class="entry-title"><?php the_title(); ?></h1>
@@ -24,7 +23,5 @@
 			?>
 
 		</div><!-- .entry-content -->
-
-	</div>
 
 </article><!-- #post-## -->

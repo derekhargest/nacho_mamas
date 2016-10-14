@@ -8,21 +8,24 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="content-container">
-		<div class="content-title">
-			<header class="entry-header">
-        <h1 class="entry-title"><?php the_title(); ?></h1>
-			</header><!-- .entry-header -->
-		</div>
+
+
 
 		<div class="page-content">
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<header class="entry-header">
+	        <h1 class="entry-title"><?php the_title(); ?></h1>
+					<div class="entry-meta">
+						<?php
+							// if ( 'post' == get_post_type() )
+								twentyfourteen_posted_on();
+
+							 ?>
+					</div><!-- .entry-meta -->
+				</header><!-- .entry-header -->
 			<?php
 			 the_content();
 			?>
+			</article><!-- #post-## -->
 
 		</div><!-- .entry-content -->
-
-	</div>
-
-</article><!-- #post-## -->

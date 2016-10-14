@@ -38,7 +38,7 @@
         }
 
         // Set up and print post meta information.
-        printf( 'Posted on <span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span></span>',
+        printf( 'Posted on <span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> <br />By :<span class="byline"><span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span></span>',
                 esc_url( get_permalink() ),
                 esc_attr( get_the_date( 'c' ) ),
                 esc_html( get_the_date() ),
@@ -88,7 +88,7 @@ add_action( 'widgets_init', 'twentyfourteen_widgets_init' );
 	wp_register_script('jquery', '', '', '', true);
 
 	add_filter( 'loop_shop_columns', 'wc_loop_shop_columns', 1, 10 );
-	
+
 
 /*
  * Return a new number of maximum columns for shop archives

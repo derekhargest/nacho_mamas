@@ -39,8 +39,25 @@ $susy: (
   @include span(6 of 10);
 }
 
-.blog #secondary{
-  @include span(4 of 12 last);
+.single-post #primary{
+  @include span(6 of 10);
+}
+
+@media (max-width: 700px){
+  .blog #primary, .single-post #primary{
+    width: 100%;
+  }
+}
+
+.blog #secondary, .single-post #secondary{
+  @include span(3 of 10 last);
+  @media (max-width: 700px){
+    @include span(12 of 12);
+  }
+}
+
+#comments-evolved-tabs{
+  width: 100%;
 }
 
 .container{
@@ -99,11 +116,14 @@ $susy: (
   float: none;
 }
 
-.single{
+.single-post{
   .page-content{
     p{
       font-size: 1.55em;
       line-height: 1.45em;
+      @media (max-width: 700px){
+        font-size: 1em;
+      }
     }
   }
 }
@@ -114,7 +134,7 @@ $susy: (
   }
   #secondary{
     @include span(3 of 10 last);
-    @media (max-width: 960px){
+    @media (max-width: 700px){
       @include span(12 of 12);
     }
   }

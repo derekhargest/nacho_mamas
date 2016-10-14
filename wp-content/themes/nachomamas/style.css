@@ -734,10 +734,33 @@ ol.comment-list {
   margin-right: 2.04082%;
 }
 
-.blog #secondary {
-  width: 32.20339%;
+.single-post #primary {
+  width: 59.18367%;
+  float: left;
+  margin-right: 2.04082%;
+}
+
+@media (max-width: 700px) {
+  .blog #primary, .single-post #primary {
+    width: 100%;
+  }
+}
+.blog #secondary, .single-post #secondary {
+  width: 28.57143%;
   float: right;
   margin-right: 0;
+}
+@media (max-width: 700px) {
+  .blog #secondary, .single-post #secondary {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+#comments-evolved-tabs {
+  width: 100%;
 }
 
 .container {
@@ -812,9 +835,14 @@ ol.comment-list {
   float: none;
 }
 
-.single .page-content p {
+.single-post .page-content p {
   font-size: 1.55em;
   line-height: 1.45em;
+}
+@media (max-width: 700px) {
+  .single-post .page-content p {
+    font-size: 1em;
+  }
 }
 
 .blog .content-container article {
@@ -825,7 +853,7 @@ ol.comment-list {
   float: right;
   margin-right: 0;
 }
-@media (max-width: 960px) {
+@media (max-width: 700px) {
   .blog #secondary {
     width: 100%;
     float: left;
@@ -1217,7 +1245,7 @@ nav.prev-next-posts {
 
 .site-header-main {
   position: absolute;
-  z-index: 30;
+  z-index: 1000;
   background: #196987;
   width: 100%;
   height: auto;
@@ -2927,4 +2955,8 @@ p.logged-in-as {
 
 .comments-evolved-embed-container iframe {
   width: 100% !important;
+}
+
+.single-post .entry-header h1 {
+  text-align: left;
 }

@@ -7,17 +7,24 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
+<div id="content" class="site-content">
 
-	<main id="main" class="site-main" role="main">
 
 		<?php get_template_part( 'template-parts/content-banner' ); ?>
 
-		<div id="content-block">
 
 		<?php get_template_part( 'template-parts/cta-link' ); ?>
 
+				<div id="content-block">
+
 			<div class="container">
+
+				<div class="content-container">
+
+						<div id="primary">
+
+					<main id="main" class="site-main" role="main">
+						<div class="page-content">
 
 			<?php
 
@@ -31,10 +38,18 @@ get_header(); ?>
 
 			endwhile;
 			?>
+</div>
+
+			</main>
+		</div>
+		<?php
+		get_sidebar('content');
+		?>
+		</div>
 
 		</div>
 
-	</main>
+	</div>
 
 </div>
 

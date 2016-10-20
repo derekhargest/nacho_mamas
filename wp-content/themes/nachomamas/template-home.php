@@ -49,6 +49,8 @@ get_header('home'); ?>
 
 				</section>
 
+						<a href="/blog" class="button blog-button-home"><span>Visit Our Blog!</span></a>
+
 	  		<?php
 
 	  		while ( have_posts() ) : the_post();

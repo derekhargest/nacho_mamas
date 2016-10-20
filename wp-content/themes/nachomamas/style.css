@@ -145,6 +145,48 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-left: -1.0439453125em;
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url("assets/fonts/icomoon.eot?9f1u1e");
+  src: url("assets/fonts/icomoon.eot?9f1u1e#iefix") format("embedded-opentype"), url("assets/fonts/icomoon.ttf?9f1u1e") format("truetype"), url("assets/fonts/icomoon.woff?9f1u1e") format("woff"), url("assets/fonts/icomoon.svg?9f1u1e#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-blog"], [class*=" icon-blog"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-blog-blog .path1:before {
+  content: "\e900";
+  color: #134e64;
+}
+
+.icon-blog-blog .path2:before {
+  content: "\e901";
+  margin-left: -1.0439453125em;
+  color: #134e64;
+}
+
+.icon-blog-blog .path3:before {
+  content: "\e902";
+  margin-left: -1.0439453125em;
+  color: #f0d86a;
+}
+
+.icon-blog-blog .path2:before {
+  margin-left: -1.07em !important;
+}
+
 html {
   font: 100%/1 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
 }
@@ -403,7 +445,7 @@ ol.comment-list {
   opacity: .85;
 }
 
-.woocommerce #respond input#submit.alt.disabled, .woocommerce #respond input#submit.alt.disabled:hover, .woocommerce #respond input#submit.alt:disabled, .woocommerce #respond input#submit.alt:disabled:hover, .woocommerce #respond input#submit.alt:disabled[disabled], .woocommerce #respond input#submit.alt:disabled[disabled]:hover, .woocommerce a.button.alt.disabled, .woocommerce #mc_embed_signup a.alt.disabled.button, #mc_embed_signup .woocommerce a.alt.disabled.button, .woocommerce .prev-posts-link a.alt.disabled, .prev-posts-link .woocommerce a.alt.disabled, .woocommerce .next-posts-link a.alt.disabled, .next-posts-link .woocommerce a.alt.disabled, .woocommerce a.button.alt.disabled:hover, .woocommerce #mc_embed_signup a.alt.disabled.button:hover, #mc_embed_signup .woocommerce a.alt.disabled.button:hover, .woocommerce .prev-posts-link a.alt.disabled:hover, .prev-posts-link .woocommerce a.alt.disabled:hover, .woocommerce .next-posts-link a.alt.disabled:hover, .next-posts-link .woocommerce a.alt.disabled:hover, .woocommerce a.button.alt:disabled, .woocommerce #mc_embed_signup a.alt.button:disabled, #mc_embed_signup .woocommerce a.alt.button:disabled, .woocommerce .prev-posts-link a.alt:disabled, .prev-posts-link .woocommerce a.alt:disabled, .woocommerce .next-posts-link a.alt:disabled, .next-posts-link .woocommerce a.alt:disabled, .woocommerce a.button.alt:disabled:hover, .woocommerce #mc_embed_signup a.alt.button:disabled:hover, #mc_embed_signup .woocommerce a.alt.button:disabled:hover, .woocommerce .prev-posts-link a.alt:disabled:hover, .prev-posts-link .woocommerce a.alt:disabled:hover, .woocommerce .next-posts-link a.alt:disabled:hover, .next-posts-link .woocommerce a.alt:disabled:hover, .woocommerce a.button.alt:disabled[disabled], .woocommerce #mc_embed_signup a.alt.button:disabled[disabled], #mc_embed_signup .woocommerce a.alt.button:disabled[disabled], .woocommerce .prev-posts-link a.alt:disabled[disabled], .prev-posts-link .woocommerce a.alt:disabled[disabled], .woocommerce .next-posts-link a.alt:disabled[disabled], .next-posts-link .woocommerce a.alt:disabled[disabled], .woocommerce a.button.alt:disabled[disabled]:hover, .woocommerce #mc_embed_signup a.alt.button:disabled[disabled]:hover, #mc_embed_signup .woocommerce a.alt.button:disabled[disabled]:hover, .woocommerce .prev-posts-link a.alt:disabled[disabled]:hover, .prev-posts-link .woocommerce a.alt:disabled[disabled]:hover, .woocommerce .next-posts-link a.alt:disabled[disabled]:hover, .next-posts-link .woocommerce a.alt:disabled[disabled]:hover, .woocommerce button.button.alt.disabled, .woocommerce #mc_embed_signup button.alt.disabled.button, #mc_embed_signup .woocommerce button.alt.disabled.button, .woocommerce button.alt.disabled#load-more, .woocommerce button.alt.disabled#follow-us, .woocommerce button.button.alt.disabled:hover, .woocommerce #mc_embed_signup button.alt.disabled.button:hover, #mc_embed_signup .woocommerce button.alt.disabled.button:hover, .woocommerce button.alt.disabled#load-more:hover, .woocommerce button.alt.disabled#follow-us:hover, .woocommerce button.button.alt:disabled, .woocommerce #mc_embed_signup button.alt.button:disabled, #mc_embed_signup .woocommerce button.alt.button:disabled, .woocommerce button.alt#load-more:disabled, .woocommerce button.alt#follow-us:disabled, .woocommerce button.button.alt:disabled:hover, .woocommerce #mc_embed_signup button.alt.button:disabled:hover, #mc_embed_signup .woocommerce button.alt.button:disabled:hover, .woocommerce button.alt#load-more:disabled:hover, .woocommerce button.alt#follow-us:disabled:hover, .woocommerce button.button.alt:disabled[disabled], .woocommerce #mc_embed_signup button.alt.button:disabled[disabled], #mc_embed_signup .woocommerce button.alt.button:disabled[disabled], .woocommerce button.alt#load-more:disabled[disabled], .woocommerce button.alt#follow-us:disabled[disabled], .woocommerce button.button.alt:disabled[disabled]:hover, .woocommerce #mc_embed_signup button.alt.button:disabled[disabled]:hover, #mc_embed_signup .woocommerce button.alt.button:disabled[disabled]:hover, .woocommerce button.alt#load-more:disabled[disabled]:hover, .woocommerce button.alt#follow-us:disabled[disabled]:hover, .woocommerce input.button.alt.disabled, .woocommerce #mc_embed_signup input.alt.disabled.button, #mc_embed_signup .woocommerce input.alt.disabled.button, .woocommerce input.button.alt.disabled:hover, .woocommerce #mc_embed_signup input.alt.disabled.button:hover, #mc_embed_signup .woocommerce input.alt.disabled.button:hover, .woocommerce input.button.alt:disabled, .woocommerce #mc_embed_signup input.alt.button:disabled, #mc_embed_signup .woocommerce input.alt.button:disabled, .woocommerce input.button.alt:disabled:hover, .woocommerce #mc_embed_signup input.alt.button:disabled:hover, #mc_embed_signup .woocommerce input.alt.button:disabled:hover, .woocommerce input.button.alt:disabled[disabled], .woocommerce #mc_embed_signup input.alt.button:disabled[disabled], #mc_embed_signup .woocommerce input.alt.button:disabled[disabled], .woocommerce input.button.alt:disabled[disabled]:hover, .woocommerce #mc_embed_signup input.alt.button:disabled[disabled]:hover, #mc_embed_signup .woocommerce input.alt.button:disabled[disabled]:hover {
+.button.blog-button-home, .woocommerce .subfooter a.blog-button-home.button, #mc_embed_signup .blog-button-home.button, button.blog-button-home#load-more, button.blog-button-home#follow-us, .prev-posts-link a.blog-button-home, .next-posts-link a.blog-button-home, .button.about-button, .woocommerce .subfooter a.about-button.button, #mc_embed_signup .about-button.button, button.about-button#load-more, button.about-button#follow-us, .prev-posts-link a.about-button, .next-posts-link a.about-button, .woocommerce #respond input#submit.alt.disabled, .woocommerce #respond input#submit.alt.disabled:hover, .woocommerce #respond input#submit.alt:disabled, .woocommerce #respond input#submit.alt:disabled:hover, .woocommerce #respond input#submit.alt:disabled[disabled], .woocommerce #respond input#submit.alt:disabled[disabled]:hover, .woocommerce a.button.alt.disabled, .woocommerce #mc_embed_signup a.alt.disabled.button, #mc_embed_signup .woocommerce a.alt.disabled.button, .woocommerce .prev-posts-link a.alt.disabled, .prev-posts-link .woocommerce a.alt.disabled, .woocommerce .next-posts-link a.alt.disabled, .next-posts-link .woocommerce a.alt.disabled, .woocommerce a.button.alt.disabled:hover, .woocommerce #mc_embed_signup a.alt.disabled.button:hover, #mc_embed_signup .woocommerce a.alt.disabled.button:hover, .woocommerce .prev-posts-link a.alt.disabled:hover, .prev-posts-link .woocommerce a.alt.disabled:hover, .woocommerce .next-posts-link a.alt.disabled:hover, .next-posts-link .woocommerce a.alt.disabled:hover, .woocommerce a.button.alt:disabled, .woocommerce #mc_embed_signup a.alt.button:disabled, #mc_embed_signup .woocommerce a.alt.button:disabled, .woocommerce .prev-posts-link a.alt:disabled, .prev-posts-link .woocommerce a.alt:disabled, .woocommerce .next-posts-link a.alt:disabled, .next-posts-link .woocommerce a.alt:disabled, .woocommerce a.button.alt:disabled:hover, .woocommerce #mc_embed_signup a.alt.button:disabled:hover, #mc_embed_signup .woocommerce a.alt.button:disabled:hover, .woocommerce .prev-posts-link a.alt:disabled:hover, .prev-posts-link .woocommerce a.alt:disabled:hover, .woocommerce .next-posts-link a.alt:disabled:hover, .next-posts-link .woocommerce a.alt:disabled:hover, .woocommerce a.button.alt:disabled[disabled], .woocommerce #mc_embed_signup a.alt.button:disabled[disabled], #mc_embed_signup .woocommerce a.alt.button:disabled[disabled], .woocommerce .prev-posts-link a.alt:disabled[disabled], .prev-posts-link .woocommerce a.alt:disabled[disabled], .woocommerce .next-posts-link a.alt:disabled[disabled], .next-posts-link .woocommerce a.alt:disabled[disabled], .woocommerce a.button.alt:disabled[disabled]:hover, .woocommerce #mc_embed_signup a.alt.button:disabled[disabled]:hover, #mc_embed_signup .woocommerce a.alt.button:disabled[disabled]:hover, .woocommerce .prev-posts-link a.alt:disabled[disabled]:hover, .prev-posts-link .woocommerce a.alt:disabled[disabled]:hover, .woocommerce .next-posts-link a.alt:disabled[disabled]:hover, .next-posts-link .woocommerce a.alt:disabled[disabled]:hover, .woocommerce button.button.alt.disabled, .woocommerce #mc_embed_signup button.alt.disabled.button, #mc_embed_signup .woocommerce button.alt.disabled.button, .woocommerce button.alt.disabled#load-more, .woocommerce button.alt.disabled#follow-us, .woocommerce button.button.alt.disabled:hover, .woocommerce #mc_embed_signup button.alt.disabled.button:hover, #mc_embed_signup .woocommerce button.alt.disabled.button:hover, .woocommerce button.alt.disabled#load-more:hover, .woocommerce button.alt.disabled#follow-us:hover, .woocommerce button.button.alt:disabled, .woocommerce #mc_embed_signup button.alt.button:disabled, #mc_embed_signup .woocommerce button.alt.button:disabled, .woocommerce button.alt#load-more:disabled, .woocommerce button.alt#follow-us:disabled, .woocommerce button.button.alt:disabled:hover, .woocommerce #mc_embed_signup button.alt.button:disabled:hover, #mc_embed_signup .woocommerce button.alt.button:disabled:hover, .woocommerce button.alt#load-more:disabled:hover, .woocommerce button.alt#follow-us:disabled:hover, .woocommerce button.button.alt:disabled[disabled], .woocommerce #mc_embed_signup button.alt.button:disabled[disabled], #mc_embed_signup .woocommerce button.alt.button:disabled[disabled], .woocommerce button.alt#load-more:disabled[disabled], .woocommerce button.alt#follow-us:disabled[disabled], .woocommerce button.button.alt:disabled[disabled]:hover, .woocommerce #mc_embed_signup button.alt.button:disabled[disabled]:hover, #mc_embed_signup .woocommerce button.alt.button:disabled[disabled]:hover, .woocommerce button.alt#load-more:disabled[disabled]:hover, .woocommerce button.alt#follow-us:disabled[disabled]:hover, .woocommerce input.button.alt.disabled, .woocommerce #mc_embed_signup input.alt.disabled.button, #mc_embed_signup .woocommerce input.alt.disabled.button, .woocommerce input.button.alt.disabled:hover, .woocommerce #mc_embed_signup input.alt.disabled.button:hover, #mc_embed_signup .woocommerce input.alt.disabled.button:hover, .woocommerce input.button.alt:disabled, .woocommerce #mc_embed_signup input.alt.button:disabled, #mc_embed_signup .woocommerce input.alt.button:disabled, .woocommerce input.button.alt:disabled:hover, .woocommerce #mc_embed_signup input.alt.button:disabled:hover, #mc_embed_signup .woocommerce input.alt.button:disabled:hover, .woocommerce input.button.alt:disabled[disabled], .woocommerce #mc_embed_signup input.alt.button:disabled[disabled], #mc_embed_signup .woocommerce input.alt.button:disabled[disabled], .woocommerce input.button.alt:disabled[disabled]:hover, .woocommerce #mc_embed_signup input.alt.button:disabled[disabled]:hover, #mc_embed_signup .woocommerce input.alt.button:disabled[disabled]:hover {
   background-color: #7ac561;
   color: #fffdf0;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
@@ -420,6 +462,26 @@ ol.comment-list {
 .woocommerce .quantity .qty {
   line-height: 2.65em;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+}
+
+.button.about-button, .woocommerce .subfooter a.about-button.button, #mc_embed_signup .about-button.button, button.about-button#load-more, button.about-button#follow-us, .prev-posts-link a.about-button, .next-posts-link a.about-button {
+  width: 50%;
+  margin: 0 auto;
+  float: none;
+  margin-top: 2em;
+}
+.button.about-button span, .woocommerce .subfooter a.about-button.button span, #mc_embed_signup .about-button.button span, button.about-button#load-more span, button.about-button#follow-us span, .prev-posts-link a.about-button span, .next-posts-link a.about-button span {
+  color: #fff;
+}
+
+.button.blog-button-home, .woocommerce .subfooter a.blog-button-home.button, #mc_embed_signup .blog-button-home.button, button.blog-button-home#load-more, button.blog-button-home#follow-us, .prev-posts-link a.blog-button-home, .next-posts-link a.blog-button-home {
+  width: 50%;
+  margin: 0 auto;
+  float: none;
+  margin-top: 2em;
+}
+.button.blog-button-home span, .woocommerce .subfooter a.blog-button-home.button span, #mc_embed_signup .blog-button-home.button span, button.blog-button-home#load-more span, button.blog-button-home#follow-us span, .prev-posts-link a.blog-button-home span, .next-posts-link a.blog-button-home span {
+  color: #fff;
 }
 
 .woocommerce #content .entry-summary p.price {
@@ -896,6 +958,7 @@ ol.comment-list {
 section.quotes {
   display: block;
   margin: 5em 0;
+  float: left;
 }
 
 .content-area.secondary {
@@ -2959,4 +3022,12 @@ p.logged-in-as {
 
 .single-post .entry-header h1 {
   text-align: left;
+}
+
+ul.instagram-pics li {
+  margin-bottom: 1em;
+}
+ul.instagram-pics li a img {
+  width: 100%;
+  height: auto;
 }

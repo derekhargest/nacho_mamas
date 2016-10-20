@@ -74,6 +74,51 @@
     margin-left: -1.0439453125em;
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src:  url('assets/fonts/icomoon.eot?9f1u1e');
+  src:  url('assets/fonts/icomoon.eot?9f1u1e#iefix') format('embedded-opentype'),
+    url('assets/fonts/icomoon.ttf?9f1u1e') format('truetype'),
+    url('assets/fonts/icomoon.woff?9f1u1e') format('woff'),
+    url('assets/fonts/icomoon.svg?9f1u1e#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-blog"], [class*=" icon-blog"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-blog-blog .path1:before {
+  content: "\e900";
+  color: rgb(19, 78, 100);
+}
+.icon-blog-blog .path2:before {
+  content: "\e901";
+  margin-left: -1.0439453125em;
+  color: rgb(19, 78, 100);
+}
+.icon-blog-blog .path3:before {
+  content: "\e902";
+  margin-left: -1.0439453125em;
+  color: rgb(240, 216, 106);
+}
+
+.icon-blog-blog .path2:before{
+  margin-left: -1.07em !important;
+}
+
 html {
 	font: 100%/1 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
 }

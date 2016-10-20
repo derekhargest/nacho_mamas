@@ -53,3 +53,13 @@ p.logged-in-as{
 .single-post .entry-header h1{
   text-align: left;
 }
+
+ul.instagram-pics{
+  li{
+    margin-bottom: 1em;
+    a img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}

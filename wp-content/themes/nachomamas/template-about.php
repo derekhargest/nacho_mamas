@@ -42,7 +42,7 @@ get_header(); ?>
 
         <img src="<?php echo esc_url( get_template_directory_uri() ) ?>/assets/images/scunny-pics.png" alt="Scunny Pics" />
 
-				<a href="/blog" class="button about-button"><span>Visit Our Blog!</span></a>
+				<a href="/NachosSite/blog" class="button about-button"><span>Visit Our Blog!</span></a>
 
 	<?php if (get_field('secondary_content')): ?>
 

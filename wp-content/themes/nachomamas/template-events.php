@@ -32,7 +32,7 @@ get_header(); ?>
 
 							</header>
 
-								<a href="/blog" class="button blog-button-home"><span>Visit Our Blog!</span></a>
+								<a href="/NachosSite/blog" class="button blog-button-home"><span>Visit Our Blog!</span></a>
 
 						</div>
 

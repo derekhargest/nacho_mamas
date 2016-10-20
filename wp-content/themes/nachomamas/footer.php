@@ -65,7 +65,7 @@
 
 				<li><a href="https://www.instagram.com/nachomamasmd" target="_blank"><span class="icon-instagram"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span></a></li>
 
-				<li><a href="/blog/" target="_blank"><span class="icon-blog-blog"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></a></li>
+				<li><a href="/NachosSite/blog" target="_blank"><span class="icon-blog-blog"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></a></li>
 
 			</ul>
 

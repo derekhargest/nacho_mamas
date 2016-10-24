@@ -212,23 +212,6 @@ function twentyfourteen_list_authors() {
 }
 endif;
 
-
-
-
-
-/**
- * Create a nicely formatted and more specific title element text for output
- * in head of document, based on current view.
- *
- * @since Twenty Fourteen 1.0
- *
- * @global int $paged WordPress archive pagination page count.
- * @global int $page  WordPress paginated post page count.
- *
- * @param string $title Default title text for current view.
- * @param string $sep Optional separator.
- * @return string The filtered title.
- */
 function twentyfourteen_wp_title( $title, $sep ) {
 	global $paged, $page;
 

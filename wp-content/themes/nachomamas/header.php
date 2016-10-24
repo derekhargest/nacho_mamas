@@ -16,7 +16,7 @@
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width">
-		<title><?php wp_title( '|', true, 'right' ); ?><?php bloginfo( 'name' ); ?>	<?php if ( is_front_page() ) : ?><?php endif; ?></title>
+		<title><?php wp_title('|', true, 'right'); ?></title>
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 		<link href='https://fonts.googleapis.com/css?family=Walter+Turncoat|Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>

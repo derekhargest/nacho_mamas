@@ -1652,6 +1652,17 @@ nav.prev-next-posts {
   line-height: 2em;
 }
 
+.ou-container {
+  width: 25%;
+  min-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+.ou-container img {
+  width: 100%;
+  height: auto;
+}
+
 .footer-signup {
   background: #f36c34;
   color: #fffdf0;
@@ -2012,11 +2023,16 @@ nav.prev-next-posts {
     width: 26.833%;
   }
 }
+.home-content-items {
+  margin-top: 3em;
+}
+
 .home-item {
   background: #f04413;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   overflow: hidden;
   margin-bottom: 4.444em;
+  position: relative;
 }
 .home-item h3 {
   font-family: "Walter Turncoat", cursive;
@@ -2030,6 +2046,7 @@ nav.prev-next-posts {
   float: left;
   margin-right: 2.27273%;
   margin-right: 0;
+  float: right;
 }
 .home-item .home-image img {
   width: 100%;
@@ -2037,10 +2054,10 @@ nav.prev-next-posts {
 }
 .home-item .home-content {
   width: 28.81%;
-  float: right;
+  float: left;
   padding: 0 2.6383%;
-  position: relative;
-  margin-top: 3em;
+  margin-top: .5em;
+  position: absolute;
 }
 .home-item .button-wrap {
   position: absolute;
@@ -2066,6 +2083,7 @@ nav.prev-next-posts {
 }
 .home-item:nth-child(odd) .home-content {
   float: right;
+  right: 0;
 }
 .home-item:nth-child(odd) .home-image {
   float: left;
@@ -2137,6 +2155,7 @@ nav.prev-next-posts {
     width: 80%;
     float: none;
     padding: 0;
+    position: relative;
   }
   .home-item:nth-child(even) h3, .home-item:nth-child(odd) h3 {
     font-size: 2em;

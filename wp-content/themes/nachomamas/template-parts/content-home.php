@@ -12,7 +12,7 @@
 
 	<div class="content-container">
 
-		<div class="home-content">
+		<div class="home-content-items">
 
 			<?php get_template_part( 'template-parts/homepage-items' ); ?>
 

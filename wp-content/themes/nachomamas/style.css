@@ -1652,17 +1652,6 @@ nav.prev-next-posts {
   line-height: 2em;
 }
 
-.ou-container {
-  width: 25%;
-  min-width: 300px;
-  margin: 0 auto;
-  margin-bottom: 2em;
-}
-.ou-container img {
-  width: 100%;
-  height: auto;
-}
-
 .footer-signup {
   background: #f36c34;
   color: #fffdf0;

@@ -77,14 +77,15 @@ get_header(); ?>
 
 										<div class="menu-buttons">
 
-											<a href="<?php echo the_field('towson_dining_menu'); ?>" class="button" onclick="event.preventDefault();"><span>Dining Menu</span></a>
+											<a href="<?php echo the_field('towson_dining_menu'); ?>" class="button"><span>Dining Menu</span></a>
 
-											<a href="<?php echo the_field('towson_specials_menu'); ?>" class="button" onclick="event.preventDefault();"><span>Specials Menu</span></a>
+											<!-- <a href="<?php // echo the_field('towson_specials_menu'); ?>" class="button" onclick="event.preventDefault();"><span>Specials Menu</span></a>
 
-											<a href="<?php echo the_field('towson_lunch_menu'); ?>" class="button" onclick="event.preventDefault();"><span>Lunch Menu</span></a>
+											<a href="<?php // echo the_field('towson_lunch_menu'); ?>" class="button" onclick="event.preventDefault();"><span>Lunch Menu</span></a>
 
-											<a href="<?php echo the_field('towson_margarita_menu'); ?>" class="button" onclick="event.preventDefault();"><span>Margarita Menu</span></a>
+											<a href="<?php // echo the_field('towson_margarita_menu'); ?>" class="button" onclick="event.preventDefault();"><span>Margarita Menu</span></a>
 
+										-->
 										</div>
 
 									</div>

@@ -69,7 +69,7 @@ get_header(); ?>
 
 										<div class="menu-content">
 
-											<p>Coming Soon!</p>
+											<p>We're Open!</p>
 
 										</div>
 
@@ -77,7 +77,7 @@ get_header(); ?>
 
 										<div class="menu-buttons">
 
-											<a href="<?php echo the_field('towson_dining_menu'); ?>" class="button"><span>Dining Menu</span></a>
+											<a href="<?php echo the_field('towson_dining_menu'); ?>" class="button" style="width: 100%;"><span>Dining Menu</span></a>
 
 											<!-- <a href="<?php // echo the_field('towson_specials_menu'); ?>" class="button" onclick="event.preventDefault();"><span>Specials Menu</span></a>
 
